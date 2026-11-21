@@ -90,6 +90,12 @@ public final class Catalog {
         cat("fun", "disco fireworks celebration partydrop skymessage snowglobe rottenrain roulette omega");
     }
 
+    /** Lets generated cannons (see {@link Combo}) set their own default tier and category. Never overrides a listed one. */
+    public static void define(String id, String tier, String category) {
+        TIER.putIfAbsent(id, tier);
+        CATEGORY.putIfAbsent(id, category);
+    }
+
     public static String tier(String id) { return TIER.getOrDefault(id, "rare"); }
     public static String category(String id) { return CATEGORY.getOrDefault(id, "other"); }
 

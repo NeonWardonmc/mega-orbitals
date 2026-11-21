@@ -1,0 +1,37 @@
+# soniccomet.yml - MegaOrbitals cannon: Sonic Comet
+#   Sonic booms that ignore cover,
+#   streaking across the area like a comet.
+# Fire with /orbital soniccomet   Give with /orbitalgive soniccomet
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lSonic Comet'
+# Description lines on the item.
+lore:
+- Sonic booms that ignore cover,
+- streaking across the area like a comet.
+# Item type of the cannon item.
+item: ECHO_SHARD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: beams
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#20A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Strength of every impact (damage, size, effect length...). 1 = normal.
+  power: 1.0
+  # Size of the pattern (area radius or line length) in blocks.
+  radius: 20.0
+  # How many impacts / rings / steps the pattern has.
+  count: 16
+  # Ticks between steps of the pattern (20 ticks = 1 second).
+  interval-ticks: 2

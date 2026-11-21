@@ -39,3 +39,5 @@ settings:
   skip-disabled: true
   # Also play every cannon's own warning (very noisy).
   include-warnings: false
+  # Also fire the 1000 arsenal cannons (payload + pattern combos added in 1.5.0). Very heavy.
+  include-arsenal: false

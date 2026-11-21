@@ -1,0 +1,37 @@
+# bloomring.yml - MegaOrbitals cannon: Bloom Ring
+#   Blooms of flowers and gentle healing,
+#   in a ring around the target.
+# Fire with /orbital bloomring   Give with /orbitalgive bloomring
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lBloom Ring'
+# Description lines on the item.
+lore:
+- Blooms of flowers and gentle healing,
+- in a ring around the target.
+# Item type of the cannon item.
+item: POPPY
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: common
+# Menu tab this cannon is listed under.
+category: fun
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF80C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Strength of every impact (damage, size, effect length...). 1 = normal.
+  power: 1.0
+  # Size of the pattern (area radius or line length) in blocks.
+  radius: 8.0
+  # How many impacts / rings / steps the pattern has.
+  count: 12
+  # Ticks between steps of the pattern (20 ticks = 1 second).
+  interval-ticks: 0

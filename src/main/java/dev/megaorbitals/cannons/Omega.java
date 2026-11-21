@@ -19,6 +19,7 @@ public final class Omega extends Cannon {
         option("stagger-ticks", 1, "Ticks between each cannon launch (0 = truly all at once).");
         option("skip-disabled", true, "Skip cannons disabled in config.yml.");
         option("include-warnings", false, "Also play every cannon's own warning (very noisy).");
+        option("include-arsenal", false, "Also fire the 1000 arsenal cannons (payload + pattern combos added in 1.5.0). Very heavy.");
     }
 
     @Override
@@ -42,6 +43,7 @@ public final class Omega extends Cannon {
         List<Cannon> all = new ArrayList<>();
         for (Cannon c : s.plugin.cannons().values()) {
             if (c == this || skip.contains(c.id())) continue;
+            if (c instanceof Combo && !b("include-arsenal")) continue;
             if (b("skip-disabled") && s.plugin.settings().disabled(c)) continue;
             all.add(c);
         }

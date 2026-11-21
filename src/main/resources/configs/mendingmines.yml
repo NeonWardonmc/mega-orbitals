@@ -1,0 +1,37 @@
+# mendingmines.yml - MegaOrbitals cannon: Mending Mines
+#   Healing light for everyone it touches,
+#   as hidden mines that go off when someone walks by.
+# Fire with /orbital mendingmines   Give with /orbitalgive mendingmines
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lMending Mines'
+# Description lines on the item.
+lore:
+- Healing light for everyone it touches,
+- as hidden mines that go off when someone walks by.
+# Item type of the cannon item.
+item: GOLDEN_APPLE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: buffs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#60FF80'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Strength of every impact (damage, size, effect length...). 1 = normal.
+  power: 1.0
+  # Size of the pattern (area radius or line length) in blocks.
+  radius: 12.0
+  # How many impacts / rings / steps the pattern has.
+  count: 8
+  # Ticks between steps of the pattern (20 ticks = 1 second).
+  interval-ticks: 1200

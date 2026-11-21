@@ -1,0 +1,37 @@
+# frostpillar.yml - MegaOrbitals cannon: Frost Pillar
+#   Freezing bursts that slow and chill,
+#   stacked in a column falling from the sky.
+# Fire with /orbital frostpillar   Give with /orbitalgive frostpillar
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lFrost Pillar'
+# Description lines on the item.
+lore:
+- Freezing bursts that slow and chill,
+- stacked in a column falling from the sky.
+# Item type of the cannon item.
+item: BLUE_ICE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: weather
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Strength of every impact (damage, size, effect length...). 1 = normal.
+  power: 1.0
+  # Size of the pattern (area radius or line length) in blocks.
+  radius: 18.0
+  # How many impacts / rings / steps the pattern has.
+  count: 6
+  # Ticks between steps of the pattern (20 ticks = 1 second).
+  interval-ticks: 4

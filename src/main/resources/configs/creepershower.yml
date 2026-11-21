@@ -1,0 +1,37 @@
+# creepershower.yml - MegaOrbitals cannon: Creeper Shower
+#   Lit creepers dropped from above,
+#   raining down all over the area.
+# Fire with /orbital creepershower   Give with /orbitalgive creepershower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lCreeper Shower'
+# Description lines on the item.
+lore:
+- Lit creepers dropped from above,
+- raining down all over the area.
+# Item type of the cannon item.
+item: CREEPER_HEAD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: mobs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#40C040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Strength of every impact (damage, size, effect length...). 1 = normal.
+  power: 1.0
+  # Size of the pattern (area radius or line length) in blocks.
+  radius: 12.0
+  # How many impacts / rings / steps the pattern has.
+  count: 20
+  # Ticks between steps of the pattern (20 ticks = 1 second).
+  interval-ticks: 3
