@@ -1,0 +1,27 @@
+# aegis.yml - MegaOrbitals cannon: Aegis Dome
+#   A golden dome: every player inside
+#   is immune to all damage for 30 seconds.
+# Fire with /orbital aegis   Give with /orbitalgive aegis
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lAegis Dome'
+# Description lines on the item.
+lore:
+- 'A golden dome: every player inside'
+- is immune to all damage for 30 seconds.
+# Item type of the cannon item.
+item: SHIELD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFD040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Dome radius.
+  radius: 15
+  # How long the dome lasts.
+  seconds: 30

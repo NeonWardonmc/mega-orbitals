@@ -1,0 +1,27 @@
+# phantomlegion.yml - MegaOrbitals cannon: Ghost Knights
+#   A legion of ghost knights: you only see
+#   their floating armour and swords.
+# Fire with /orbital phantomlegion   Give with /orbitalgive phantomlegion
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lGhost Knights'
+# Description lines on the item.
+lore:
+- 'A legion of ghost knights: you only see'
+- their floating armour and swords.
+# Item type of the cannon item.
+item: IRON_HELMET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C0C0E0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of knights.
+  knights: 10
+  # Spread.
+  radius: 10.0

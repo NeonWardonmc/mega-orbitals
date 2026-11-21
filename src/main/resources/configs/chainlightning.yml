@@ -1,0 +1,31 @@
+# chainlightning.yml - MegaOrbitals cannon: Chain Lightning
+#   A bolt that jumps from target to target.
+#   Don't stand close together.
+# Fire with /orbital chainlightning   Give with /orbitalgive chainlightning
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lChain Lightning'
+# Description lines on the item.
+lore:
+- A bolt that jumps from target to target.
+- Don't stand close together.
+# Item type of the cannon item.
+item: COPPER_INGOT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Maximum jumps.
+  jumps: 25
+  # How far it can jump.
+  jump-range: 14.0
+  # Damage per hit.
+  damage: 12.0
+  # Delay between jumps.
+  ticks-per-jump: 3

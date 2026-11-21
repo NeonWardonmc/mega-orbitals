@@ -1,0 +1,27 @@
+# witherroses.yml - MegaOrbitals cannon: Cursed Garden
+#   Plants a cursed garden of wither roses.
+#   Touch one and you start to wither.
+# Fire with /orbital witherroses   Give with /orbitalgive witherroses
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lCursed Garden'
+# Description lines on the item.
+lore:
+- Plants a cursed garden of wither roses.
+- Touch one and you start to wither.
+# Item type of the cannon item.
+item: WITHER_ROSE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#303030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the garden.
+  radius: 16
+  # How much of the ground gets a rose (0-1).
+  density: 0.5

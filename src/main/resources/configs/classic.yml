@@ -1,0 +1,31 @@
+# classic.yml - MegaOrbitals cannon: Classic Orbital
+#   The original orbital strike cannon.
+#   Rings of TNT dropped from the sky.
+# Fire with /orbital classic   Give with /orbitalgive classic
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lClassic Orbital'
+# Description lines on the item.
+lore:
+- The original orbital strike cannon.
+- Rings of TNT dropped from the sky.
+# Item type of the cannon item.
+item: FIRE_CHARGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF2020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of TNT circles.
+  rings: 6
+  # Blocks between circles.
+  ring-spacing: 3.0
+  # Spawn height above the target.
+  height: 30
+  # Explosion power of each TNT.
+  power: 4.0

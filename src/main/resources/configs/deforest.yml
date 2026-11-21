@@ -1,0 +1,27 @@
+# deforest.yml - MegaOrbitals cannon: Clear-Cut
+#   Clear-cuts every tree in range: logs, leaves,
+#   mushrooms and vines, all gone in seconds.
+# Fire with /orbital deforest   Give with /orbitalgive deforest
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lClear-Cut'
+# Description lines on the item.
+lore:
+- 'Clear-cuts every tree in range: logs, leaves,'
+- mushrooms and vines, all gone in seconds.
+# Item type of the cannon item.
+item: IRON_AXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#A07030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 35
+  # Vertical range.
+  height: 40

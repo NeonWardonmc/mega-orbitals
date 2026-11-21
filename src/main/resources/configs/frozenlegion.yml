@@ -1,0 +1,29 @@
+# frozenlegion.yml - MegaOrbitals cannon: Frozen Legion
+#   A frozen legion of strays marches out of
+#   a snowstorm, firing slowness arrows.
+# Fire with /orbital frozenlegion   Give with /orbitalgive frozenlegion
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lFrozen Legion'
+# Description lines on the item.
+lore:
+- A frozen legion of strays marches out of
+- a snowstorm, firing slowness arrows.
+# Item type of the cannon item.
+item: SNOW_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#C0E8FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of strays.
+  strays: 10
+  # Spread.
+  radius: 12.0
+  # Cover the ground in snow.
+  snow: true

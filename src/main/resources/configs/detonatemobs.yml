@@ -1,0 +1,29 @@
+# detonatemobs.yml - MegaOrbitals cannon: Living Bombs
+#   Every mob nearby starts to swell and glow...
+#   then they all explode.
+# Fire with /orbital detonatemobs   Give with /orbitalgive detonatemobs
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lLiving Bombs'
+# Description lines on the item.
+lore:
+- Every mob nearby starts to swell and glow...
+- then they all explode.
+# Item type of the cannon item.
+item: TNT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FF2020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Time before they explode.
+  fuse-seconds: 3
+  # Explosion power per mob.
+  power: 3.0

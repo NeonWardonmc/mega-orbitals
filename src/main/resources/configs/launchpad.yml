@@ -1,0 +1,29 @@
+# launchpad.yml - MegaOrbitals cannon: Launchpad
+#   A massive air blast launches everyone
+#   out of the area, far and fast.
+# Fire with /orbital launchpad   Give with /orbitalgive launchpad
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lLaunchpad'
+# Description lines on the item.
+lore:
+- A massive air blast launches everyone
+- out of the area, far and fast.
+# Item type of the cannon item.
+item: PISTON
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60FF60'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Sideways launch strength.
+  power: 4.0
+  # Upward launch strength.
+  lift: 1.6

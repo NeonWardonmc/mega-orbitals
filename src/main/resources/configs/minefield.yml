@@ -1,0 +1,33 @@
+# minefield.yml - MegaOrbitals cannon: Minefield
+#   Buries hidden mines all over the area.
+#   They stay armed for 5 minutes.
+# Fire with /orbital minefield   Give with /orbitalgive minefield
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lMinefield'
+# Description lines on the item.
+lore:
+- Buries hidden mines all over the area.
+- They stay armed for 5 minutes.
+# Item type of the cannon item.
+item: STONE_PRESSURE_PLATE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#606060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area the mines are spread over.
+  radius: 25
+  # Number of mines.
+  mines: 40
+  # Explosion power of each mine.
+  power: 4.0
+  # How long the mines stay armed.
+  armed-seconds: 300
+  # How close you must step to set one off.
+  trigger-distance: 1.5

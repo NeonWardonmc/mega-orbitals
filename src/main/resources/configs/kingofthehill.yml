@@ -1,0 +1,34 @@
+# kingofthehill.yml - MegaOrbitals cannon: King of the Hill
+#   Minigame: a glowing hill appears. Whoever
+#   stands on it longest wins the prize.
+# Fire with /orbital kingofthehill   Give with /orbitalgive kingofthehill
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lKing of the Hill'
+# Description lines on the item.
+lore:
+- 'Minigame: a glowing hill appears. Whoever'
+- stands on it longest wins the prize.
+# Item type of the cannon item.
+item: GOLDEN_HELMET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFC000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the hill zone.
+  zone-radius: 4.0
+  # Length of the game.
+  seconds: 60
+  # Players this close see the scoreboard.
+  announce-radius: 80
+  # Prize items, MATERIAL:amount.
+  prize:
+  - GOLDEN_APPLE:5
+  - DIAMOND:8
+  - ENCHANTED_GOLDEN_APPLE:1

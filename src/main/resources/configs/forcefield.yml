@@ -1,0 +1,27 @@
+# forcefield.yml - MegaOrbitals cannon: Force Field Cells
+#   Traps every target inside an invisible,
+#   unbreakable force-field box for a while.
+# Fire with /orbital forcefield   Give with /orbitalgive forcefield
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lForce Field Cells'
+# Description lines on the item.
+lore:
+- Traps every target inside an invisible,
+- unbreakable force-field box for a while.
+# Item type of the cannon item.
+item: BARRIER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#80E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long the cells last.
+  seconds: 15

@@ -1,0 +1,29 @@
+# spleefarena.yml - MegaOrbitals cannon: Sky Spleef
+#   Minigame: everyone nearby lands on a snow platform
+#   high in the sky, with a shovel. Last one up wins.
+# Fire with /orbital spleefarena   Give with /orbitalgive spleefarena
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lSky Spleef'
+# Description lines on the item.
+lore:
+- 'Minigame: everyone nearby lands on a snow platform'
+- high in the sky, with a shovel. Last one up wins.
+# Item type of the cannon item.
+item: DIAMOND_SHOVEL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#F0F0F0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Who gets pulled in.
+  radius: 20
+  # Platform size.
+  platform-radius: 10
+  # Platform height above the target.
+  height: 60

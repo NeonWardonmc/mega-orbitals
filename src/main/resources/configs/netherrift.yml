@@ -1,0 +1,31 @@
+# netherrift.yml - MegaOrbitals cannon: Nether Rift
+#   Tears open a rift to the Nether.
+#   The land burns and Nether mobs pour out.
+# Fire with /orbital netherrift   Give with /orbitalgive netherrift
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lNether Rift'
+# Description lines on the item.
+lore:
+- Tears open a rift to the Nether.
+- The land burns and Nether mobs pour out.
+# Item type of the cannon item.
+item: NETHERRACK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#A01010'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the rift.
+  radius: 25
+  # Piglin brutes.
+  piglins: 8
+  # Blazes.
+  blazes: 4
+  # Ghasts.
+  ghasts: 1

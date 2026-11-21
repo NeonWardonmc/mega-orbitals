@@ -1,0 +1,27 @@
+# desertify.yml - MegaOrbitals cannon: Desertify
+#   Drains the land: plants die, water dries
+#   up, and it all turns to desert.
+# Fire with /orbital desertify   Give with /orbitalgive desertify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lDesertify'
+# Description lines on the item.
+lore:
+- 'Drains the land: plants die, water dries'
+- up, and it all turns to desert.
+# Item type of the cannon item.
+item: DEAD_BUSH
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#E0C080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Hunger effect for anyone caught in it.
+  thirst-seconds: 30

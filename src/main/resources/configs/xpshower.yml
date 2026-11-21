@@ -1,0 +1,29 @@
+# xpshower.yml - MegaOrbitals cannon: XP Shower
+#   Support: a shower of experience orbs
+#   rains down for everyone to grab.
+# Fire with /orbital xpshower   Give with /orbitalgive xpshower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lXP Shower'
+# Description lines on the item.
+lore:
+- 'Support: a shower of experience orbs'
+- rains down for everyone to grab.
+# Item type of the cannon item.
+item: EXPERIENCE_BOTTLE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#80FF40'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Total experience dropped.
+  total-xp: 2000
+  # Number of orbs.
+  orbs: 100
+  # Spread.
+  radius: 8

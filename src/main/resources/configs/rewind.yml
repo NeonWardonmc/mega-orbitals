@@ -1,0 +1,27 @@
+# rewind.yml - MegaOrbitals cannon: Rewind
+#   Marks everyone nearby. Later, they snap back
+#   to where they were, with the health they had.
+# Fire with /orbital rewind   Give with /orbitalgive rewind
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lRewind'
+# Description lines on the item.
+lore:
+- Marks everyone nearby. Later, they snap back
+- to where they were, with the health they had.
+# Item type of the cannon item.
+item: RECOVERY_COMPASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFE080'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Seconds before everyone is rewound.
+  seconds: 15

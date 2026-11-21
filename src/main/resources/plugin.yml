@@ -1,0 +1,30 @@
+name: MegaOrbitals
+version: 1.2.0
+main: dev.megaorbitals.MegaOrbitals
+api-version: '26.1'
+description: 302 overpowered orbital strike cannons.
+commands:
+  orbital:
+    description: Fire an orbital cannon at the block you are looking at.
+    usage: /orbital <cannon|list|info <cannon>|reload>
+    permission: megaorbitals.orbital
+  orbitalgive:
+    description: Give an orbital cannon item.
+    usage: /orbitalgive <cannon|all> [player] [amount]
+    permission: megaorbitals.give
+permissions:
+  megaorbitals.orbital:
+    description: Use /orbital
+    default: op
+  megaorbitals.give:
+    description: Use /orbitalgive
+    default: op
+  megaorbitals.use:
+    description: Fire cannon items by right-clicking them
+    default: true
+  megaorbitals.immune:
+    description: Never targeted by any cannon (when safety.respect-immunity is on)
+    default: false
+  megaorbitals.bypass.cooldown:
+    description: Ignore all cannon cooldowns
+    default: op

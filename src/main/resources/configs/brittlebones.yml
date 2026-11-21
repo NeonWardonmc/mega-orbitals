@@ -1,0 +1,29 @@
+# brittlebones.yml - MegaOrbitals cannon: Brittle Bones
+#   Curses everyone with brittle bones: fall
+#   damage is multiplied five times.
+# Fire with /orbital brittlebones   Give with /orbitalgive brittlebones
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lBrittle Bones'
+# Description lines on the item.
+lore:
+- 'Curses everyone with brittle bones: fall'
+- damage is multiplied five times.
+# Item type of the cannon item.
+item: BONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#E0E0D0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long the curse lasts.
+  seconds: 90
+  # Fall damage multiplier.
+  multiplier: 5.0

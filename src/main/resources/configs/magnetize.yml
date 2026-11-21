@@ -1,0 +1,29 @@
+# magnetize.yml - MegaOrbitals cannon: Magnetize
+#   Magnetises everyone, drags them into one
+#   tight clump, then slams them together.
+# Fire with /orbital magnetize   Give with /orbitalgive magnetize
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lMagnetize'
+# Description lines on the item.
+lore:
+- Magnetises everyone, drags them into one
+- tight clump, then slams them together.
+# Item type of the cannon item.
+item: LODESTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#8080A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # How long they are pulled.
+  seconds: 6
+  # Damage when they collide.
+  slam-damage: 10.0

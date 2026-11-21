@@ -1,0 +1,29 @@
+# scramble.yml - MegaOrbitals cannon: Scramble
+#   Everyone nearby swaps places
+#   with each other at random. Repeatedly.
+# Fire with /orbital scramble   Give with /orbitalgive scramble
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lScramble'
+# Description lines on the item.
+lore:
+- Everyone nearby swaps places
+- with each other at random. Repeatedly.
+# Item type of the cannon item.
+item: CHORUS_FRUIT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 40
+  # Number of swaps.
+  swaps: 5
+  # Seconds between swaps.
+  seconds-between: 2

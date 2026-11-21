@@ -1,0 +1,27 @@
+# drain.yml - MegaOrbitals cannon: Drain
+#   Drains every drop of water and lava in range.
+#   Oceans, lakes, lava pools: gone.
+# Fire with /orbital drain   Give with /orbitalgive drain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lDrain'
+# Description lines on the item.
+lore:
+- Drains every drop of water and lava in range.
+- 'Oceans, lakes, lava pools: gone.'
+# Item type of the cannon item.
+item: SPONGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#4080C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # How far down it drains.
+  depth: 30

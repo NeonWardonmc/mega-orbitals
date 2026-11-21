@@ -1,0 +1,31 @@
+# supernova.yml - MegaOrbitals cannon: Supernova
+#   A star explodes above the target,
+#   burning everything it touches.
+# Fire with /orbital supernova   Give with /orbitalgive supernova
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lSupernova'
+# Description lines on the item.
+lore:
+- A star explodes above the target,
+- burning everything it touches.
+# Item type of the cannon item.
+item: GLOWSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 50
+# Colour of the targeting ring.
+warning-color: '#FFFF80'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Final size of the blast sphere.
+  radius: 35
+  # Damage to anything the sphere touches.
+  damage: 15.0
+  # How long targets burn.
+  burn-seconds: 10
+  # Size of the glowing star core left behind.
+  core-radius: 4

@@ -1,0 +1,27 @@
+# watchtower.yml - MegaOrbitals cannon: Watchtower
+#   Raises a stone watchtower with a ladder
+#   and a lookout platform.
+# Fire with /orbital watchtower   Give with /orbitalgive watchtower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lWatchtower'
+# Description lines on the item.
+lore:
+- Raises a stone watchtower with a ladder
+- and a lookout platform.
+# Item type of the cannon item.
+item: LADDER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Tower height.
+  height: 20
+  # Put you on top when it's built.
+  teleport-shooter: true

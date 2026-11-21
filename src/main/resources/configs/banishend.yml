@@ -1,0 +1,25 @@
+# banishend.yml - MegaOrbitals cannon: Banish to the End
+#   Banishes every player nearby to the End,
+#   onto the obsidian platform. Say hi to the dragon.
+# Fire with /orbital banishend   Give with /orbitalgive banishend
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lBanish to the End'
+# Description lines on the item.
+lore:
+- Banishes every player nearby to the End,
+- onto the obsidian platform. Say hi to the dragon.
+# Item type of the cannon item.
+item: END_PORTAL_FRAME
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#E0E0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 15

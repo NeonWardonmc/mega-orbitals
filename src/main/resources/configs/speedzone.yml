@@ -1,0 +1,29 @@
+# speedzone.yml - MegaOrbitals cannon: Overdrive
+#   Support: everyone in range gets huge
+#   speed, jump and swim boosts.
+# Fire with /orbital speedzone   Give with /orbitalgive speedzone
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lOverdrive'
+# Description lines on the item.
+lore:
+- 'Support: everyone in range gets huge'
+- speed, jump and swim boosts.
+# Item type of the cannon item.
+item: SUGAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#80FFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 15
+  # How long the boost lasts.
+  seconds: 60
+  # Speed level.
+  speed-level: 3

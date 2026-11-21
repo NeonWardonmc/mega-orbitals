@@ -1,0 +1,31 @@
+# medusa.yml - MegaOrbitals cannon: Medusa's Gaze
+#   A gorgon's head hovers over the target.
+#   Anyone who looks at it turns to stone.
+# Fire with /orbital medusa   Give with /orbitalgive medusa
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lMedusa''s Gaze'
+# Description lines on the item.
+lore:
+- A gorgon's head hovers over the target.
+- Anyone who looks at it turns to stone.
+# Item type of the cannon item.
+item: CREEPER_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#30A030'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far away its gaze works.
+  range: 50
+  # How long the head stays.
+  seconds: 20
+  # How long you stay petrified.
+  stone-seconds: 5
+  # Damage each time you're petrified.
+  damage: 3.0

@@ -1,0 +1,27 @@
+# pumpkincurse.yml - MegaOrbitals cannon: Pumpkin Curse
+#   Jams a cursed pumpkin onto everyone's head.
+#   It won't come off. Their helmet falls off.
+# Fire with /orbital pumpkincurse   Give with /orbitalgive pumpkincurse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lPumpkin Curse'
+# Description lines on the item.
+lore:
+- Jams a cursed pumpkin onto everyone's head.
+- It won't come off. Their helmet falls off.
+# Item type of the cannon item.
+item: CARVED_PUMPKIN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF9020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Darkness for the victims.
+  darkness-seconds: 20

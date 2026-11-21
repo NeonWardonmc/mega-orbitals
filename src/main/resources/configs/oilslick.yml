@@ -1,0 +1,29 @@
+# oilslick.yml - MegaOrbitals cannon: Oil Slick
+#   Coats the ground in slick oil that slows
+#   everyone down... then sets it all alight.
+# Fire with /orbital oilslick   Give with /orbitalgive oilslick
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lOil Slick'
+# Description lines on the item.
+lore:
+- Coats the ground in slick oil that slows
+- everyone down... then sets it all alight.
+# Item type of the cannon item.
+item: BLACK_DYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#202020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the slick.
+  radius: 16
+  # Seconds before the oil ignites.
+  ignite-seconds: 8
+  # Fuel explosions when it ignites.
+  blasts: 8

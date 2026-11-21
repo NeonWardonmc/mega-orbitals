@@ -1,0 +1,31 @@
+# shrapnel.yml - MegaOrbitals cannon: Frag Shell
+#   A fragmentation shell. The blast sprays
+#   razor shrapnel flat out in every direction.
+# Fire with /orbital shrapnel   Give with /orbitalgive shrapnel
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lFrag Shell'
+# Description lines on the item.
+lore:
+- A fragmentation shell. The blast sprays
+- razor shrapnel flat out in every direction.
+# Item type of the cannon item.
+item: FLINT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A0A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of fragments.
+  fragments: 120
+  # Damage per fragment.
+  damage: 6.0
+  # Fragment speed.
+  speed: 3.0
+  # Power of the central blast.
+  power: 3.0

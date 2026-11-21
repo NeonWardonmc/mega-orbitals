@@ -1,0 +1,31 @@
+# swordrain.yml - MegaOrbitals cannon: Rain of Swords
+#   Giant swords rain point-first from the sky
+#   and stick in the ground where they land.
+# Fire with /orbital swordrain   Give with /orbitalgive swordrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lRain of Swords'
+# Description lines on the item.
+lore:
+- Giant swords rain point-first from the sky
+- and stick in the ground where they land.
+# Item type of the cannon item.
+item: DIAMOND_SWORD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 18
+  # Number of swords.
+  swords: 40
+  # Damage when a sword hits you.
+  damage: 12.0
+  # Share of swords aimed straight at targets (0-1).
+  aimed-fraction: 0.5

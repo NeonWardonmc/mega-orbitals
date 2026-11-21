@@ -1,0 +1,31 @@
+# sandworm.yml - MegaOrbitals cannon: Sandworm
+#   A colossal sandworm bursts out of the ground,
+#   diving in and out, devouring everything.
+# Fire with /orbital sandworm   Give with /orbitalgive sandworm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lSandworm'
+# Description lines on the item.
+lore:
+- A colossal sandworm bursts out of the ground,
+- diving in and out, devouring everything.
+# Item type of the cannon item.
+item: SANDSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#D0B060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Distance the worm travels.
+  length: 120
+  # Body segments.
+  segments: 14
+  # Body thickness.
+  size: 3.0
+  # Damage when it hits you.
+  damage: 14.0

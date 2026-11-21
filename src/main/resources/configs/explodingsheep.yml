@@ -1,0 +1,31 @@
+# explodingsheep.yml - MegaOrbitals cannon: Exploding Sheep
+#   A flock of adorable rainbow sheep...
+#   each one packed with explosives.
+# Fire with /orbital explodingsheep   Give with /orbitalgive explodingsheep
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lExploding Sheep'
+# Description lines on the item.
+lore:
+- A flock of adorable rainbow sheep...
+- each one packed with explosives.
+# Item type of the cannon item.
+item: PINK_WOOL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FF80C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of sheep.
+  sheep: 12
+  # Spread.
+  radius: 8.0
+  # Time before they blow.
+  fuse-seconds: 6
+  # Explosion power per sheep.
+  power: 3.0

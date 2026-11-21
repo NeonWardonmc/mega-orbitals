@@ -1,0 +1,31 @@
+# eggbombs.yml - MegaOrbitals cannon: Egg Bombs
+#   A barrage of eggs rains down on everyone.
+#   They're not normal eggs. They explode.
+# Fire with /orbital eggbombs   Give with /orbitalgive eggbombs
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lEgg Bombs'
+# Description lines on the item.
+lore:
+- A barrage of eggs rains down on everyone.
+- They're not normal eggs. They explode.
+# Item type of the cannon item.
+item: EGG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FFF0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Number of volleys.
+  volleys: 6
+  # Eggs per target per volley.
+  eggs-per-target: 3
+  # Explosion power per egg.
+  power: 1.6

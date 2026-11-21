@@ -1,0 +1,31 @@
+# lighthouse.yml - MegaOrbitals cannon: Death Lighthouse
+#   A searing beam sweeps round at head height,
+#   blinding and burning anyone it passes.
+# Fire with /orbital lighthouse   Give with /orbitalgive lighthouse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lDeath Lighthouse'
+# Description lines on the item.
+lore:
+- A searing beam sweeps round at head height,
+- blinding and burning anyone it passes.
+# Item type of the cannon item.
+item: SEA_LANTERN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFFF80'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the beam.
+  range: 40.0
+  # How long it sweeps.
+  seconds: 20
+  # Seconds per full turn.
+  rotation-seconds: 4
+  # Damage when the beam passes you.
+  damage: 5.0

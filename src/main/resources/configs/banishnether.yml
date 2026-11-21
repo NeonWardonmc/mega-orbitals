@@ -1,0 +1,25 @@
+# banishnether.yml - MegaOrbitals cannon: Banish to the Nether
+#   Banishes every player nearby to the
+#   matching spot in the Nether.
+# Fire with /orbital banishnether   Give with /orbitalgive banishnether
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lBanish to the Nether'
+# Description lines on the item.
+lore:
+- Banishes every player nearby to the
+- matching spot in the Nether.
+# Item type of the cannon item.
+item: NETHERRACK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#A02010'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 15

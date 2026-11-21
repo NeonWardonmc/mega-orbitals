@@ -1,0 +1,31 @@
+# diamondrain.yml - MegaOrbitals cannon: Diamond Rain
+#   Crushing blocks of diamond fall from the sky.
+#   They shatter on impact. Nobody gets rich.
+# Fire with /orbital diamondrain   Give with /orbitalgive diamondrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lDiamond Rain'
+# Description lines on the item.
+lore:
+- Crushing blocks of diamond fall from the sky.
+- They shatter on impact. Nobody gets rich.
+# Item type of the cannon item.
+item: DIAMOND_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 15
+  # Number of diamond blocks.
+  blocks: 80
+  # Damage per block of fall height.
+  damage-per-block-fallen: 2.0
+  # Damage cap per hit.
+  max-damage: 40

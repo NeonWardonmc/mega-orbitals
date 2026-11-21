@@ -1,0 +1,31 @@
+# teslatower.yml - MegaOrbitals cannon: Tesla Tower
+#   Builds a copper Tesla tower that zaps the
+#   nearest target with lightning every second.
+# Fire with /orbital teslatower   Give with /orbitalgive teslatower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lTesla Tower'
+# Description lines on the item.
+lore:
+- Builds a copper Tesla tower that zaps the
+- nearest target with lightning every second.
+# Item type of the cannon item.
+item: COPPER_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E08040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Tower height.
+  height: 7
+  # Zap range.
+  range: 22.0
+  # How long the tower is powered.
+  seconds: 60
+  # Damage per zap.
+  damage: 6.0

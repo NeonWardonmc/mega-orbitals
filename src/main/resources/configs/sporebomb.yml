@@ -1,0 +1,29 @@
+# sporebomb.yml - MegaOrbitals cannon: Spore Bomb
+#   Giant mushrooms burst out of the ground
+#   and the air fills with toxic spores.
+# Fire with /orbital sporebomb   Give with /orbitalgive sporebomb
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lSpore Bomb'
+# Description lines on the item.
+lore:
+- Giant mushrooms burst out of the ground
+- and the air fills with toxic spores.
+# Item type of the cannon item.
+item: RED_MUSHROOM
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#A04080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Giant mushrooms to grow.
+  mushrooms: 15
+  # How long the spores linger.
+  spore-seconds: 20

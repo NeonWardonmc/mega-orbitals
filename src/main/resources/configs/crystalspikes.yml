@@ -1,0 +1,29 @@
+# crystalspikes.yml - MegaOrbitals cannon: Crystal Eruption
+#   Rings of razor-sharp amethyst crystals
+#   erupt outward from the impact.
+# Fire with /orbital crystalspikes   Give with /orbitalgive crystalspikes
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lCrystal Eruption'
+# Description lines on the item.
+lore:
+- Rings of razor-sharp amethyst crystals
+- erupt outward from the impact.
+# Item type of the cannon item.
+item: AMETHYST_SHARD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the crystal rings spread.
+  radius: 20
+  # Damage when a ring hits you.
+  damage: 7.0
+  # Crystals shatter after this long (0 = stay).
+  vanish-seconds: 10

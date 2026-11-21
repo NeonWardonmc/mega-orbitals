@@ -1,0 +1,31 @@
+# anvilrain.yml - MegaOrbitals cannon: Anvil Hunters
+#   Anvils drop straight onto every target
+#   in range. Again. And again.
+# Fire with /orbital anvilrain   Give with /orbitalgive anvilrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lAnvil Hunters'
+# Description lines on the item.
+lore:
+- Anvils drop straight onto every target
+- in range. Again. And again.
+# Item type of the cannon item.
+item: ANVIL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Number of volleys.
+  volleys: 6
+  # How high above each target the anvil drops from.
+  drop-height: 15
+  # Leave the anvils behind.
+  leave-anvils: false

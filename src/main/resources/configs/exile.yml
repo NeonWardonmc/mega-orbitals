@@ -1,0 +1,31 @@
+# exile.yml - MegaOrbitals cannon: Exile
+#   Banishes everyone nearby to a random spot
+#   thousands of blocks away.
+# Fire with /orbital exile   Give with /orbitalgive exile
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lExile'
+# Description lines on the item.
+lore:
+- Banishes everyone nearby to a random spot
+- thousands of blocks away.
+# Item type of the cannon item.
+item: END_PORTAL_FRAME
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#6020A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Minimum distance they are sent.
+  min-distance: 2000
+  # Maximum distance they are sent.
+  max-distance: 5000
+  # Only exile players.
+  players-only: true

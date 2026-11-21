@@ -1,0 +1,31 @@
+# lasercutter.yml - MegaOrbitals cannon: Laser Cutter
+#   A razor-thin orbital laser slices the world
+#   in half along your line of sight.
+# Fire with /orbital lasercutter   Give with /orbitalgive lasercutter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lLaser Cutter'
+# Description lines on the item.
+lore:
+- A razor-thin orbital laser slices the world
+- in half along your line of sight.
+# Item type of the cannon item.
+item: SHEARS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF2020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the cut.
+  length: 80
+  # How deep the cut goes.
+  depth: 40
+  # How high above the target it cuts.
+  height: 25
+  # Damage to anything caught in the beam.
+  damage: 20.0

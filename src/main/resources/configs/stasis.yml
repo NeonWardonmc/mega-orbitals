@@ -1,0 +1,27 @@
+# stasis.yml - MegaOrbitals cannon: Stasis Field
+#   Freezes time. Everyone nearby is locked
+#   in place and can't move an inch.
+# Fire with /orbital stasis   Give with /orbitalgive stasis
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lStasis Field'
+# Description lines on the item.
+lore:
+- Freezes time. Everyone nearby is locked
+- in place and can't move an inch.
+# Item type of the cannon item.
+item: CLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#80FFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long time is frozen.
+  seconds: 10

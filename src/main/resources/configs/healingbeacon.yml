@@ -1,0 +1,27 @@
+# healingbeacon.yml - MegaOrbitals cannon: Healing Beacon
+#   A support strike: heals every player in
+#   range, cleanses debuffs and buffs them.
+# Fire with /orbital healingbeacon   Give with /orbitalgive healingbeacon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lHealing Beacon'
+# Description lines on the item.
+lore:
+- 'A support strike: heals every player in'
+- range, cleanses debuffs and buffs them.
+# Item type of the cannon item.
+item: GOLDEN_APPLE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FF80C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long the buffs last.
+  buff-seconds: 60

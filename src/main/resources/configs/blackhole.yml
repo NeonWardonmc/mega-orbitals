@@ -1,0 +1,35 @@
+# blackhole.yml - MegaOrbitals cannon: Black Hole
+#   Opens a black hole that pulls in
+#   players, mobs and the ground itself.
+# Fire with /orbital blackhole   Give with /orbitalgive blackhole
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&0&lBlack Hole'
+# Description lines on the item.
+lore:
+- Opens a black hole that pulls in
+- players, mobs and the ground itself.
+# Item type of the cannon item.
+item: OBSIDIAN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#300040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Pull range.
+  radius: 30
+  # How long the black hole lasts.
+  seconds: 12
+  # Pull strength.
+  pull: 0.6
+  # Damage every half second at the core.
+  core-damage: 8.0
+  # Ground blocks ripped up each tick.
+  blocks-per-tick: 6
+  # Power of the final collapse.
+  collapse-power: 10.0

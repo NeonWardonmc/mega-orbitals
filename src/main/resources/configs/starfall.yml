@@ -1,0 +1,31 @@
+# starfall.yml - MegaOrbitals cannon: Starfall
+#   Shooting stars streak down all over the area,
+#   each leaving a small glowing crater.
+# Fire with /orbital starfall   Give with /orbitalgive starfall
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lStarfall'
+# Description lines on the item.
+lore:
+- Shooting stars streak down all over the area,
+- each leaving a small glowing crater.
+# Item type of the cannon item.
+item: NETHER_STAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FFF080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 30
+  # How long it lasts.
+  seconds: 15
+  # Stars each second.
+  stars-per-second: 4
+  # Impact power of each star.
+  power: 1.8

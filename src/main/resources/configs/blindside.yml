@@ -1,0 +1,29 @@
+# blindside.yml - MegaOrbitals cannon: Blindside
+#   Darkness, blindness and terrifying fake
+#   sounds all around. Then the real attack.
+# Fire with /orbital blindside   Give with /orbitalgive blindside
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&0&lBlindside'
+# Description lines on the item.
+lore:
+- Darkness, blindness and terrifying fake
+- sounds all around. Then the real attack.
+# Item type of the cannon item.
+item: INK_SAC
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#101010'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # How long it lasts.
+  seconds: 20
+  # End with a real explosion on each player.
+  final-strike: true

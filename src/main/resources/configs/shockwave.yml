@@ -1,0 +1,29 @@
+# shockwave.yml - MegaOrbitals cannon: Shockwave
+#   An expanding ring of force throws
+#   everything back and shatters glass.
+# Fire with /orbital shockwave   Give with /orbitalgive shockwave
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lShockwave'
+# Description lines on the item.
+lore:
+- An expanding ring of force throws
+- everything back and shatters glass.
+# Item type of the cannon item.
+item: GOAT_HORN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FFE060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the wave travels.
+  radius: 45
+  # Damage when the wave hits you.
+  damage: 10.0
+  # How hard the wave throws you.
+  knockback: 2.5

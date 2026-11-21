@@ -1,0 +1,33 @@
+# raid.yml - MegaOrbitals cannon: Raiding Party
+#   A full illager raid appears: pillagers,
+#   vindicators, evokers and ravagers.
+# Fire with /orbital raid   Give with /orbitalgive raid
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lRaiding Party'
+# Description lines on the item.
+lore:
+- 'A full illager raid appears: pillagers,'
+- vindicators, evokers and ravagers.
+# Item type of the cannon item.
+item: OMINOUS_BOTTLE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#505050'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Pillagers.
+  pillagers: 8
+  # Vindicators.
+  vindicators: 5
+  # Evokers.
+  evokers: 2
+  # Ravagers (each with a rider).
+  ravagers: 2
+  # Spread.
+  radius: 12

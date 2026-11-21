@@ -1,0 +1,31 @@
+# ioncannon.yml - MegaOrbitals cannon: Ion Cannon
+#   Charges with converging rings of energy,
+#   then detonates in three expanding waves.
+# Fire with /orbital ioncannon   Give with /orbitalgive ioncannon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lIon Cannon'
+# Description lines on the item.
+lore:
+- Charges with converging rings of energy,
+- then detonates in three expanding waves.
+# Item type of the cannon item.
+item: BEACON
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 100
+# Colour of the targeting ring.
+warning-color: '#2080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the charge-up and outer wave.
+  radius: 28
+  # Power of the central blast.
+  core-power: 10.0
+  # Power of the wave blasts.
+  wave-power: 5.0
+  # How hard everyone is thrown upward.
+  launch: 2.5

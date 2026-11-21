@@ -1,0 +1,29 @@
+# skydrop.yml - MegaOrbitals cannon: Sky Drop
+#   Teleports everyone nearby high into the sky.
+#   Hope you packed a water bucket.
+# Fire with /orbital skydrop   Give with /orbitalgive skydrop
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lSky Drop'
+# Description lines on the item.
+lore:
+- Teleports everyone nearby high into the sky.
+- Hope you packed a water bucket.
+# Item type of the cannon item.
+item: FEATHER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#80C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How far up they go.
+  height: 200
+  # Stop elytra from saving them.
+  disable-elytra: true

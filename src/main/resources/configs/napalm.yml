@@ -1,0 +1,29 @@
+# napalm.yml - MegaOrbitals cannon: Napalm
+#   A ring of sticky fire rolls outward.
+#   Once it's on you, you burn for a long time.
+# Fire with /orbital napalm   Give with /orbitalgive napalm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lNapalm'
+# Description lines on the item.
+lore:
+- A ring of sticky fire rolls outward.
+- Once it's on you, you burn for a long time.
+# Item type of the cannon item.
+item: FIRE_CHARGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#FF4000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the fire spreads.
+  radius: 28
+  # Damage when the fire wave hits you.
+  damage: 4.0
+  # How long you burn.
+  burn-seconds: 25

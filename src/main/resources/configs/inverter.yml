@@ -1,0 +1,27 @@
+# inverter.yml - MegaOrbitals cannon: Inverter
+#   Inverts reality in a sphere: air becomes
+#   solid and solid becomes air.
+# Fire with /orbital inverter   Give with /orbitalgive inverter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lInverter'
+# Description lines on the item.
+lore:
+- 'Inverts reality in a sphere: air becomes'
+- solid and solid becomes air.
+# Item type of the cannon item.
+item: OBSERVER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#8040C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Sphere radius.
+  radius: 9
+  # What empty space turns into.
+  fill: STONE

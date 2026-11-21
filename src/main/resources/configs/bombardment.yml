@@ -1,0 +1,31 @@
+# bombardment.yml - MegaOrbitals cannon: Artillery Bombardment
+#   Sustained artillery fire. Shells whistle in
+#   and land randomly across the area.
+# Fire with /orbital bombardment   Give with /orbitalgive bombardment
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lArtillery Bombardment'
+# Description lines on the item.
+lore:
+- Sustained artillery fire. Shells whistle in
+- and land randomly across the area.
+# Item type of the cannon item.
+item: BLAST_FURNACE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF9000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered by shells.
+  radius: 35
+  # How long the bombardment lasts.
+  seconds: 30
+  # Shells each second.
+  shells-per-second: 2
+  # Power of each shell.
+  power: 3.5

@@ -1,0 +1,29 @@
+# doppelganger.yml - MegaOrbitals cannon: Doppelganger
+#   Every player nearby is hunted by an evil
+#   copy of themselves, wearing their gear.
+# Fire with /orbital doppelganger   Give with /orbitalgive doppelganger
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lDoppelganger'
+# Description lines on the item.
+lore:
+- Every player nearby is hunted by an evil
+- copy of themselves, wearing their gear.
+# Item type of the cannon item.
+item: ARMOR_STAND
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#602080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Copies per player.
+  copies-each: 2
+  # Health of each copy.
+  health: 40.0

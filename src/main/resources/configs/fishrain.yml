@@ -1,0 +1,31 @@
+# fishrain.yml - MegaOrbitals cannon: Fish Rain
+#   It's raining fish. Most are harmless...
+#   the pufferfish are not.
+# Fire with /orbital fishrain   Give with /orbitalgive fishrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lFish Rain'
+# Description lines on the item.
+lore:
+- It's raining fish. Most are harmless...
+- the pufferfish are not.
+# Item type of the cannon item.
+item: PUFFERFISH
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#40A0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 15
+  # Number of fish.
+  fish: 60
+  # Share of fish that are pufferfish.
+  pufferfish-chance: 0.35
+  # Fish vanish after this long.
+  vanish-seconds: 30

@@ -1,0 +1,29 @@
+# disco.yml - MegaOrbitals cannon: Orbital Rave
+#   A flashing dance floor, music and lasers.
+#   Everyone nearby is forced to dance.
+# Fire with /orbital disco   Give with /orbitalgive disco
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lOrbital Rave'
+# Description lines on the item.
+lore:
+- A flashing dance floor, music and lasers.
+- Everyone nearby is forced to dance.
+# Item type of the cannon item.
+item: MUSIC_DISC_PIGSTEP
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FF40FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Dance floor radius.
+  radius: 10
+  # Length of the party.
+  seconds: 30
+  # Sound that plays.
+  music: music_disc.pigstep

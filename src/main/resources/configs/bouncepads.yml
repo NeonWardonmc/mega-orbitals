@@ -1,0 +1,29 @@
+# bouncepads.yml - MegaOrbitals cannon: Trampoline
+#   The ground becomes a giant trampoline
+#   that keeps launching everyone sky-high.
+# Fire with /orbital bouncepads   Give with /orbitalgive bouncepads
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lTrampoline'
+# Description lines on the item.
+lore:
+- The ground becomes a giant trampoline
+- that keeps launching everyone sky-high.
+# Item type of the cannon item.
+item: SLIME_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60FF60'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the trampoline.
+  radius: 15
+  # How long the launching lasts.
+  seconds: 20
+  # Launch strength.
+  launch: 2.2

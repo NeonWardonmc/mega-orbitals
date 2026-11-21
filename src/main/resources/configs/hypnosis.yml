@@ -1,0 +1,27 @@
+# hypnosis.yml - MegaOrbitals cannon: Hypnosis
+#   A hypnotic spiral forces everyone nearby
+#   to stare at it. You can't look away.
+# Fire with /orbital hypnosis   Give with /orbitalgive hypnosis
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lHypnosis'
+# Description lines on the item.
+lore:
+- A hypnotic spiral forces everyone nearby
+- to stare at it. You can't look away.
+# Item type of the cannon item.
+item: ENDER_EYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#A040C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # How long they are hypnotised.
+  seconds: 10

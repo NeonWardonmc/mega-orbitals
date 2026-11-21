@@ -1,0 +1,31 @@
+# personalorbit.yml - MegaOrbitals cannon: Personal Orbit
+#   Burning rocks orbit around YOU, scorching
+#   anyone who gets close. Follows you everywhere.
+# Fire with /orbital personalorbit   Give with /orbitalgive personalorbit
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lPersonal Orbit'
+# Description lines on the item.
+lore:
+- Burning rocks orbit around YOU, scorching
+- anyone who gets close. Follows you everywhere.
+# Item type of the cannon item.
+item: MAGMA_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FF8020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of orbiting rocks.
+  rocks: 5
+  # Orbit size.
+  radius: 3.0
+  # How long they orbit you.
+  seconds: 45
+  # Damage per hit.
+  damage: 5.0

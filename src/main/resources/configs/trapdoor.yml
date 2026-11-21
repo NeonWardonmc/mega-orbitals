@@ -1,0 +1,27 @@
+# trapdoor.yml - MegaOrbitals cannon: Trapdoor
+#   The floor vanishes under every target,
+#   dropping them down a deep shaft.
+# Fire with /orbital trapdoor   Give with /orbitalgive trapdoor
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lTrapdoor'
+# Description lines on the item.
+lore:
+- The floor vanishes under every target,
+- dropping them down a deep shaft.
+# Item type of the cannon item.
+item: IRON_TRAPDOOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#404040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Depth of each shaft.
+  depth: 35

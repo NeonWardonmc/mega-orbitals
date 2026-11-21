@@ -1,0 +1,31 @@
+# laser.yml - MegaOrbitals cannon: Steerable Laser
+#   An orbital laser that follows
+#   wherever you look. Burns everything.
+# Fire with /orbital laser   Give with /orbitalgive laser
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lSteerable Laser'
+# Description lines on the item.
+lore:
+- An orbital laser that follows
+- wherever you look. Burns everything.
+# Item type of the cannon item.
+item: END_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF0000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long you can steer the laser.
+  seconds: 12
+  # Damage every half second.
+  damage: 6.0
+  # Width of the burn area.
+  beam-radius: 2.5
+  # Melt blocks where the beam hits.
+  melt: true

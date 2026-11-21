@@ -1,0 +1,27 @@
+# infestation.yml - MegaOrbitals cannon: Infestation
+#   Infests the stone underground with silverfish.
+#   Every block you mine might bite back.
+# Fire with /orbital infestation   Give with /orbitalgive infestation
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lInfestation'
+# Description lines on the item.
+lore:
+- Infests the stone underground with silverfish.
+- Every block you mine might bite back.
+# Item type of the cannon item.
+item: INFESTED_STONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the infested area.
+  radius: 16
+  # Silverfish released right away.
+  silverfish: 12

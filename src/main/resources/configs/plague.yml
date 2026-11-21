@@ -1,0 +1,33 @@
+# plague.yml - MegaOrbitals cannon: Plague
+#   A contagious sickness. The infected
+#   spread it to anyone who gets close.
+# Fire with /orbital plague   Give with /orbitalgive plague
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lPlague'
+# Description lines on the item.
+lore:
+- A contagious sickness. The infected
+- spread it to anyone who gets close.
+# Item type of the cannon item.
+item: FERMENTED_SPIDER_EYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40A020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Initial infection radius.
+  radius: 15
+  # How close you must be to catch it.
+  spread-distance: 3.5
+  # How long each infection lasts.
+  sick-seconds: 60
+  # How long the plague keeps spreading.
+  outbreak-seconds: 180
+  # Damage every second while sick.
+  damage: 1.0

@@ -1,0 +1,31 @@
+# electricfence.yml - MegaOrbitals cannon: Electric Fence
+#   A crackling ring of electricity. Anyone who
+#   touches it is zapped and thrown back in.
+# Fire with /orbital electricfence   Give with /orbitalgive electricfence
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lElectric Fence'
+# Description lines on the item.
+lore:
+- A crackling ring of electricity. Anyone who
+- touches it is zapped and thrown back in.
+# Item type of the cannon item.
+item: LIGHTNING_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#F0F060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the fence.
+  radius: 16.0
+  # How long the fence stays on.
+  seconds: 45
+  # Damage per zap.
+  damage: 6.0
+  # Place lightning rod posts around the ring.
+  place-rods: true

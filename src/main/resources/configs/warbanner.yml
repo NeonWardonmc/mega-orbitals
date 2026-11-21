@@ -1,0 +1,29 @@
+# warbanner.yml - MegaOrbitals cannon: War Banner
+#   Plants a war banner. You and your squad
+#   fight stronger while standing near it.
+# Fire with /orbital warbanner   Give with /orbitalgive warbanner
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lWar Banner'
+# Description lines on the item.
+lore:
+- Plants a war banner. You and your squad
+- fight stronger while standing near it.
+# Item type of the cannon item.
+item: RED_BANNER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#C02020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Players this close to you when you fire count as your squad.
+  squad-radius: 10
+  # How close to the banner you must stay.
+  aura-radius: 14
+  # How long the banner stands.
+  seconds: 120

@@ -1,0 +1,29 @@
+# executioner.yml - MegaOrbitals cannon: Executioner
+#   A guillotine falls on every target. Anyone below
+#   40% health is executed instantly.
+# Fire with /orbital executioner   Give with /orbitalgive executioner
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lExecutioner'
+# Description lines on the item.
+lore:
+- A guillotine falls on every target. Anyone below
+- 40% health is executed instantly.
+# Item type of the cannon item.
+item: IRON_AXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#800000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Health fraction below which targets are executed.
+  threshold: 0.4
+  # Damage to everyone else.
+  damage: 6.0

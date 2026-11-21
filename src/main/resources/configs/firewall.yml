@@ -1,0 +1,31 @@
+# firewall.yml - MegaOrbitals cannon: Ring of Fire
+#   A ring of eternal fire seals off the area.
+#   An arena nobody leaves without burning.
+# Fire with /orbital firewall   Give with /orbitalgive firewall
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lRing of Fire'
+# Description lines on the item.
+lore:
+- A ring of eternal fire seals off the area.
+- An arena nobody leaves without burning.
+# Item type of the cannon item.
+item: NETHERRACK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF6000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the ring.
+  radius: 16.0
+  # Width of the burning ring.
+  width: 2
+  # How long the flame wall burns hot.
+  seconds: 60
+  # How long you burn after crossing.
+  burn-seconds: 8

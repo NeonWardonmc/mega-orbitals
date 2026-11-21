@@ -1,0 +1,31 @@
+# tether.yml - MegaOrbitals cannon: Tether
+#   Chains every target to where they stand.
+#   Wander too far and you're yanked back.
+# Fire with /orbital tether   Give with /orbitalgive tether
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lTether'
+# Description lines on the item.
+lore:
+- Chains every target to where they stand.
+- Wander too far and you're yanked back.
+# Item type of the cannon item.
+item: LEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#A0A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How far they can move.
+  leash-length: 5.0
+  # How long the tether lasts.
+  seconds: 25
+  # Damage each time you're yanked back.
+  yank-damage: 1.0

@@ -1,0 +1,31 @@
+# firenado.yml - MegaOrbitals cannon: Firenado
+#   A spinning pillar of fire that drags
+#   everyone into its burning core.
+# Fire with /orbital firenado   Give with /orbitalgive firenado
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lFirenado'
+# Description lines on the item.
+lore:
+- A spinning pillar of fire that drags
+- everyone into its burning core.
+# Item type of the cannon item.
+item: BLAZE_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF6000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long it burns.
+  seconds: 15
+  # How far it pulls.
+  pull-radius: 10.0
+  # Damage every second inside it.
+  damage: 3.0
+  # Height of the fire column.
+  height: 25

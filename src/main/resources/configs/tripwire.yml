@@ -1,0 +1,29 @@
+# tripwire.yml - MegaOrbitals cannon: Orbital Tripwire
+#   An invisible alarm zone. Anyone who walks in
+#   glows and you get pinged with their name.
+# Fire with /orbital tripwire   Give with /orbitalgive tripwire
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lOrbital Tripwire'
+# Description lines on the item.
+lore:
+- An invisible alarm zone. Anyone who walks in
+- glows and you get pinged with their name.
+# Item type of the cannon item.
+item: TRIPWIRE_HOOK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#A0A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the alarm zone.
+  radius: 25
+  # How long the alarm stays armed.
+  minutes: 10
+  # Also hit intruders with lightning.
+  strike-intruders: false

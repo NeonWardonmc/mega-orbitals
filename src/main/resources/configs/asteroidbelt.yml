@@ -1,0 +1,31 @@
+# asteroidbelt.yml - MegaOrbitals cannon: Asteroid Belt
+#   A long shower of burning rocks
+#   hammers the whole area.
+# Fire with /orbital asteroidbelt   Give with /orbitalgive asteroidbelt
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lAsteroid Belt'
+# Description lines on the item.
+lore:
+- A long shower of burning rocks
+- hammers the whole area.
+# Item type of the cannon item.
+item: COBBLED_DEEPSLATE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C08040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 40
+  # How long the shower lasts.
+  seconds: 15
+  # Asteroids each second.
+  rocks-per-second: 3
+  # Explosion power of each asteroid.
+  power: 4.0

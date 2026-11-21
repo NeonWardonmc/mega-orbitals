@@ -1,0 +1,29 @@
+# sniper.yml - MegaOrbitals cannon: Orbital Sniper
+#   A red laser sight locks onto the nearest player.
+#   Three seconds later: one devastating shot.
+# Fire with /orbital sniper   Give with /orbitalgive sniper
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lOrbital Sniper'
+# Description lines on the item.
+lore:
+- A red laser sight locks onto the nearest player.
+- 'Three seconds later: one devastating shot.'
+# Item type of the cannon item.
+item: CROSSBOW
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FF0000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to find someone.
+  range: 50
+  # How long the laser sight tracks before firing.
+  aim-seconds: 3
+  # Damage of the shot.
+  damage: 40.0

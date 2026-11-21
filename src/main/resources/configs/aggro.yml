@@ -1,0 +1,27 @@
+# aggro.yml - MegaOrbitals cannon: Aggro Beacon
+#   Every hostile mob for miles hunts down
+#   the player nearest the target. Enraged.
+# Fire with /orbital aggro   Give with /orbitalgive aggro
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lAggro Beacon'
+# Description lines on the item.
+lore:
+- Every hostile mob for miles hunts down
+- the player nearest the target. Enraged.
+# Item type of the cannon item.
+item: ZOMBIE_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#A02020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far away mobs are called from.
+  mob-radius: 96
+  # How far from the target to find the victim.
+  target-radius: 30

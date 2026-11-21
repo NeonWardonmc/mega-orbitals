@@ -1,0 +1,31 @@
+# enderinvasion.yml - MegaOrbitals cannon: Ender Invasion
+#   Angry endermen invade, and everyone
+#   nearby keeps randomly teleporting.
+# Fire with /orbital enderinvasion   Give with /orbitalgive enderinvasion
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lEnder Invasion'
+# Description lines on the item.
+lore:
+- Angry endermen invade, and everyone
+- nearby keeps randomly teleporting.
+# Item type of the cannon item.
+item: ENDER_PEARL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#A040FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of endermen.
+  endermen: 10
+  # Range.
+  radius: 20
+  # How long the random teleports last.
+  seconds: 15
+  # How far each random teleport goes.
+  teleport-range: 16

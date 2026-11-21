@@ -1,0 +1,27 @@
+# smokescreen.yml - MegaOrbitals cannon: Smoke Screen
+#   A thick smoke cloud. Everyone inside is blind,
+#   except you: you turn invisible in it.
+# Fire with /orbital smokescreen   Give with /orbitalgive smokescreen
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lSmoke Screen'
+# Description lines on the item.
+lore:
+- A thick smoke cloud. Everyone inside is blind,
+- 'except you: you turn invisible in it.'
+# Item type of the cannon item.
+item: GRAY_DYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#808080'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the cloud.
+  radius: 15
+  # How long the smoke lasts.
+  seconds: 30

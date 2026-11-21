@@ -1,0 +1,31 @@
+# geomancer.yml - MegaOrbitals cannon: Geomancer
+#   Stone pillars burst out of the ground at
+#   random, catapulting anyone on top.
+# Fire with /orbital geomancer   Give with /orbitalgive geomancer
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lGeomancer'
+# Description lines on the item.
+lore:
+- Stone pillars burst out of the ground at
+- random, catapulting anyone on top.
+# Item type of the cannon item.
+item: DEEPSLATE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#808080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area of the pillar field.
+  radius: 20
+  # Number of pillars.
+  pillars: 40
+  # Height of each pillar.
+  pillar-height: 6
+  # Launch strength.
+  launch: 2.4

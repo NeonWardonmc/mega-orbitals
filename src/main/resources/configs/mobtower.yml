@@ -1,0 +1,27 @@
+# mobtower.yml - MegaOrbitals cannon: Mob Totems
+#   Towers of mobs riding mobs riding mobs:
+#   ravager, spider, zombie, skeleton, creeper...
+# Fire with /orbital mobtower   Give with /orbitalgive mobtower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lMob Totems'
+# Description lines on the item.
+lore:
+- 'Towers of mobs riding mobs riding mobs:'
+- ravager, spider, zombie, skeleton, creeper...
+# Item type of the cannon item.
+item: ZOMBIE_SPAWN_EGG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40A040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of mob towers.
+  towers: 3
+  # Spread.
+  radius: 8.0

@@ -1,0 +1,27 @@
+# thornsaura.yml - MegaOrbitals cannon: Thorns Aura
+#   Self-buff: anyone who hurts you takes
+#   even more damage back.
+# Fire with /orbital thornsaura   Give with /orbitalgive thornsaura
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lThorns Aura'
+# Description lines on the item.
+lore:
+- 'Self-buff: anyone who hurts you takes'
+- even more damage back.
+# Item type of the cannon item.
+item: CACTUS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#40A040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the aura lasts.
+  seconds: 60
+  # Damage reflected (1.5 = 150%).
+  reflect: 1.5

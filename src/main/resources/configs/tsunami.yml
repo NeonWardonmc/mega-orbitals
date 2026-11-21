@@ -1,0 +1,31 @@
+# tsunami.yml - MegaOrbitals cannon: Tsunami
+#   A wall of water surges outward
+#   and sweeps everything away.
+# Fire with /orbital tsunami   Give with /orbitalgive tsunami
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lTsunami'
+# Description lines on the item.
+lore:
+- A wall of water surges outward
+- and sweeps everything away.
+# Item type of the cannon item.
+item: HEART_OF_THE_SEA
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#2060FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the wave travels.
+  radius: 40
+  # Height of the water wall.
+  wave-height: 4
+  # How hard the wave pushes.
+  push: 1.4
+  # Leave the water behind instead of draining it.
+  leave-water: false

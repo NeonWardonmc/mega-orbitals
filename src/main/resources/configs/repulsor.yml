@@ -1,0 +1,31 @@
+# repulsor.yml - MegaOrbitals cannon: Repulsor Field
+#   A glowing no-go zone. Anyone who
+#   tries to get in is thrown back out.
+# Fire with /orbital repulsor   Give with /orbitalgive repulsor
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lRepulsor Field'
+# Description lines on the item.
+lore:
+- A glowing no-go zone. Anyone who
+- tries to get in is thrown back out.
+# Item type of the cannon item.
+item: SHIELD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#40C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the zone.
+  radius: 14.0
+  # How long the zone lasts.
+  seconds: 45
+  # How hard intruders are thrown.
+  push: 1.6
+  # The shooter can stand inside safely.
+  shooter-allowed: true

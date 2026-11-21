@@ -1,0 +1,29 @@
+# recon.yml - MegaOrbitals cannon: Recon Scan
+#   A recon satellite scans a huge area. Everyone
+#   glows, and you get their names and positions.
+# Fire with /orbital recon   Give with /orbitalgive recon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lRecon Scan'
+# Description lines on the item.
+lore:
+- A recon satellite scans a huge area. Everyone
+- glows, and you get their names and positions.
+# Item type of the cannon item.
+item: RECOVERY_COMPASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#40FF80'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Scan radius.
+  radius: 300
+  # How long they glow.
+  glow-seconds: 60
+  # Remove invisibility from anyone scanned.
+  reveal-invisible: true

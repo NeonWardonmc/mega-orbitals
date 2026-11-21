@@ -1,0 +1,31 @@
+# doomclock.yml - MegaOrbitals cannon: Doom Clock
+#   Plants a giant bomb with a
+#   countdown everyone can see.
+# Fire with /orbital doomclock   Give with /orbitalgive doomclock
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lDoom Clock'
+# Description lines on the item.
+lore:
+- Plants a giant bomb with a
+- countdown everyone can see.
+# Item type of the cannon item.
+item: CLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#AA0000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Countdown length.
+  seconds: 60
+  # Power of the main blast.
+  power: 25.0
+  # Extra blasts in a ring around it.
+  ring-blasts: 10
+  # Radius of the ring blasts.
+  ring-radius: 16.0

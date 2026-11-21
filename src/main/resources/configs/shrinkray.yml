@@ -1,0 +1,29 @@
+# shrinkray.yml - MegaOrbitals cannon: Shrink Ray
+#   Shrinks everyone nearby to a quarter of
+#   their size. Tiny, slow and weak.
+# Fire with /orbital shrinkray   Give with /orbitalgive shrinkray
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lShrink Ray'
+# Description lines on the item.
+lore:
+- Shrinks everyone nearby to a quarter of
+- their size. Tiny, slow and weak.
+# Item type of the cannon item.
+item: POISONOUS_POTATO
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FF80FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long they stay small.
+  seconds: 60
+  # New size (1.0 = normal).
+  size: 0.25

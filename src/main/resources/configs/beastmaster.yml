@@ -1,0 +1,29 @@
+# beastmaster.yml - MegaOrbitals cannon: Beastmaster
+#   Every tameable animal nearby becomes yours:
+#   wolves, cats, parrots, horses. Plus new wolves.
+# Fire with /orbital beastmaster   Give with /orbitalgive beastmaster
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lBeastmaster'
+# Description lines on the item.
+lore:
+- 'Every tameable animal nearby becomes yours:'
+- wolves, cats, parrots, horses. Plus new wolves.
+# Item type of the cannon item.
+item: LEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C08040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Also take animals tamed by other players.
+  steal-from-others: true
+  # Extra wolves summoned for you.
+  bonus-wolves: 3

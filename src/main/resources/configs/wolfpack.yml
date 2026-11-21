@@ -1,0 +1,27 @@
+# wolfpack.yml - MegaOrbitals cannon: Wolf Pack
+#   A pack of armoured wolves loyal to you.
+#   They attack everyone else nearby.
+# Fire with /orbital wolfpack   Give with /orbitalgive wolfpack
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lWolf Pack'
+# Description lines on the item.
+lore:
+- A pack of armoured wolves loyal to you.
+- They attack everyone else nearby.
+# Item type of the cannon item.
+item: BONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A0A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of wolves.
+  wolves: 8
+  # How far they look for targets.
+  hunt-radius: 40

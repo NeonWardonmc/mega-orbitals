@@ -1,0 +1,27 @@
+# antimatter.yml - MegaOrbitals cannon: Antimatter
+#   Deletes a perfect sphere of the world.
+#   No explosion. No drops. Just gone.
+# Fire with /orbital antimatter   Give with /orbitalgive antimatter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lAntimatter'
+# Description lines on the item.
+lore:
+- Deletes a perfect sphere of the world.
+- No explosion. No drops. Just gone.
+# Item type of the cannon item.
+item: ENDER_EYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 60
+# Colour of the targeting ring.
+warning-color: '#8000FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the deleted sphere.
+  radius: 25
+  # Damage to anything inside.
+  damage: 1000.0

@@ -1,0 +1,29 @@
+# poisongas.yml - MegaOrbitals cannon: Gas Attack
+#   Toxic gas clouds that drift with the wind.
+#   Watch which way it blows.
+# Fire with /orbital poisongas   Give with /orbitalgive poisongas
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lGas Attack'
+# Description lines on the item.
+lore:
+- Toxic gas clouds that drift with the wind.
+- Watch which way it blows.
+# Item type of the cannon item.
+item: GREEN_DYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60A040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of gas clouds.
+  clouds: 10
+  # How long the gas lasts.
+  seconds: 40
+  # How fast the clouds drift.
+  wind-speed: 0.08

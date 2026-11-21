@@ -1,0 +1,33 @@
+# creeperswarm.yml - MegaOrbitals cannon: Creeper Swarm
+#   Charged creepers drop from orbit
+#   and hunt down the nearest player.
+# Fire with /orbital creeperswarm   Give with /orbitalgive creeperswarm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lCreeper Swarm'
+# Description lines on the item.
+lore:
+- Charged creepers drop from orbit
+- and hunt down the nearest player.
+# Item type of the cannon item.
+item: CREEPER_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#40FF40'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of creepers.
+  creepers: 14
+  # Spread of the drop.
+  radius: 10
+  # Spawn charged creepers.
+  charged: true
+  # Creeper fuse (vanilla is 30).
+  fuse-ticks: 20
+  # Creeper explosion size (vanilla is 3).
+  explosion-radius: 4

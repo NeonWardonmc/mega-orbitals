@@ -1,0 +1,31 @@
+# whitehole.yml - MegaOrbitals cannon: White Hole
+#   Pushes everything away from it,
+#   ripping up the ground and flinging it.
+# Fire with /orbital whitehole   Give with /orbitalgive whitehole
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lWhite Hole'
+# Description lines on the item.
+lore:
+- Pushes everything away from it,
+- ripping up the ground and flinging it.
+# Item type of the cannon item.
+item: QUARTZ_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#FFFFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Push range.
+  radius: 30
+  # How long it lasts.
+  seconds: 8
+  # Push strength.
+  push: 1.2
+  # Ground blocks flung each tick.
+  blocks-per-tick: 8

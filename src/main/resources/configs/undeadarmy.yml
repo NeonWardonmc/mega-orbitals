@@ -1,0 +1,29 @@
+# undeadarmy.yml - MegaOrbitals cannon: Undead Cavalry
+#   Skeleton horsemen and wither skeleton
+#   knights charge in.
+# Fire with /orbital undeadarmy   Give with /orbitalgive undeadarmy
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lUndead Cavalry'
+# Description lines on the item.
+lore:
+- Skeleton horsemen and wither skeleton
+- knights charge in.
+# Item type of the cannon item.
+item: SKELETON_HORSE_SPAWN_EGG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C0C0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Skeleton archers on horseback.
+  horsemen: 6
+  # Wither skeleton knights.
+  knights: 6
+  # Spread.
+  radius: 10

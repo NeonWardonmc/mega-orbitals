@@ -1,0 +1,31 @@
+# sirensong.yml - MegaOrbitals cannon: Siren Song
+#   An irresistible song lures everyone
+#   to the centre... where a bomb waits.
+# Fire with /orbital sirensong   Give with /orbitalgive sirensong
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lSiren Song'
+# Description lines on the item.
+lore:
+- An irresistible song lures everyone
+- to the centre... where a bomb waits.
+# Item type of the cannon item.
+item: NOTE_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#60D0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range of the song.
+  radius: 35
+  # How long they are lured.
+  seconds: 10
+  # How fast they walk in.
+  pull: 0.3
+  # Power of the bomb at the end.
+  power: 6.0

@@ -1,0 +1,29 @@
+# midas.yml - MegaOrbitals cannon: Midas Touch
+#   The ground turns to gold, and anything
+#   caught in it is frozen as a gold statue.
+# Fire with /orbital midas   Give with /orbitalgive midas
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lMidas Touch'
+# Description lines on the item.
+lore:
+- The ground turns to gold, and anything
+- caught in it is frozen as a gold statue.
+# Item type of the cannon item.
+item: GOLD_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FFD700'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Turn mobs into gold block statues.
+  statue-mobs: true
+  # Players are slowed (heavy with gold) for this long.
+  slow-seconds: 10

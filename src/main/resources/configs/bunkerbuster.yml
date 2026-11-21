@@ -1,0 +1,27 @@
+# bunkerbuster.yml - MegaOrbitals cannon: Bunker Buster
+#   A penetrator bomb that punches deep
+#   underground before it detonates.
+# Fire with /orbital bunkerbuster   Give with /orbitalgive bunkerbuster
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lBunker Buster'
+# Description lines on the item.
+lore:
+- A penetrator bomb that punches deep
+- underground before it detonates.
+# Item type of the cannon item.
+item: NETHERITE_INGOT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#404040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far underground it detonates.
+  depth: 25
+  # Explosion power.
+  power: 12.0

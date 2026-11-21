@@ -1,0 +1,29 @@
+# emp.yml - MegaOrbitals cannon: EMP
+#   Fries all redstone in range and locks
+#   elytra, pearls, rockets, shields and tridents.
+# Fire with /orbital emp   Give with /orbitalgive emp
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lEMP'
+# Description lines on the item.
+lore:
+- Fries all redstone in range and locks
+- elytra, pearls, rockets, shields and tridents.
+# Item type of the cannon item.
+item: REDSTONE_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FFFF40'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Pulse radius.
+  radius: 40
+  # How long gadgets are locked.
+  lockout-seconds: 30
+  # Destroy redstone components in range.
+  fry-redstone: true

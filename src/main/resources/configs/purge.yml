@@ -1,0 +1,27 @@
+# purge.yml - MegaOrbitals cannon: Purge
+#   A holy light that wipes every hostile
+#   mob in range off the map. Players are safe.
+# Fire with /orbital purge   Give with /orbitalgive purge
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lPurge'
+# Description lines on the item.
+lore:
+- A holy light that wipes every hostile
+- mob in range off the map. Players are safe.
+# Item type of the cannon item.
+item: NETHER_STAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFFFE0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 64
+  # Also remove withers, wardens and elder guardians.
+  include-bosses: false

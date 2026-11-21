@@ -1,0 +1,27 @@
+# forest.yml - MegaOrbitals cannon: Instant Forest
+#   A whole forest erupts out of the ground
+#   in seconds. Good luck getting out.
+# Fire with /orbital forest   Give with /orbitalgive forest
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lInstant Forest'
+# Description lines on the item.
+lore:
+- A whole forest erupts out of the ground
+- in seconds. Good luck getting out.
+# Item type of the cannon item.
+item: OAK_SAPLING
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#208020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area of the forest.
+  radius: 25
+  # Number of trees.
+  trees: 50

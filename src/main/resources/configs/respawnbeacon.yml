@@ -1,0 +1,22 @@
+# respawnbeacon.yml - MegaOrbitals cannon: Respawn Beacon
+#   Sets your respawn point to the target.
+#   Die anywhere, come back here.
+# Fire with /orbital respawnbeacon   Give with /orbitalgive respawnbeacon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lRespawn Beacon'
+# Description lines on the item.
+lore:
+- Sets your respawn point to the target.
+- Die anywhere, come back here.
+# Item type of the cannon item.
+item: RESPAWN_ANCHOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#60C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false

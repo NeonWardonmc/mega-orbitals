@@ -1,0 +1,31 @@
+# skymessage.yml - MegaOrbitals cannon: Sky Writer
+#   Writes a giant glowing message in the sky.
+#   Edit the text in the config.
+# Fire with /orbital skymessage   Give with /orbitalgive skymessage
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lSky Writer'
+# Description lines on the item.
+lore:
+- Writes a giant glowing message in the sky.
+- Edit the text in the config.
+# Item type of the cannon item.
+item: OAK_SIGN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FFFF60'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Text to write ({player} = who fired it).
+  message: '&c&l{player} WAS HERE'
+  # Height above the target.
+  height: 25
+  # Text size.
+  size: 12.0
+  # How long it stays.
+  seconds: 120

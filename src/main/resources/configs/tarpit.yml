@@ -1,0 +1,27 @@
+# tarpit.yml - MegaOrbitals cannon: Tar Pit
+#   The ground turns to sticky tar.
+#   You can barely walk and can't jump.
+# Fire with /orbital tarpit   Give with /orbitalgive tarpit
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lTar Pit'
+# Description lines on the item.
+lore:
+- The ground turns to sticky tar.
+- You can barely walk and can't jump.
+# Item type of the cannon item.
+item: MUD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#302820'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the pit.
+  radius: 18
+  # How long it sticks.
+  seconds: 25

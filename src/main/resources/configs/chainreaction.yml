@@ -1,0 +1,29 @@
+# chainreaction.yml - MegaOrbitals cannon: Chain Reaction
+#   Every explosion spawns more bombs, which spawn
+#   more bombs... a runaway chain reaction.
+# Fire with /orbital chainreaction   Give with /orbitalgive chainreaction
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lChain Reaction'
+# Description lines on the item.
+lore:
+- Every explosion spawns more bombs, which spawn
+- more bombs... a runaway chain reaction.
+# Item type of the cannon item.
+item: TNT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#FF4020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How many times the chain multiplies.
+  generations: 4
+  # Bombs spawned by each explosion.
+  children: 3
+  # Power of each bomb.
+  power: 3.0

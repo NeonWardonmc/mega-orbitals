@@ -1,0 +1,31 @@
+# sonicboom.yml - MegaOrbitals cannon: Sonic Boom
+#   A warden's scream from orbit.
+#   Hits everything nearby, through walls.
+# Fire with /orbital sonicboom   Give with /orbitalgive sonicboom
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lSonic Boom'
+# Description lines on the item.
+lore:
+- A warden's scream from orbit.
+- Hits everything nearby, through walls.
+# Item type of the cannon item.
+item: ECHO_SHARD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#1080A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range of the scream.
+  radius: 30
+  # Damage to each target.
+  damage: 30.0
+  # How far targets are thrown.
+  knockback: 3.0
+  # Number of screams.
+  screams: 3

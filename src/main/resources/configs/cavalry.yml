@@ -1,0 +1,29 @@
+# cavalry.yml - MegaOrbitals cannon: Cavalry Drop
+#   Support: drops saddled, diamond-armoured
+#   warhorses already tamed to you.
+# Fire with /orbital cavalry   Give with /orbitalgive cavalry
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lCavalry Drop'
+# Description lines on the item.
+lore:
+- 'Support: drops saddled, diamond-armoured'
+- warhorses already tamed to you.
+# Item type of the cannon item.
+item: DIAMOND_HORSE_ARMOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C09050'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of horses.
+  horses: 4
+  # Horse movement speed (vanilla average is about 0.22).
+  speed: 0.35
+  # Horse health.
+  health: 40.0

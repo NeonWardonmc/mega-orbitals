@@ -1,0 +1,29 @@
+# witchcoven.yml - MegaOrbitals cannon: Witch Coven
+#   A witch coven appears in a circle with their
+#   black cats, and starts brewing trouble.
+# Fire with /orbital witchcoven   Give with /orbitalgive witchcoven
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lWitch Coven'
+# Description lines on the item.
+lore:
+- A witch coven appears in a circle with their
+- black cats, and starts brewing trouble.
+# Item type of the cannon item.
+item: CAULDRON
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#6020A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of witches.
+  witches: 6
+  # Black cats.
+  cats: 4
+  # Size of the circle.
+  radius: 6.0

@@ -1,0 +1,27 @@
+# thornfield.yml - MegaOrbitals cannon: Thornfield
+#   The ground sprouts thick thorny bushes
+#   and cacti. Every step hurts.
+# Fire with /orbital thornfield   Give with /orbitalgive thornfield
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lThornfield'
+# Description lines on the item.
+lore:
+- The ground sprouts thick thorny bushes
+- and cacti. Every step hurts.
+# Item type of the cannon item.
+item: SWEET_BERRIES
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40A040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the field.
+  radius: 18
+  # How much of the ground gets a bush (0-1).
+  density: 0.6

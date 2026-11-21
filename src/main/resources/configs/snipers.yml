@@ -1,0 +1,31 @@
+# snipers.yml - MegaOrbitals cannon: Sniper Towers
+#   Raises stone towers around the target with
+#   a skeleton sniper perched on top of each.
+# Fire with /orbital snipers   Give with /orbitalgive snipers
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lSniper Towers'
+# Description lines on the item.
+lore:
+- Raises stone towers around the target with
+- a skeleton sniper perched on top of each.
+# Item type of the cannon item.
+item: BOW
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E0E0E0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of towers.
+  towers: 4
+  # Distance of the towers from the target.
+  radius: 12.0
+  # Height of each tower.
+  tower-height: 10
+  # Snipers vanish after this long.
+  lifetime-seconds: 120

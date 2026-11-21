@@ -1,0 +1,29 @@
+# bubble.yml - MegaOrbitals cannon: Bubble Trap
+#   Traps every target in a floating bubble that
+#   drifts up into the sky... and pops.
+# Fire with /orbital bubble   Give with /orbitalgive bubble
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lBubble Trap'
+# Description lines on the item.
+lore:
+- Traps every target in a floating bubble that
+- drifts up into the sky... and pops.
+# Item type of the cannon item.
+item: GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long they float up.
+  seconds: 6
+  # How fast the bubbles rise.
+  rise-speed: 0.35

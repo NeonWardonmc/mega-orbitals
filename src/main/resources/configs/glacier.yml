@@ -1,0 +1,33 @@
+# glacier.yml - MegaOrbitals cannon: Glacier Spikes
+#   Giant spikes of ice erupt from the ground,
+#   launching anyone standing on them.
+# Fire with /orbital glacier   Give with /orbitalgive glacier
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lGlacier Spikes'
+# Description lines on the item.
+lore:
+- Giant spikes of ice erupt from the ground,
+- launching anyone standing on them.
+# Item type of the cannon item.
+item: PACKED_ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#A0E8FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 20
+  # Number of ice spikes.
+  spikes: 7
+  # Shortest spike.
+  min-height: 12
+  # Tallest spike.
+  max-height: 26
+  # Damage to anyone launched.
+  damage: 10.0

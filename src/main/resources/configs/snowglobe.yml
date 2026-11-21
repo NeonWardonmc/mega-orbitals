@@ -1,0 +1,27 @@
+# snowglobe.yml - MegaOrbitals cannon: Snow Globe
+#   Seals the area in a giant glass snow globe,
+#   with snow drifting down inside it.
+# Fire with /orbital snowglobe   Give with /orbitalgive snowglobe
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lSnow Globe'
+# Description lines on the item.
+lore:
+- Seals the area in a giant glass snow globe,
+- with snow drifting down inside it.
+# Item type of the cannon item.
+item: SNOWBALL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Globe radius.
+  radius: 14
+  # How long it snows inside.
+  snow-seconds: 300

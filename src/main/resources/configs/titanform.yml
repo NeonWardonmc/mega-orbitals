@@ -1,0 +1,31 @@
+# titanform.yml - MegaOrbitals cannon: Titan Form
+#   YOU become a titan: giant size, double health,
+#   huge reach and a crushing punch.
+# Fire with /orbital titanform   Give with /orbitalgive titanform
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lTitan Form'
+# Description lines on the item.
+lore:
+- 'YOU become a titan: giant size, double health,'
+- huge reach and a crushing punch.
+# Item type of the cannon item.
+item: TOTEM_OF_UNDYING
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFC040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long you stay a titan.
+  seconds: 60
+  # Your size multiplier.
+  size: 3.0
+  # Extra max health.
+  bonus-health: 20.0
+  # Extra reach in blocks.
+  bonus-reach: 4.0

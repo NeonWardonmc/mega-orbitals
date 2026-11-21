@@ -1,0 +1,31 @@
+# vampire.yml - MegaOrbitals cannon: Vampiric Drain
+#   Drains the life out of everyone nearby
+#   and feeds it to you.
+# Fire with /orbital vampire   Give with /orbitalgive vampire
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lVampiric Drain'
+# Description lines on the item.
+lore:
+- Drains the life out of everyone nearby
+- and feeds it to you.
+# Item type of the cannon item.
+item: REDSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C00020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long the drain lasts.
+  seconds: 10
+  # Damage to each target every half second.
+  damage: 2.0
+  # Fraction of the damage you get back as health.
+  lifesteal: 0.5

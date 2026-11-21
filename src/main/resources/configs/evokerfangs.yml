@@ -1,0 +1,29 @@
+# evokerfangs.yml - MegaOrbitals cannon: Fang Ripple
+#   Waves of evoker fangs ripple
+#   outward from the target in rings.
+# Fire with /orbital evokerfangs   Give with /orbitalgive evokerfangs
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lFang Ripple'
+# Description lines on the item.
+lore:
+- Waves of evoker fangs ripple
+- outward from the target in rings.
+# Item type of the cannon item.
+item: TOTEM_OF_UNDYING
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#8040A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the rings travel.
+  radius: 24
+  # Number of waves.
+  waves: 3
+  # Blocks between rings.
+  ring-spacing: 1.5

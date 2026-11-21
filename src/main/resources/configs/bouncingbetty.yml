@@ -1,0 +1,31 @@
+# bouncingbetty.yml - MegaOrbitals cannon: Bouncing Betty
+#   Bombs that bounce around,
+#   exploding on every bounce.
+# Fire with /orbital bouncingbetty   Give with /orbitalgive bouncingbetty
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lBouncing Betty'
+# Description lines on the item.
+lore:
+- Bombs that bounce around,
+- exploding on every bounce.
+# Item type of the cannon item.
+item: SLIME_BALL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFE020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of bouncing bombs.
+  bombs: 8
+  # Bounces before the final blast.
+  bounces: 5
+  # Explosion power of each bounce.
+  bounce-power: 2.5
+  # Explosion power of the final blast.
+  final-power: 5.0

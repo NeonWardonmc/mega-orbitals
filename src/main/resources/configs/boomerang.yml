@@ -1,0 +1,29 @@
+# boomerang.yml - MegaOrbitals cannon: Boomerang Axes
+#   Spinning giant axes fly out from the
+#   target and come back, cutting everything twice.
+# Fire with /orbital boomerang   Give with /orbitalgive boomerang
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lBoomerang Axes'
+# Description lines on the item.
+lore:
+- Spinning giant axes fly out from the
+- target and come back, cutting everything twice.
+# Item type of the cannon item.
+item: IRON_AXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#B0B0B0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of axes.
+  axes: 4
+  # How far they fly out.
+  range: 25
+  # Damage per hit.
+  damage: 9.0

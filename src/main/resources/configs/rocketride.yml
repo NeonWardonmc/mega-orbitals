@@ -1,0 +1,29 @@
+# rocketride.yml - MegaOrbitals cannon: Rocket Ride
+#   Straps a rocket to everyone nearby.
+#   Up they go, until it blows.
+# Fire with /orbital rocketride   Give with /orbitalgive rocketride
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lRocket Ride'
+# Description lines on the item.
+lore:
+- Straps a rocket to everyone nearby.
+- Up they go, until it blows.
+# Item type of the cannon item.
+item: FIREWORK_ROCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FF4040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long the rockets fly.
+  burn-ticks: 35
+  # Power of the final blast.
+  blast-power: 2.5

@@ -1,0 +1,29 @@
+# fireworks.yml - MegaOrbitals cannon: Grand Finale
+#   A deadly firework show. Rockets burst
+#   right in everyone's face.
+# Fire with /orbital fireworks   Give with /orbitalgive fireworks
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lGrand Finale'
+# Description lines on the item.
+lore:
+- A deadly firework show. Rockets burst
+- right in everyone's face.
+# Item type of the cannon item.
+item: FIREWORK_STAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF60C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Length of the show.
+  seconds: 10
+  # Star effects per rocket (more = more damage).
+  stars: 6

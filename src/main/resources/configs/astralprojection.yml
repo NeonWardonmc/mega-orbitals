@@ -1,0 +1,25 @@
+# astralprojection.yml - MegaOrbitals cannon: Astral Projection
+#   Your spirit leaves your body: fly through walls
+#   as a ghost to scout, then snap back.
+# Fire with /orbital astralprojection   Give with /orbitalgive astralprojection
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lAstral Projection'
+# Description lines on the item.
+lore:
+- 'Your spirit leaves your body: fly through walls'
+- as a ghost to scout, then snap back.
+# Item type of the cannon item.
+item: PHANTOM_MEMBRANE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long you can scout.
+  seconds: 20

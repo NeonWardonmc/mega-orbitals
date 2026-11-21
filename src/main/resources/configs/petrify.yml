@@ -1,0 +1,29 @@
+# petrify.yml - MegaOrbitals cannon: Petrify
+#   Turns everything in a sphere to plain stone:
+#   houses, trees, the lot.
+# Fire with /orbital petrify   Give with /orbitalgive petrify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lPetrify'
+# Description lines on the item.
+lore:
+- 'Turns everything in a sphere to plain stone:'
+- houses, trees, the lot.
+# Item type of the cannon item.
+item: STONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Sphere radius.
+  radius: 12
+  # What everything turns into.
+  material: STONE
+  # Leave chests, barrels and shulker boxes alone.
+  skip-containers: true

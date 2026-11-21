@@ -1,0 +1,31 @@
+# slimerain.yml - MegaOrbitals cannon: Slime Rain
+#   Huge slimes and magma cubes rain down
+#   and split into hordes of smaller ones.
+# Fire with /orbital slimerain   Give with /orbitalgive slimerain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lSlime Rain'
+# Description lines on the item.
+lore:
+- Huge slimes and magma cubes rain down
+- and split into hordes of smaller ones.
+# Item type of the cannon item.
+item: SLIME_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60E060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Giant slimes.
+  slimes: 6
+  # Giant magma cubes.
+  magma-cubes: 4
+  # Size of each (vanilla big is 4).
+  size: 6
+  # Spread.
+  radius: 10

@@ -1,0 +1,29 @@
+# bridge.yml - MegaOrbitals cannon: Instant Bridge
+#   Builds a bridge with railings from
+#   where you stand straight to the target.
+# Fire with /orbital bridge   Give with /orbitalgive bridge
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lInstant Bridge'
+# Description lines on the item.
+lore:
+- Builds a bridge with railings from
+- where you stand straight to the target.
+# Item type of the cannon item.
+item: STONE_BRICK_SLAB
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#A0A0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Bridge width.
+  width: 3
+  # Deck material.
+  deck: STONE_BRICKS
+  # Railing material.
+  railing: STONE_BRICK_WALL

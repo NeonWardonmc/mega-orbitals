@@ -1,0 +1,27 @@
+# voidgate.yml - MegaOrbitals cannon: Void Gate
+#   Opens a gate to the void beneath the world.
+#   Everyone caught in it falls out of existence.
+# Fire with /orbital voidgate   Give with /orbitalgive voidgate
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&0&lVoid Gate'
+# Description lines on the item.
+lore:
+- Opens a gate to the void beneath the world.
+- Everyone caught in it falls out of existence.
+# Item type of the cannon item.
+item: BLACK_STAINED_GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 60
+# Colour of the targeting ring.
+warning-color: '#000000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the gate.
+  radius: 8
+  # Only send players into the void.
+  players-only: false

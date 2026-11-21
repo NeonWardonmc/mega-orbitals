@@ -1,0 +1,29 @@
+# dragonbreath.yml - MegaOrbitals cannon: Dragon's Breath
+#   Carpets the whole area in clouds
+#   of burning dragon's breath.
+# Fire with /orbital dragonbreath   Give with /orbitalgive dragonbreath
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lDragon''s Breath'
+# Description lines on the item.
+lore:
+- Carpets the whole area in clouds
+- of burning dragon's breath.
+# Item type of the cannon item.
+item: DRAGON_BREATH
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#B040FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 20
+  # How long the clouds last.
+  seconds: 20
+  # Instant damage level of the clouds (0 = I, 1 = II).
+  damage-level: 1

@@ -1,0 +1,29 @@
+# waterspout.yml - MegaOrbitals cannon: Waterspout
+#   A towering waterspout sucks everyone
+#   up into the sky... then lets go.
+# Fire with /orbital waterspout   Give with /orbitalgive waterspout
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lWaterspout'
+# Description lines on the item.
+lore:
+- A towering waterspout sucks everyone
+- up into the sky... then lets go.
+# Item type of the cannon item.
+item: WATER_BUCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#3080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Width of the spout.
+  radius: 7.0
+  # How high it carries you.
+  height: 45
+  # How long the spout lasts.
+  seconds: 8

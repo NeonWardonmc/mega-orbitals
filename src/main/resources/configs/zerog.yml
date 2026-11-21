@@ -1,0 +1,29 @@
+# zerog.yml - MegaOrbitals cannon: Zero-G
+#   Turns gravity off. Everything floats up.
+#   Then gravity comes back.
+# Fire with /orbital zerog   Give with /orbitalgive zerog
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lZero-G'
+# Description lines on the item.
+lore:
+- Turns gravity off. Everything floats up.
+- Then gravity comes back.
+# Item type of the cannon item.
+item: SHULKER_SHELL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long gravity is off.
+  seconds: 10
+  # Ground blocks that float up.
+  lift-blocks: 120

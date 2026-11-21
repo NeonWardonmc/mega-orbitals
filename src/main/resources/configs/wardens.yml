@@ -1,0 +1,27 @@
+# wardens.yml - MegaOrbitals cannon: Warden Uprising
+#   Wardens dig out of the ground,
+#   already furious at everyone nearby.
+# Fire with /orbital wardens   Give with /orbitalgive wardens
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lWarden Uprising'
+# Description lines on the item.
+lore:
+- Wardens dig out of the ground,
+- already furious at everyone nearby.
+# Item type of the cannon item.
+item: SCULK_SHRIEKER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 60
+# Colour of the targeting ring.
+warning-color: '#0A3040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of wardens.
+  wardens: 2
+  # Everyone in this range makes them angry.
+  anger-radius: 40

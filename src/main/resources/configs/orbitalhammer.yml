@@ -1,0 +1,29 @@
+# orbitalhammer.yml - MegaOrbitals cannon: Orbital Hammer
+#   A building-sized anvil falls from orbit
+#   and pounds the target flat.
+# Fire with /orbital orbitalhammer   Give with /orbitalgive orbitalhammer
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lOrbital Hammer'
+# Description lines on the item.
+lore:
+- A building-sized anvil falls from orbit
+- and pounds the target flat.
+# Item type of the cannon item.
+item: ANVIL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#505050'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the anvil.
+  size: 9.0
+  # Damage to anything crushed.
+  damage: 50.0
+  # How deep it pushes the ground down.
+  crush-depth: 4

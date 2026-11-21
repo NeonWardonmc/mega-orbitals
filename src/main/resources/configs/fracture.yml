@@ -1,0 +1,29 @@
+# fracture.yml - MegaOrbitals cannon: Fracture
+#   The ground fractures: jagged cracks race out
+#   from the impact, carving twisting tunnels.
+# Fire with /orbital fracture   Give with /orbitalgive fracture
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lFracture'
+# Description lines on the item.
+lore:
+- 'The ground fractures: jagged cracks race out'
+- from the impact, carving twisting tunnels.
+# Item type of the cannon item.
+item: CRACKED_STONE_BRICKS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#707070'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of cracks.
+  cracks: 8
+  # Length of each crack.
+  length: 45
+  # Crack width.
+  width: 1.6

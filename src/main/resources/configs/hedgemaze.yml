@@ -1,0 +1,27 @@
+# hedgemaze.yml - MegaOrbitals cannon: Hedge Maze
+#   A hedge maze grows instantly around the target.
+#   Everyone inside has to find the way out.
+# Fire with /orbital hedgemaze   Give with /orbitalgive hedgemaze
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lHedge Maze'
+# Description lines on the item.
+lore:
+- A hedge maze grows instantly around the target.
+- Everyone inside has to find the way out.
+# Item type of the cannon item.
+item: OAK_LEAVES
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#30A030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Maze size in cells (each cell is 2 blocks).
+  cells: 12
+  # Height of the hedges.
+  wall-height: 4

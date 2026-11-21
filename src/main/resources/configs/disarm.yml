@@ -1,0 +1,29 @@
+# disarm.yml - MegaOrbitals cannon: Disarm
+#   Knocks the weapon out of everyone's hands
+#   and the armour off their backs.
+# Fire with /orbital disarm   Give with /orbitalgive disarm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lDisarm'
+# Description lines on the item.
+lore:
+- Knocks the weapon out of everyone's hands
+- and the armour off their backs.
+# Item type of the cannon item.
+item: IRON_SWORD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFB040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Also knock off armour.
+  strip-armor: true
+  # How far the items fly.
+  scatter: 0.6

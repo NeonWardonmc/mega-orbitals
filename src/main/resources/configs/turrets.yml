@@ -1,0 +1,33 @@
+# turrets.yml - MegaOrbitals cannon: Auto Turrets
+#   Drops automatic arrow turrets that fire
+#   at anyone who comes near (except you).
+# Fire with /orbital turrets   Give with /orbitalgive turrets
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lAuto Turrets'
+# Description lines on the item.
+lore:
+- Drops automatic arrow turrets that fire
+- at anyone who comes near (except you).
+# Item type of the cannon item.
+item: DISPENSER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of turrets.
+  turrets: 4
+  # Distance of turrets from the target.
+  spacing: 6.0
+  # Turret range.
+  range: 30.0
+  # How long the turrets stay.
+  seconds: 60
+  # Arrow damage.
+  arrow-damage: 4.0

@@ -1,0 +1,27 @@
+# switcheroo.yml - MegaOrbitals cannon: Switcheroo
+#   You swap places with the player
+#   nearest the target.
+# Fire with /orbital switcheroo   Give with /orbitalgive switcheroo
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lSwitcheroo'
+# Description lines on the item.
+lore:
+- You swap places with the player
+- nearest the target.
+# Item type of the cannon item.
+item: ENDER_PEARL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#E060FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to find someone.
+  range: 30
+  # Swap with a mob if no player is near.
+  mobs-too: true

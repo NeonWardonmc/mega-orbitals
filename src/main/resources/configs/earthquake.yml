@@ -1,0 +1,31 @@
+# earthquake.yml - MegaOrbitals cannon: Earthquake
+#   The ground shakes, splits open into
+#   cracks and throws everyone around.
+# Fire with /orbital earthquake   Give with /orbitalgive earthquake
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lEarthquake'
+# Description lines on the item.
+lore:
+- The ground shakes, splits open into
+- cracks and throws everyone around.
+# Item type of the cannon item.
+item: CRACKED_STONE_BRICKS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#A06030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area of the quake.
+  radius: 30
+  # How long the shaking lasts.
+  seconds: 12
+  # Number of cracks that split open.
+  cracks: 7
+  # How deep the cracks go.
+  crack-depth: 12

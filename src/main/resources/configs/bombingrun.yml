@@ -1,0 +1,33 @@
+# bombingrun.yml - MegaOrbitals cannon: Bombing Run
+#   A bomber flies overhead in the
+#   direction you face, carpet bombing a line.
+# Fire with /orbital bombingrun   Give with /orbitalgive bombingrun
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lBombing Run'
+# Description lines on the item.
+lore:
+- A bomber flies overhead in the
+- direction you face, carpet bombing a line.
+# Item type of the cannon item.
+item: ELYTRA
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF8000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the bombing line in blocks.
+  length: 120
+  # Blocks between each bomb.
+  spacing: 3.0
+  # Bombs dropped side by side per row.
+  width: 2
+  # Bomber altitude above the target.
+  height: 35
+  # Explosion power of each bomb.
+  power: 5.0

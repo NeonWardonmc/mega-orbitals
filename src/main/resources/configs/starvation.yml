@@ -1,0 +1,27 @@
+# starvation.yml - MegaOrbitals cannon: Famine
+#   Everyone's hunger drains to zero and they
+#   can't eat or drink anything for a while.
+# Fire with /orbital starvation   Give with /orbitalgive starvation
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lFamine'
+# Description lines on the item.
+lore:
+- Everyone's hunger drains to zero and they
+- can't eat or drink anything for a while.
+# Item type of the cannon item.
+item: BOWL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#A08040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long the famine lasts.
+  seconds: 45

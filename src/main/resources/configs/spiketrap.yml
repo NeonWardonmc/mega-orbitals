@@ -1,0 +1,31 @@
+# spiketrap.yml - MegaOrbitals cannon: Spike Eruption
+#   Stone spikes erupt out of the ground
+#   under every target and across the area.
+# Fire with /orbital spiketrap   Give with /orbitalgive spiketrap
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lSpike Eruption'
+# Description lines on the item.
+lore:
+- Stone spikes erupt out of the ground
+- under every target and across the area.
+# Item type of the cannon item.
+item: POINTED_DRIPSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A08060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Damage to anyone impaled.
+  damage: 14.0
+  # Random spikes across the area.
+  extra-spikes: 40
+  # Height of each spike.
+  spike-height: 4

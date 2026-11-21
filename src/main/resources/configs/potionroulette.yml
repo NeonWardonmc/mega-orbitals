@@ -1,0 +1,29 @@
+# potionroulette.yml - MegaOrbitals cannon: Potion Roulette
+#   Everyone nearby gets a random mix of
+#   potion effects. Some good. Mostly not.
+# Fire with /orbital potionroulette   Give with /orbitalgive potionroulette
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lPotion Roulette'
+# Description lines on the item.
+lore:
+- Everyone nearby gets a random mix of
+- potion effects. Some good. Mostly not.
+# Item type of the cannon item.
+item: BREWING_STAND
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#E060E0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Random effects per target.
+  effects-each: 3
+  # How long each effect lasts.
+  seconds: 30

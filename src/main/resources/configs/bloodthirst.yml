@@ -1,0 +1,27 @@
+# bloodthirst.yml - MegaOrbitals cannon: Bloodthirst
+#   Self-buff: every hit you land heals you
+#   for part of the damage dealt.
+# Fire with /orbital bloodthirst   Give with /orbitalgive bloodthirst
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lBloodthirst'
+# Description lines on the item.
+lore:
+- 'Self-buff: every hit you land heals you'
+- for part of the damage dealt.
+# Item type of the cannon item.
+item: RED_DYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#A00010'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the buff lasts.
+  seconds: 60
+  # Fraction of damage dealt that heals you.
+  lifesteal: 0.5

@@ -1,0 +1,31 @@
+# sunstrike.yml - MegaOrbitals cannon: Sun Lens
+#   A giant lens focuses sunlight onto the target.
+#   Brutal at noon, weak at night. Sand turns to glass.
+# Fire with /orbital sunstrike   Give with /orbitalgive sunstrike
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lSun Lens'
+# Description lines on the item.
+lore:
+- A giant lens focuses sunlight onto the target.
+- Brutal at noon, weak at night. Sand turns to glass.
+# Item type of the cannon item.
+item: SPYGLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFC020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the focused spot.
+  radius: 5.0
+  # How long it burns.
+  seconds: 8
+  # Damage every half second during the day.
+  day-damage: 10.0
+  # Damage every half second at night.
+  night-damage: 1.0

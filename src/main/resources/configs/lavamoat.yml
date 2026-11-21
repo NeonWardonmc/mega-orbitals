@@ -1,0 +1,29 @@
+# lavamoat.yml - MegaOrbitals cannon: Lava Moat
+#   Digs a ring-shaped moat of lava around
+#   the target. Trap a base, or defend yours.
+# Fire with /orbital lavamoat   Give with /orbitalgive lavamoat
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lLava Moat'
+# Description lines on the item.
+lore:
+- Digs a ring-shaped moat of lava around
+- the target. Trap a base, or defend yours.
+# Item type of the cannon item.
+item: LAVA_BUCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF8020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the moat ring.
+  radius: 16
+  # Width of the moat.
+  width: 3
+  # Depth of the moat.
+  depth: 4

@@ -1,0 +1,36 @@
+# treasurehunt.yml - MegaOrbitals cannon: Treasure Hunt
+#   Buries a treasure chest somewhere nearby.
+#   Everyone close gets hot/cold hints. Dig it up!
+# Fire with /orbital treasurehunt   Give with /orbitalgive treasurehunt
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lTreasure Hunt'
+# Description lines on the item.
+lore:
+- Buries a treasure chest somewhere nearby.
+- Everyone close gets hot/cold hints. Dig it up!
+# Item type of the cannon item.
+item: FILLED_MAP
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#E0B040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far away the treasure can be buried.
+  radius: 50
+  # Players this close get hints.
+  hint-radius: 120
+  # How long hints last.
+  minutes: 10
+  # Treasure, MATERIAL:amount.
+  loot:
+  - DIAMOND:10
+  - GOLD_BLOCK:3
+  - ENCHANTED_GOLDEN_APPLE:1
+  - NETHERITE_SCRAP:2
+  - EMERALD:16

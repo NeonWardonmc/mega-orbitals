@@ -1,0 +1,31 @@
+# flamethrower.yml - MegaOrbitals cannon: Flamethrower
+#   Turns you into a flamethrower: a cone of fire
+#   pours out wherever you look.
+# Fire with /orbital flamethrower   Give with /orbitalgive flamethrower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lFlamethrower'
+# Description lines on the item.
+lore:
+- 'Turns you into a flamethrower: a cone of fire'
+- pours out wherever you look.
+# Item type of the cannon item.
+item: BLAZE_POWDER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 0
+# Colour of the targeting ring.
+warning-color: '#FF8020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long it fires.
+  seconds: 6
+  # Flame range.
+  range: 14.0
+  # Cone width (higher = wider).
+  cone: 0.35
+  # Damage every few ticks.
+  damage: 2.0

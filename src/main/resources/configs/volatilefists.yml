@@ -1,0 +1,27 @@
+# volatilefists.yml - MegaOrbitals cannon: Volatile Fists
+#   Self-buff: for a while every melee hit
+#   you land explodes on your target.
+# Fire with /orbital volatilefists   Give with /orbitalgive volatilefists
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lVolatile Fists'
+# Description lines on the item.
+lore:
+- 'Self-buff: for a while every melee hit'
+- you land explodes on your target.
+# Item type of the cannon item.
+item: TNT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FF4040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the buff lasts.
+  seconds: 30
+  # Explosion power per hit.
+  power: 1.8

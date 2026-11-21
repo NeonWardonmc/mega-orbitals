@@ -1,0 +1,33 @@
+# arrowstorm.yml - MegaOrbitals cannon: Arrow Storm
+#   Thousands of flaming arrows
+#   blot out the sun.
+# Fire with /orbital arrowstorm   Give with /orbitalgive arrowstorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lArrow Storm'
+# Description lines on the item.
+lore:
+- Thousands of flaming arrows
+- blot out the sun.
+# Item type of the cannon item.
+item: ARROW
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#F0F0F0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 18
+  # How long the volley lasts.
+  seconds: 6
+  # Arrows each tick.
+  arrows-per-tick: 15
+  # Arrow damage.
+  damage: 4.0
+  # Set arrows on fire.
+  flaming: true

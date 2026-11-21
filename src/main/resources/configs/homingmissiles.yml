@@ -1,0 +1,33 @@
+# homingmissiles.yml - MegaOrbitals cannon: Homing Missiles
+#   Missiles that hunt down
+#   the nearest target.
+# Fire with /orbital homingmissiles   Give with /orbitalgive homingmissiles
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lHoming Missiles'
+# Description lines on the item.
+lore:
+- Missiles that hunt down
+- the nearest target.
+# Item type of the cannon item.
+item: FIREWORK_ROCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF4040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of missiles.
+  missiles: 10
+  # How far missiles look for targets.
+  range: 60
+  # Missile speed (blocks per tick).
+  speed: 1.1
+  # Explosion power.
+  power: 3.0
+  # Missiles explode after this long anyway.
+  lifetime-seconds: 15

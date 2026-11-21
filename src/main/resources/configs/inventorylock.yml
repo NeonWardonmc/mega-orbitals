@@ -1,0 +1,27 @@
+# inventorylock.yml - MegaOrbitals cannon: Inventory Jammer
+#   Jams everyone's inventory: no opening it,
+#   no dropping, no swapping, stuck on one slot.
+# Fire with /orbital inventorylock   Give with /orbitalgive inventorylock
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lInventory Jammer'
+# Description lines on the item.
+lore:
+- 'Jams everyone''s inventory: no opening it,'
+- no dropping, no swapping, stuck on one slot.
+# Item type of the cannon item.
+item: IRON_DOOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#808080'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long the jam lasts.
+  seconds: 30

@@ -1,0 +1,31 @@
+# lightningstorm.yml - MegaOrbitals cannon: Lightning Storm
+#   A thunderstorm whose bolts
+#   hunt players caught under it.
+# Fire with /orbital lightningstorm   Give with /orbitalgive lightningstorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lLightning Storm'
+# Description lines on the item.
+lore:
+- A thunderstorm whose bolts
+- hunt players caught under it.
+# Item type of the cannon item.
+item: LIGHTNING_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#F0F060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Storm radius.
+  radius: 50
+  # Storm length.
+  seconds: 20
+  # Lightning bolts per second.
+  bolts-per-second: 3
+  # Extra damage per bolt.
+  damage: 8.0

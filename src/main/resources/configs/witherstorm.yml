@@ -1,0 +1,27 @@
+# witherstorm.yml - MegaOrbitals cannon: Wither Squadron
+#   Summons a squadron of withers
+#   hovering over the target.
+# Fire with /orbital witherstorm   Give with /orbitalgive witherstorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lWither Squadron'
+# Description lines on the item.
+lore:
+- Summons a squadron of withers
+- hovering over the target.
+# Item type of the cannon item.
+item: WITHER_SKELETON_SKULL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 60
+# Colour of the targeting ring.
+warning-color: '#202020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of withers.
+  withers: 3
+  # Multiply each wither's health.
+  health-multiplier: 1.0

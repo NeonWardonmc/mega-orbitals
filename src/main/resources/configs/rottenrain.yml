@@ -1,0 +1,29 @@
+# rottenrain.yml - MegaOrbitals cannon: Rotten Rain
+#   A harmless troll: it rains rotten flesh,
+#   poisonous potatoes and spider eyes.
+# Fire with /orbital rottenrain   Give with /orbitalgive rottenrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lRotten Rain'
+# Description lines on the item.
+lore:
+- 'A harmless troll: it rains rotten flesh,'
+- poisonous potatoes and spider eyes.
+# Item type of the cannon item.
+item: ROTTEN_FLESH
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#608030'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 15
+  # Items dropped.
+  items: 300
+  # Items disappear after this long.
+  vanish-seconds: 30

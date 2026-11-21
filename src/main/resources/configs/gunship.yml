@@ -1,0 +1,35 @@
+# gunship.yml - MegaOrbitals cannon: Gunship
+#   A gunship circles overhead, raking anyone
+#   below with explosive cannon fire.
+# Fire with /orbital gunship   Give with /orbitalgive gunship
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lGunship'
+# Description lines on the item.
+lore:
+- A gunship circles overhead, raking anyone
+- below with explosive cannon fire.
+# Item type of the cannon item.
+item: IRON_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#707070'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long it circles.
+  seconds: 20
+  # Size of its circle.
+  orbit-radius: 22.0
+  # Altitude.
+  height: 35
+  # How far it can shoot.
+  target-radius: 30.0
+  # Fire rate.
+  shots-per-second: 2
+  # Explosion power of each shell.
+  power: 2.5

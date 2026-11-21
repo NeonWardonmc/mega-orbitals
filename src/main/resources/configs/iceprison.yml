@@ -1,0 +1,27 @@
+# iceprison.yml - MegaOrbitals cannon: Ice Prison
+#   Freezes everyone nearby inside
+#   their own block of ice.
+# Fire with /orbital iceprison   Give with /orbitalgive iceprison
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lIce Prison'
+# Description lines on the item.
+lore:
+- Freezes everyone nearby inside
+- their own block of ice.
+# Item type of the cannon item.
+item: PACKED_ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Seconds until the ice melts (0 = never).
+  melt-seconds: 15

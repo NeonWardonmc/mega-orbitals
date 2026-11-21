@@ -1,0 +1,29 @@
+# cryoshatter.yml - MegaOrbitals cannon: Cryoshatter
+#   Flash-freezes everyone solid...
+#   then shatters them.
+# Fire with /orbital cryoshatter   Give with /orbitalgive cryoshatter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lCryoshatter'
+# Description lines on the item.
+lore:
+- Flash-freezes everyone solid...
+- then shatters them.
+# Item type of the cannon item.
+item: BLUE_ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#80E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 18
+  # How long they're frozen before shattering.
+  freeze-seconds: 3
+  # Damage when the ice shatters.
+  shatter-damage: 16.0

@@ -1,0 +1,31 @@
+# meteor.yml - MegaOrbitals cannon: Meteor
+#   A giant burning meteor streaks in
+#   from the sky and leaves a crater.
+# Fire with /orbital meteor   Give with /orbitalgive meteor
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lMeteor'
+# Description lines on the item.
+lore:
+- A giant burning meteor streaks in
+- from the sky and leaves a crater.
+# Item type of the cannon item.
+item: MAGMA_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF6000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the meteor.
+  size: 7.0
+  # How long it takes to arrive.
+  flight-ticks: 60
+  # Impact explosion power.
+  power: 12.0
+  # Crater radius.
+  crater-radius: 12

@@ -1,0 +1,31 @@
+# vacuumcannon.yml - MegaOrbitals cannon: Vacuum Beam
+#   A vacuum beam: everything in front of you
+#   is sucked straight toward you.
+# Fire with /orbital vacuumcannon   Give with /orbitalgive vacuumcannon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lVacuum Beam'
+# Description lines on the item.
+lore:
+- 'A vacuum beam: everything in front of you'
+- is sucked straight toward you.
+# Item type of the cannon item.
+item: HOPPER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 0
+# Colour of the targeting ring.
+warning-color: '#606060'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long it sucks.
+  seconds: 6
+  # Range.
+  range: 25.0
+  # Cone width.
+  cone: 0.3
+  # Pull strength.
+  strength: 0.9

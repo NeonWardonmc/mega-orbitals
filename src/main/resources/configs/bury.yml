@@ -1,0 +1,29 @@
+# bury.yml - MegaOrbitals cannon: Buried Alive
+#   Teleports everyone nearby deep underground,
+#   sealed in an obsidian coffin.
+# Fire with /orbital bury   Give with /orbitalgive bury
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lBuried Alive'
+# Description lines on the item.
+lore:
+- Teleports everyone nearby deep underground,
+- sealed in an obsidian coffin.
+# Item type of the cannon item.
+item: SOUL_SOIL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#402020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How far underground they go.
+  depth: 30
+  # Only bury players (not mobs).
+  players-only: true

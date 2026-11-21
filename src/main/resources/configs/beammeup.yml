@@ -1,0 +1,22 @@
+# beammeup.yml - MegaOrbitals cannon: Orbital Teleporter
+#   Beams you down from orbit onto the target,
+#   safely. An orbital teleporter.
+# Fire with /orbital beammeup   Give with /orbitalgive beammeup
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lOrbital Teleporter'
+# Description lines on the item.
+lore:
+- Beams you down from orbit onto the target,
+- safely. An orbital teleporter.
+# Item type of the cannon item.
+item: ENDER_EYE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#80E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false

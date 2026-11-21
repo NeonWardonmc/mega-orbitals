@@ -1,0 +1,29 @@
+# flatten.yml - MegaOrbitals cannon: Flattener
+#   Levels everything in range to perfectly
+#   flat ground at the target's height.
+# Fire with /orbital flatten   Give with /orbitalgive flatten
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lFlattener'
+# Description lines on the item.
+lore:
+- Levels everything in range to perfectly
+- flat ground at the target's height.
+# Item type of the cannon item.
+item: SMOOTH_STONE_SLAB
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#80C080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 40
+  # Fill dips and holes up to the level.
+  fill-holes: true
+  # How high above the level it clears.
+  max-height: 120

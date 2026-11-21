@@ -1,0 +1,29 @@
+# bunker.yml - MegaOrbitals cannon: Instant Bunker
+#   Drops a reinforced obsidian bunker
+#   at the target, with a door and lights.
+# Fire with /orbital bunker   Give with /orbitalgive bunker
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lInstant Bunker'
+# Description lines on the item.
+lore:
+- Drops a reinforced obsidian bunker
+- at the target, with a door and lights.
+# Item type of the cannon item.
+item: OBSIDIAN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#505050'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Half the width of the bunker.
+  half-size: 5
+  # Inside height.
+  height: 5
+  # Wall material.
+  material: OBSIDIAN

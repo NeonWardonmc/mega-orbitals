@@ -1,0 +1,29 @@
+# quicksand.yml - MegaOrbitals cannon: Quicksand
+#   The ground turns to quicksand.
+#   Stand still and you sink. Then you suffocate.
+# Fire with /orbital quicksand   Give with /orbitalgive quicksand
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lQuicksand'
+# Description lines on the item.
+lore:
+- The ground turns to quicksand.
+- Stand still and you sink. Then you suffocate.
+# Item type of the cannon item.
+item: SUSPICIOUS_SAND
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#D0B060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the quicksand.
+  radius: 12
+  # How long it pulls you down.
+  seconds: 20
+  # Blocks sunk per tick.
+  sink-speed: 0.08

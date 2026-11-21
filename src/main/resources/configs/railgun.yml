@@ -1,0 +1,31 @@
+# railgun.yml - MegaOrbitals cannon: Railgun
+#   A hypersonic slug from you to the target.
+#   Rips through everything in between.
+# Fire with /orbital railgun   Give with /orbitalgive railgun
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lRailgun'
+# Description lines on the item.
+lore:
+- A hypersonic slug from you to the target.
+- Rips through everything in between.
+# Item type of the cannon item.
+item: LIGHTNING_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#20E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Damage to everything along the line.
+  damage: 40.0
+  # How close to the line you must be to get hit.
+  width: 2.0
+  # Blocks between explosions along the line (0 = none).
+  blast-every: 5
+  # Power of those explosions.
+  blast-power: 3.0

@@ -1,0 +1,27 @@
+# rainbow.yml - MegaOrbitals cannon: Rainbow
+#   Paints the ground in giant rainbow rings.
+#   Harmless. Extremely visible from the sky.
+# Fire with /orbital rainbow   Give with /orbitalgive rainbow
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lR&6&la&e&li&a&ln&b&lb&9&lo&d&lw'
+# Description lines on the item.
+lore:
+- Paints the ground in giant rainbow rings.
+- Harmless. Extremely visible from the sky.
+# Item type of the cannon item.
+item: RED_WOOL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FF80FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the rainbow.
+  radius: 28
+  # Width of each colour ring.
+  ring-width: 3

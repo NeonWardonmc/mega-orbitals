@@ -1,0 +1,29 @@
+# decoys.yml - MegaOrbitals cannon: Smoke Mirrors
+#   Drops a crowd of decoys that look like you,
+#   and turns the real you invisible.
+# Fire with /orbital decoys   Give with /orbitalgive decoys
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lSmoke & Mirrors'
+# Description lines on the item.
+lore:
+- Drops a crowd of decoys that look like you,
+- and turns the real you invisible.
+# Item type of the cannon item.
+item: ARMOR_STAND
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#8060A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of decoys.
+  decoys: 8
+  # Spread.
+  radius: 8.0
+  # How long decoys and invisibility last.
+  seconds: 30

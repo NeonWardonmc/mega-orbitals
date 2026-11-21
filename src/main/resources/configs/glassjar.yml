@@ -1,0 +1,29 @@
+# glassjar.yml - MegaOrbitals cannon: Glass Jar
+#   Traps the area under a giant dark glass dome.
+#   Everyone inside is too weak to dig out.
+# Fire with /orbital glassjar   Give with /orbitalgive glassjar
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lGlass Jar'
+# Description lines on the item.
+lore:
+- Traps the area under a giant dark glass dome.
+- Everyone inside is too weak to dig out.
+# Item type of the cannon item.
+item: TINTED_GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#808080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Dome radius.
+  radius: 20
+  # How long everyone inside has mining fatigue.
+  weak-seconds: 60
+  # What the dome is made of.
+  material: TINTED_GLASS

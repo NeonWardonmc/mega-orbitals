@@ -1,0 +1,29 @@
+# centrifuge.yml - MegaOrbitals cannon: Centrifuge
+#   Spins everyone around the target faster
+#   and faster... then lets go.
+# Fire with /orbital centrifuge   Give with /orbitalgive centrifuge
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lCentrifuge'
+# Description lines on the item.
+lore:
+- Spins everyone around the target faster
+- and faster... then lets go.
+# Item type of the cannon item.
+item: LODESTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#C080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 18
+  # Spin time.
+  seconds: 5
+  # Top speed.
+  max-speed: 1.8

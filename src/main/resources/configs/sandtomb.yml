@@ -1,0 +1,29 @@
+# sandtomb.yml - MegaOrbitals cannon: Sand Tomb
+#   Buries every target under
+#   a tower of falling sand.
+# Fire with /orbital sandtomb   Give with /orbitalgive sandtomb
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lSand Tomb'
+# Description lines on the item.
+lore:
+- Buries every target under
+- a tower of falling sand.
+# Item type of the cannon item.
+item: SAND
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E0D080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Height of each sand tower.
+  tower-height: 10
+  # Block to bury them with (SAND, GRAVEL, ...).
+  material: SAND

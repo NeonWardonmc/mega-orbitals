@@ -1,0 +1,33 @@
+# spidernest.yml - MegaOrbitals cannon: Spider Nest
+#   The area becomes a spider nest: webs
+#   everywhere, spiders and spider jockeys.
+# Fire with /orbital spidernest   Give with /orbitalgive spidernest
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lSpider Nest'
+# Description lines on the item.
+lore:
+- 'The area becomes a spider nest: webs'
+- everywhere, spiders and spider jockeys.
+# Item type of the cannon item.
+item: COBWEB
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#404040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the nest.
+  radius: 12
+  # Cobwebs placed.
+  webs: 60
+  # Spiders.
+  spiders: 6
+  # Cave spiders.
+  cave-spiders: 8
+  # Spider jockeys.
+  jockeys: 2

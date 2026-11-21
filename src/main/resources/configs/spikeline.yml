@@ -1,0 +1,29 @@
+# spikeline.yml - MegaOrbitals cannon: Spike Line
+#   A line of stone spikes erupts one after another,
+#   racing out from the target the way you face.
+# Fire with /orbital spikeline   Give with /orbitalgive spikeline
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lSpike Line'
+# Description lines on the item.
+lore:
+- A line of stone spikes erupts one after another,
+- racing out from the target the way you face.
+# Item type of the cannon item.
+item: POINTED_DRIPSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#A08060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the line.
+  length: 40
+  # Damage when a spike hits you.
+  damage: 12.0
+  # Spikes crumble after this long (0 = stay).
+  vanish-seconds: 8

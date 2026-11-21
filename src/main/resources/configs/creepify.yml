@@ -1,0 +1,29 @@
+# creepify.yml - MegaOrbitals cannon: Creepify
+#   Every mob nearby turns into a creeper
+#   that hunts the nearest player.
+# Fire with /orbital creepify   Give with /orbitalgive creepify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lCreepify'
+# Description lines on the item.
+lore:
+- Every mob nearby turns into a creeper
+- that hunts the nearest player.
+# Item type of the cannon item.
+item: GUNPOWDER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#40C040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Make them charged creepers.
+  charged: false
+  # Also convert cows, pigs, villagers...
+  include-passive: true

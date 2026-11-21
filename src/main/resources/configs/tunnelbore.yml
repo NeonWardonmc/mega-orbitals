@@ -1,0 +1,29 @@
+# tunnelbore.yml - MegaOrbitals cannon: Tunnel Bore
+#   A boring beam drills a lit 3x3 tunnel from
+#   the target in the direction you're facing.
+# Fire with /orbital tunnelbore   Give with /orbitalgive tunnelbore
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lTunnel Bore'
+# Description lines on the item.
+lore:
+- A boring beam drills a lit 3x3 tunnel from
+- the target in the direction you're facing.
+# Item type of the cannon item.
+item: DIAMOND_PICKAXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C0A060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Tunnel length.
+  length: 80
+  # Tunnel radius (1 = 3x3).
+  radius: 1
+  # Blocks between torches (0 = none).
+  torch-every: 8

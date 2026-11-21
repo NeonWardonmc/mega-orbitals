@@ -1,0 +1,27 @@
+# silence.yml - MegaOrbitals cannon: Silence
+#   A silence field: everyone caught in it
+#   can't type in chat for a while.
+# Fire with /orbital silence   Give with /orbitalgive silence
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lSilence'
+# Description lines on the item.
+lore:
+- 'A silence field: everyone caught in it'
+- can't type in chat for a while.
+# Item type of the cannon item.
+item: WHITE_WOOL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C0C0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long they're muted.
+  seconds: 60

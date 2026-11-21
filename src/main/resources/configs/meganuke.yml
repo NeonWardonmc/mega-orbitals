@@ -1,0 +1,35 @@
+# meganuke.yml - MegaOrbitals cannon: ☢ MEGA NUKE ☢
+#   Deals 100,000 damage to everything
+#   and erases a 16 chunk radius.
+#   There is no surviving this.
+# Fire with /orbital meganuke   Give with /orbitalgive meganuke
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&l☢ MEGA NUKE ☢'
+# Description lines on the item.
+lore:
+- Deals 100,000 damage to everything
+- and erases a 16 chunk radius.
+- '&cThere is no surviving this.'
+# Item type of the cannon item.
+item: NETHER_STAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 200
+# Colour of the targeting ring.
+warning-color: '#FF0000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Blast radius in blocks (16 chunks = 256).
+  radius: 256
+  # Damage dealt to every living thing in the radius.
+  damage: 100000.0
+  # How deep the crater goes at ground zero.
+  crater-depth: 60
+  # Leave scorched blackstone on the crater floor.
+  scorch: true
+  # How long the mushroom cloud lasts.
+  mushroom-cloud-seconds: 20

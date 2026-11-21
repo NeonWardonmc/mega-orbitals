@@ -1,0 +1,31 @@
+# hailstorm.yml - MegaOrbitals cannon: Hailstorm
+#   Chunks of ice hammer down from the sky,
+#   bruising and slowing everyone outside.
+# Fire with /orbital hailstorm   Give with /orbitalgive hailstorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lHailstorm'
+# Description lines on the item.
+lore:
+- Chunks of ice hammer down from the sky,
+- bruising and slowing everyone outside.
+# Item type of the cannon item.
+item: PACKED_ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 22
+  # How long the hail lasts.
+  seconds: 12
+  # Ice chunks per tick.
+  hail-per-tick: 5
+  # Damage per block the hail falls.
+  damage-per-block-fallen: 0.6

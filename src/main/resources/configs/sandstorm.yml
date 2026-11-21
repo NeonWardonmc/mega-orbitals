@@ -1,0 +1,31 @@
+# sandstorm.yml - MegaOrbitals cannon: Sandstorm
+#   A blinding sandstorm shoves everyone
+#   around and buries the area in sand.
+# Fire with /orbital sandstorm   Give with /orbitalgive sandstorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lSandstorm'
+# Description lines on the item.
+lore:
+- A blinding sandstorm shoves everyone
+- around and buries the area in sand.
+# Item type of the cannon item.
+item: SANDSTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#E0C070'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Storm radius.
+  radius: 30
+  # Storm length.
+  seconds: 20
+  # Wind strength.
+  wind: 0.25
+  # Sand piles dropped each second.
+  sand-per-second: 15

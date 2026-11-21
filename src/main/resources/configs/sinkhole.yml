@@ -1,0 +1,29 @@
+# sinkhole.yml - MegaOrbitals cannon: Sinkhole
+#   The ground collapses into a deep pit,
+#   layer by layer.
+# Fire with /orbital sinkhole   Give with /orbitalgive sinkhole
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lSinkhole'
+# Description lines on the item.
+lore:
+- The ground collapses into a deep pit,
+- layer by layer.
+# Item type of the cannon item.
+item: COARSE_DIRT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#806040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the pit.
+  radius: 10
+  # How deep the pit goes.
+  depth: 60
+  # Blocks removed per tick (lower = slower collapse).
+  collapse-speed: 500

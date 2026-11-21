@@ -1,0 +1,31 @@
+# upheaval.yml - MegaOrbitals cannon: Upheaval
+#   Rips a disc of land out of the ground and
+#   lifts it into the sky. Passengers included.
+# Fire with /orbital upheaval   Give with /orbitalgive upheaval
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lUpheaval'
+# Description lines on the item.
+lore:
+- Rips a disc of land out of the ground and
+- lifts it into the sky. Passengers included.
+# Item type of the cannon item.
+item: DIRT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#60A040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the lifted island.
+  radius: 12
+  # How deep below the target the island goes.
+  depth: 10
+  # How far above the target it includes (trees, houses...).
+  above: 15
+  # How high the island is lifted.
+  lift: 35

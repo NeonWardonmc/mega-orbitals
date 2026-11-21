@@ -1,0 +1,29 @@
+# minersblessing.yml - MegaOrbitals cannon: Miner's Blessing
+#   Support for miners: haste, night vision
+#   and luck for everyone in range.
+# Fire with /orbital minersblessing   Give with /orbitalgive minersblessing
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lMiner''s Blessing'
+# Description lines on the item.
+lore:
+- 'Support for miners: haste, night vision'
+- and luck for everyone in range.
+# Item type of the cannon item.
+item: GOLDEN_PICKAXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FFE060'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long the blessing lasts.
+  minutes: 5
+  # Haste level.
+  haste-level: 3

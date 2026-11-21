@@ -1,0 +1,30 @@
+# roulette.yml - MegaOrbitals cannon: Orbital Roulette
+#   Spins the wheel and fires a random cannon
+#   at the target. Could be anything.
+# Fire with /orbital roulette   Give with /orbitalgive roulette
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lOrbital Roulette'
+# Description lines on the item.
+lore:
+- Spins the wheel and fires a random cannon
+- at the target. Could be anything.
+# Item type of the cannon item.
+item: COMPASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#FFC000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Cannons the wheel can never land on.
+  exclude:
+  - meganuke
+  - omega
+  - roulette
+  # How many random cannons it fires.
+  spins: 1

@@ -1,0 +1,29 @@
+# abduction.yml - MegaOrbitals cannon: Alien Abduction
+#   A UFO hovers over the target and beams
+#   everyone underneath up... then lets go.
+# Fire with /orbital abduction   Give with /orbitalgive abduction
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lAlien Abduction'
+# Description lines on the item.
+lore:
+- A UFO hovers over the target and beams
+- everyone underneath up... then lets go.
+# Item type of the cannon item.
+item: LIGHT_GRAY_CONCRETE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60FF60'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Width of the tractor beam.
+  beam-radius: 6.0
+  # UFO height.
+  height: 35
+  # How long the beam lifts.
+  seconds: 8

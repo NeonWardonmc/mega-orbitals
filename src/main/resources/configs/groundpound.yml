@@ -1,0 +1,31 @@
+# groundpound.yml - MegaOrbitals cannon: Ground Pound
+#   A colossal invisible fist smashes everyone
+#   into the ground, leaving them dazed.
+# Fire with /orbital groundpound   Give with /orbitalgive groundpound
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lGround Pound'
+# Description lines on the item.
+lore:
+- A colossal invisible fist smashes everyone
+- into the ground, leaving them dazed.
+# Item type of the cannon item.
+item: HEAVY_CORE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C08040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Damage to each target.
+  damage: 12.0
+  # How long targets are dazed.
+  daze-seconds: 6
+  # Power of the crater under each target.
+  crater-power: 2.5

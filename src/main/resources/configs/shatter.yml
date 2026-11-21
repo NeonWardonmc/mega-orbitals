@@ -1,0 +1,27 @@
+# shatter.yml - MegaOrbitals cannon: Resonance Shatter
+#   Shatters every fragile block in a huge area:
+#   glass, ice, leaves, lanterns and more.
+# Fire with /orbital shatter   Give with /orbitalgive shatter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lResonance Shatter'
+# Description lines on the item.
+lore:
+- 'Shatters every fragile block in a huge area:'
+- glass, ice, leaves, lanterns and more.
+# Item type of the cannon item.
+item: GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 50
+  # Vertical range above and below.
+  height: 40

@@ -1,0 +1,29 @@
+# duelarena.yml - MegaOrbitals cannon: Duel Arena
+#   Grabs the two players nearest the target
+#   and locks them in an arena to fight it out.
+# Fire with /orbital duelarena   Give with /orbitalgive duelarena
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lDuel Arena'
+# Description lines on the item.
+lore:
+- Grabs the two players nearest the target
+- and locks them in an arena to fight it out.
+# Item type of the cannon item.
+item: IRON_SWORD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C04040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to find duellists.
+  range: 40
+  # Arena size.
+  arena-radius: 12
+  # How long the walls stand.
+  seconds: 90

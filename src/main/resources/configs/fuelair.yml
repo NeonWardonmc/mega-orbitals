@@ -1,0 +1,31 @@
+# fuelair.yml - MegaOrbitals cannon: Thermobaric Bomb
+#   A cloud of fuel spreads over the area,
+#   then the whole cloud ignites at once.
+# Fire with /orbital fuelair   Give with /orbitalgive fuelair
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lThermobaric Bomb'
+# Description lines on the item.
+lore:
+- A cloud of fuel spreads over the area,
+- then the whole cloud ignites at once.
+# Item type of the cannon item.
+item: FIRE_CHARGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFA040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the fuel cloud.
+  radius: 16
+  # Time the cloud spreads before igniting.
+  spread-seconds: 5
+  # Blocks between blasts in the cloud.
+  blast-spacing: 4
+  # Power of each blast.
+  power: 2.5

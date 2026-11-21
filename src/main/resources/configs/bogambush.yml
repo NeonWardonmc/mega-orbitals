@@ -1,0 +1,27 @@
+# bogambush.yml - MegaOrbitals cannon: Bog Ambush
+#   The ground turns to swamp mud and bogged
+#   archers ambush you with poison arrows.
+# Fire with /orbital bogambush   Give with /orbitalgive bogambush
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lBog Ambush'
+# Description lines on the item.
+lore:
+- The ground turns to swamp mud and bogged
+- archers ambush you with poison arrows.
+# Item type of the cannon item.
+item: MUD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#406020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of bogged archers.
+  bogged: 10
+  # Spread.
+  radius: 12.0

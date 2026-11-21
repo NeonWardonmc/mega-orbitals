@@ -1,0 +1,29 @@
+# blizzard.yml - MegaOrbitals cannon: Blizzard
+#   Freezes water, buries the land in snow
+#   and slowly freezes everyone solid.
+# Fire with /orbital blizzard   Give with /orbitalgive blizzard
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lBlizzard'
+# Description lines on the item.
+lore:
+- Freezes water, buries the land in snow
+- and slowly freezes everyone solid.
+# Item type of the cannon item.
+item: POWDER_SNOW_BUCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Blizzard radius.
+  radius: 35
+  # How long it lasts.
+  seconds: 25
+  # Damage every second while frozen.
+  freeze-damage: 1.5

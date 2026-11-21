@@ -1,0 +1,29 @@
+# icerink.yml - MegaOrbitals cannon: Ice Rink
+#   Turns the ground to slick blue ice and keeps
+#   shoving everyone so they slide out of control.
+# Fire with /orbital icerink   Give with /orbitalgive icerink
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lIce Rink'
+# Description lines on the item.
+lore:
+- Turns the ground to slick blue ice and keeps
+- shoving everyone so they slide out of control.
+# Item type of the cannon item.
+item: BLUE_ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#80D0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the rink.
+  radius: 20
+  # How long the shoving lasts.
+  seconds: 25
+  # Shove strength.
+  shove: 0.9

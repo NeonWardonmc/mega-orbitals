@@ -1,0 +1,27 @@
+# guardianangel.yml - MegaOrbitals cannon: Guardian Angel
+#   A guardian angel watches over you: the next hit
+#   that would kill you is stopped and you're healed.
+# Fire with /orbital guardianangel   Give with /orbitalgive guardianangel
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lGuardian Angel'
+# Description lines on the item.
+lore:
+- 'A guardian angel watches over you: the next hit'
+- that would kill you is stopped and you're healed.
+# Item type of the cannon item.
+item: TOTEM_OF_UNDYING
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FFFFE0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the angel watches over you.
+  minutes: 5
+  # How much health you're restored to.
+  heal-fraction: 0.6

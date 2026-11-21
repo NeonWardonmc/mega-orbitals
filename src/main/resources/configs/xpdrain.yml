@@ -1,0 +1,27 @@
+# xpdrain.yml - MegaOrbitals cannon: XP Heist
+#   Steals experience levels from everyone
+#   nearby and gives them to you.
+# Fire with /orbital xpdrain   Give with /orbitalgive xpdrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lXP Heist'
+# Description lines on the item.
+lore:
+- Steals experience levels from everyone
+- nearby and gives them to you.
+# Item type of the cannon item.
+item: EXPERIENCE_BOTTLE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#80FF40'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 30
+  # Fraction of their levels to steal (1.0 = all).
+  fraction: 1.0

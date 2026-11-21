@@ -1,0 +1,31 @@
+# thermite.yml - MegaOrbitals cannon: Thermite
+#   White-hot thermite melts a glowing shaft
+#   straight down, leaving lava at the bottom.
+# Fire with /orbital thermite   Give with /orbitalgive thermite
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lThermite'
+# Description lines on the item.
+lore:
+- White-hot thermite melts a glowing shaft
+- straight down, leaving lava at the bottom.
+# Item type of the cannon item.
+item: MAGMA_CREAM
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFF0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the shaft.
+  radius: 2
+  # How deep it melts.
+  depth: 60
+  # Melting speed (lower = faster).
+  ticks-per-layer: 4
+  # Burn damage to anything in the shaft.
+  damage: 6.0

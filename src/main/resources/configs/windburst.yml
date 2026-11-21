@@ -1,0 +1,29 @@
+# windburst.yml - MegaOrbitals cannon: Hurricane Barrage
+#   A barrage of wind charges blasts
+#   everyone around like ragdolls.
+# Fire with /orbital windburst   Give with /orbitalgive windburst
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lHurricane Barrage'
+# Description lines on the item.
+lore:
+- A barrage of wind charges blasts
+- everyone around like ragdolls.
+# Item type of the cannon item.
+item: WIND_CHARGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area covered.
+  radius: 20
+  # Length of the barrage.
+  seconds: 6
+  # Wind charges per tick.
+  charges-per-tick: 2

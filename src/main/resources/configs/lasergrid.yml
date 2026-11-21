@@ -1,0 +1,31 @@
+# lasergrid.yml - MegaOrbitals cannon: Laser Grid
+#   Security lasers sweep back and forth across
+#   the area at waist height. Jump or get cut.
+# Fire with /orbital lasergrid   Give with /orbitalgive lasergrid
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lLaser Grid'
+# Description lines on the item.
+lore:
+- Security lasers sweep back and forth across
+- the area at waist height. Jump or get cut.
+# Item type of the cannon item.
+item: REDSTONE_TORCH
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF2020'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Half the size of the grid.
+  radius: 20
+  # How long the grid runs.
+  seconds: 20
+  # Lasers per direction.
+  lasers: 3
+  # Damage per hit.
+  damage: 6.0

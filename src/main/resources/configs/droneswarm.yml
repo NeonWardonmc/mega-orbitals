@@ -1,0 +1,31 @@
+# droneswarm.yml - MegaOrbitals cannon: Drone Swarm
+#   Laser drones hover over their targets,
+#   tracking them and zapping them over and over.
+# Fire with /orbital droneswarm   Give with /orbitalgive droneswarm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lDrone Swarm'
+# Description lines on the item.
+lore:
+- Laser drones hover over their targets,
+- tracking them and zapping them over and over.
+# Item type of the cannon item.
+item: OBSERVER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40C0E0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of drones.
+  drones: 6
+  # How long the drones stay.
+  seconds: 30
+  # How far drones hunt.
+  range: 40.0
+  # Damage per zap.
+  damage: 3.0

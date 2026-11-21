@@ -1,0 +1,29 @@
+# creakingwoods.yml - MegaOrbitals cannon: Creaking Woods
+#   A grove of pale oak trunks sprouts around you,
+#   and creakings stalk you between them.
+# Fire with /orbital creakingwoods   Give with /orbitalgive creakingwoods
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lCreaking Woods'
+# Description lines on the item.
+lore:
+- A grove of pale oak trunks sprouts around you,
+- and creakings stalk you between them.
+# Item type of the cannon item.
+item: PALE_OAK_LOG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#B0B0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the grove.
+  radius: 14
+  # Number of pale trunks.
+  trunks: 18
+  # Number of creakings.
+  creakings: 5

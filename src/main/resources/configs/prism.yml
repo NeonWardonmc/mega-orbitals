@@ -1,0 +1,31 @@
+# prism.yml - MegaOrbitals cannon: Prism
+#   A prism in the sky splits a beam
+#   into rainbow lasers that hunt targets.
+# Fire with /orbital prism   Give with /orbitalgive prism
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lPrism'
+# Description lines on the item.
+lore:
+- A prism in the sky splits a beam
+- into rainbow lasers that hunt targets.
+# Item type of the cannon item.
+item: AMETHYST_CLUSTER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF60FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range of the split beams.
+  radius: 30
+  # Maximum targets at once.
+  beams: 8
+  # Damage every half second.
+  damage: 4.0
+  # How long the prism lasts.
+  seconds: 10

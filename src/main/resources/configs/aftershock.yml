@@ -1,0 +1,29 @@
+# aftershock.yml - MegaOrbitals cannon: Aftershock
+#   One massive blast, then aftershock after
+#   aftershock rocks the same spot.
+# Fire with /orbital aftershock   Give with /orbitalgive aftershock
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lAftershock'
+# Description lines on the item.
+lore:
+- One massive blast, then aftershock after
+- aftershock rocks the same spot.
+# Item type of the cannon item.
+item: CRACKED_DEEPSLATE_BRICKS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#C08030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Power of the main blast.
+  power: 8.0
+  # Number of aftershocks.
+  aftershocks: 6
+  # How far the shaking is felt.
+  shake-radius: 30

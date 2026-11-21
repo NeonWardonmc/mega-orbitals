@@ -1,0 +1,31 @@
+# droppod.yml - MegaOrbitals cannon: Drop Pod
+#   YOU are the payload. You go up to orbit
+#   and slam down on the target in a drop pod.
+# Fire with /orbital droppod   Give with /orbitalgive droppod
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lDrop Pod'
+# Description lines on the item.
+lore:
+- YOU are the payload. You go up to orbit
+- and slam down on the target in a drop pod.
+# Item type of the cannon item.
+item: IRON_TRAPDOOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FF6040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Drop height.
+  height: 80
+  # Damage to everyone near the landing.
+  impact-damage: 14.0
+  # Size of the landing shockwave.
+  impact-radius: 8.0
+  # Explosion power of the landing (does not hurt you).
+  power: 4.0

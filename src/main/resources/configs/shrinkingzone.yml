@@ -1,0 +1,31 @@
+# shrinkingzone.yml - MegaOrbitals cannon: The Storm
+#   Battle-royale storm: a deadly ring closes in.
+#   Anyone left outside it takes damage.
+# Fire with /orbital shrinkingzone   Give with /orbitalgive shrinkingzone
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lThe Storm'
+# Description lines on the item.
+lore:
+- 'Battle-royale storm: a deadly ring closes in.'
+- Anyone left outside it takes damage.
+# Item type of the cannon item.
+item: PURPLE_STAINED_GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#8020C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Starting size of the safe zone.
+  start-radius: 60
+  # Final size of the safe zone.
+  end-radius: 5
+  # How long the storm takes to close.
+  seconds: 90
+  # Damage per second outside the zone.
+  damage: 2.0

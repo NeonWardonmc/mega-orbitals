@@ -1,0 +1,33 @@
+# magmageyser.yml - MegaOrbitals cannon: Magma Geysers
+#   Magma geysers burst out of the ground
+#   at random, launching anyone on top.
+# Fire with /orbital magmageyser   Give with /orbitalgive magmageyser
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lMagma Geysers'
+# Description lines on the item.
+lore:
+- Magma geysers burst out of the ground
+- at random, launching anyone on top.
+# Item type of the cannon item.
+item: MAGMA_CREAM
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF4020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area of the geyser field.
+  radius: 25
+  # How long geysers keep erupting.
+  seconds: 20
+  # New geysers each second.
+  geysers-per-second: 2
+  # Launch strength.
+  launch: 3.0
+  # Burn damage.
+  damage: 6.0

@@ -1,0 +1,31 @@
+# sculk.yml - MegaOrbitals cannon: Sculk Infestation
+#   The Deep Dark slowly spreads across the land,
+#   with shriekers and pulses of darkness.
+# Fire with /orbital sculk   Give with /orbitalgive sculk
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lSculk Infestation'
+# Description lines on the item.
+lore:
+- The Deep Dark slowly spreads across the land,
+- with shriekers and pulses of darkness.
+# Item type of the cannon item.
+item: SCULK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#052030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the sculk spreads.
+  radius: 30
+  # Blocks converted per tick.
+  spread-speed: 150
+  # Number of sculk shriekers.
+  shriekers: 6
+  # How long the darkness pulses last.
+  darkness-seconds: 40

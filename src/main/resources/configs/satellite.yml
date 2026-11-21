@@ -1,0 +1,31 @@
+# satellite.yml - MegaOrbitals cannon: Satellite Lock-On
+#   Locks onto the nearest player and
+#   keeps striking them wherever they run.
+# Fire with /orbital satellite   Give with /orbitalgive satellite
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lSatellite Lock-On'
+# Description lines on the item.
+lore:
+- Locks onto the nearest player and
+- keeps striking them wherever they run.
+# Item type of the cannon item.
+item: COMPASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#00C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to look for a player.
+  lock-range: 100
+  # Number of strikes.
+  strikes: 6
+  # Seconds between strikes.
+  seconds-between: 3
+  # Power of each strike.
+  power: 4.0

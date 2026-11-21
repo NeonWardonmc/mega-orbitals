@@ -1,0 +1,31 @@
+# leafblower.yml - MegaOrbitals cannon: Gale Cannon
+#   Hurricane-force wind pours from you wherever
+#   you look, blowing everything away.
+# Fire with /orbital leafblower   Give with /orbitalgive leafblower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lGale Cannon'
+# Description lines on the item.
+lore:
+- Hurricane-force wind pours from you wherever
+- you look, blowing everything away.
+# Item type of the cannon item.
+item: WIND_CHARGE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 0
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long it blows.
+  seconds: 6
+  # Wind range.
+  range: 20.0
+  # Cone width.
+  cone: 0.4
+  # Push strength.
+  strength: 1.4

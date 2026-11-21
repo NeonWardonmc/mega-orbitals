@@ -1,0 +1,29 @@
+# dragonstrafe.yml - MegaOrbitals cannon: Dragon Strafe
+#   An unseen dragon strafes across the target
+#   the way you face, raining acid breath.
+# Fire with /orbital dragonstrafe   Give with /orbitalgive dragonstrafe
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lDragon Strafe'
+# Description lines on the item.
+lore:
+- An unseen dragon strafes across the target
+- the way you face, raining acid breath.
+# Item type of the cannon item.
+item: DRAGON_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A030E0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the strafing run.
+  length: 80
+  # Blocks between fireballs.
+  spacing: 4.0
+  # Height of the run.
+  height: 25

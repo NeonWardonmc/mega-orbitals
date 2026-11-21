@@ -1,0 +1,27 @@
+# prospector.yml - MegaOrbitals cannon: Prospector
+#   Support for miners: turns the stone
+#   underground into a seam packed with ores.
+# Fire with /orbital prospector   Give with /orbitalgive prospector
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lProspector'
+# Description lines on the item.
+lore:
+- 'Support for miners: turns the stone'
+- underground into a seam packed with ores.
+# Item type of the cannon item.
+item: DIAMOND_ORE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#60E0E0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Sphere radius.
+  radius: 10
+  # Chance each stone block becomes an ore.
+  ore-chance: 0.25

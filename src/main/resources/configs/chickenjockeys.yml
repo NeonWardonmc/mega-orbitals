@@ -1,0 +1,27 @@
+# chickenjockeys.yml - MegaOrbitals cannon: Chicken Jockey Cavalry
+#   A cavalry of baby zombies riding chickens.
+#   Fast, tiny and furious.
+# Fire with /orbital chickenjockeys   Give with /orbitalgive chickenjockeys
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lChicken Jockey Cavalry'
+# Description lines on the item.
+lore:
+- A cavalry of baby zombies riding chickens.
+- Fast, tiny and furious.
+# Item type of the cannon item.
+item: CHICKEN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FFE080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of chicken jockeys.
+  jockeys: 12
+  # Spread.
+  radius: 8.0

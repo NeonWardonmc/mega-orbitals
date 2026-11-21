@@ -1,0 +1,27 @@
+# celebration.yml - MegaOrbitals cannon: Celebration
+#   A harmless fireworks show high in the sky.
+#   Nobody gets hurt.
+# Fire with /orbital celebration   Give with /orbitalgive celebration
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lCelebration'
+# Description lines on the item.
+lore:
+- A harmless fireworks show high in the sky.
+- Nobody gets hurt.
+# Item type of the cannon item.
+item: FIREWORK_ROCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FF80FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of the show.
+  seconds: 20
+  # Rockets each second.
+  rockets-per-second: 4

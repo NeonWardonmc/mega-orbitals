@@ -1,0 +1,29 @@
+# mitosis.yml - MegaOrbitals cannon: Mitosis
+#   Every mob nearby splits in two.
+#   Then again.
+# Fire with /orbital mitosis   Give with /orbitalgive mitosis
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lMitosis'
+# Description lines on the item.
+lore:
+- Every mob nearby splits in two.
+- Then again.
+# Item type of the cannon item.
+item: SLIME_BALL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#60E060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How many times they split (2 = 4x the mobs).
+  splits: 2
+  # Safety cap on new mobs.
+  max-mobs: 200

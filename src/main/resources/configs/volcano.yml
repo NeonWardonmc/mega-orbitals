@@ -1,0 +1,31 @@
+# volcano.yml - MegaOrbitals cannon: Volcano
+#   Raises a volcano out of the ground,
+#   then it erupts for 15 seconds.
+# Fire with /orbital volcano   Give with /orbitalgive volcano
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lVolcano'
+# Description lines on the item.
+lore:
+- Raises a volcano out of the ground,
+- then it erupts for 15 seconds.
+# Item type of the cannon item.
+item: MAGMA_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#FF3000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the volcano's base.
+  radius: 16
+  # Height of the volcano.
+  height: 20
+  # How long it erupts.
+  eruption-seconds: 15
+  # Lava bombs thrown each second.
+  bombs-per-second: 8

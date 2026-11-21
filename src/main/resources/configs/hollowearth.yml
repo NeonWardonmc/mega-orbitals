@@ -1,0 +1,27 @@
+# hollowearth.yml - MegaOrbitals cannon: Hollow Earth
+#   Hollows out everything inside a huge sphere,
+#   leaving only the shell. Outside looks normal.
+# Fire with /orbital hollowearth   Give with /orbitalgive hollowearth
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lHollow Earth'
+# Description lines on the item.
+lore:
+- Hollows out everything inside a huge sphere,
+- leaving only the shell. Outside looks normal.
+# Item type of the cannon item.
+item: STRUCTURE_VOID
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#404040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Sphere radius.
+  radius: 18
+  # Thickness of the shell left behind.
+  shell: 2.0

@@ -1,0 +1,31 @@
+# lavapour.yml - MegaOrbitals cannon: Lava Falls
+#   Waterfalls of lava pour down
+#   from the sky onto the target.
+# Fire with /orbital lavapour   Give with /orbitalgive lavapour
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lLava Falls'
+# Description lines on the item.
+lore:
+- Waterfalls of lava pour down
+- from the sky onto the target.
+# Item type of the cannon item.
+item: LAVA_BUCKET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF7000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of lava streams.
+  streams: 8
+  # Spread of the streams.
+  radius: 8
+  # Height the lava pours from.
+  height: 25
+  # How long the lava pours.
+  seconds: 20

@@ -1,0 +1,31 @@
+# mortar.yml - MegaOrbitals cannon: Mortar Battery
+#   A mortar position at the target lobs
+#   high-arcing shells out in every direction.
+# Fire with /orbital mortar   Give with /orbitalgive mortar
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lMortar Battery'
+# Description lines on the item.
+lore:
+- A mortar position at the target lobs
+- high-arcing shells out in every direction.
+# Item type of the cannon item.
+item: CAULDRON
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C08020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Furthest shell distance.
+  range: 35
+  # How long it fires.
+  seconds: 10
+  # Fire rate.
+  shells-per-second: 4
+  # Shell explosion power.
+  power: 3.0

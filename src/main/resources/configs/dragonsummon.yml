@@ -1,0 +1,27 @@
+# dragonsummon.yml - MegaOrbitals cannon: Summon the Dragon
+#   Summons a real Ender Dragon over the target.
+#   It flies away after a few minutes.
+# Fire with /orbital dragonsummon   Give with /orbitalgive dragonsummon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lSummon the Dragon'
+# Description lines on the item.
+lore:
+- Summons a real Ender Dragon over the target.
+- It flies away after a few minutes.
+# Item type of the cannon item.
+item: DRAGON_EGG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 100
+# Colour of the targeting ring.
+warning-color: '#8000FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the dragon stays.
+  minutes: 3
+  # Spawn height.
+  height: 30

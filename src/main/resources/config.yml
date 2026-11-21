@@ -1,0 +1,112 @@
+# ============================================================================
+#  MegaOrbitals 1.2.0 - main configuration
+#  Every cannon has its own file in: plugins/MegaOrbitals/configs/<cannon>.yml
+#  Run /orbital reload after editing anything.
+# ============================================================================
+
+# Do not touch. Used to upgrade old config files automatically.
+config-version: 2
+
+# ----------------------------------------------------------------------------
+general:
+  # How far players can target, in blocks. 0 = unlimited (any loaded block you can see).
+  max-range: 0
+  # How many blocks cannons may check/change per tick across ALL strikes.
+  # Lower = less lag, but big cannons (mega nuke, superlaser...) take longer to finish.
+  blocks-per-tick: 40000
+  # Print extra information to the console.
+  debug: false
+
+# ----------------------------------------------------------------------------
+worlds:
+  # blacklist = cannons work everywhere EXCEPT the listed worlds
+  # whitelist = cannons ONLY work in the listed worlds
+  mode: blacklist
+  list: []
+
+# ----------------------------------------------------------------------------
+safety:
+  # Master switch. false = no cannon can break or change blocks, whatever its own config says.
+  allow-block-damage: true
+  # Multiplies all direct damage dealt by cannons (lasers, beams, drains, the nuke ...).
+  # Explosions are not affected.
+  damage-multiplier: 1.0
+  # Can the person who fired a cannon be hurt by it?
+  #   default = use each cannon's own hurt-shooter setting
+  #   always  = the shooter is always affected
+  #   never   = the shooter is never affected
+  hurt-shooter: default
+  # Players with the permission megaorbitals.immune are never targeted by cannons.
+  respect-immunity: true
+  # Cannons cannot be aimed within this many blocks of a world's spawn point. 0 = off.
+  spawn-protection-radius: 0
+  # Maximum cannons fired per minute across the whole server. 0 = unlimited.
+  max-fires-per-minute: 0
+
+# ----------------------------------------------------------------------------
+cooldowns:
+  # Seconds a player must wait between firing cannon ITEMS.
+  item-seconds: 3
+  # Seconds a player must wait between /orbital commands.
+  command-seconds: 0
+  # Extra cooldowns for specific cannons, in seconds (applied to items and commands).
+  per-cannon:
+    meganuke: 300
+    omega: 600
+  # Players with this permission ignore all cooldowns.
+  bypass-permission: megaorbitals.bypass.cooldown
+
+# ----------------------------------------------------------------------------
+items:
+  # Use up one item each time a cannon item is fired.
+  consume-on-use: true
+  # Enchantment glint on cannon items.
+  glow: true
+  # Players must be sneaking to fire a cannon item (prevents accidents).
+  require-sneak: false
+  # Allow firing from the off hand.
+  allow-off-hand: true
+  # Extra lore lines added under every cannon's own description. {uses} = "One-time use" or "Reusable".
+  usage-lore:
+    - ""
+    - "&eRight-click &7to call the strike"
+    - "&7on the block you are looking at."
+    - "&8{uses}"
+
+# ----------------------------------------------------------------------------
+cannons:
+  # Cannon ids that can't be fired or given. Example: [meganuke, omega]
+  disabled: []
+  # If true, firing a cannon ITEM also needs the permission megaorbitals.cannon.<id>
+  per-cannon-permission: false
+
+# ----------------------------------------------------------------------------
+announce:
+  # Tell players when an orbital is fired.
+  enabled: false
+  # 0 = whole server, otherwise only players within this many blocks of the target.
+  radius: 0
+  message: "&c&l[ORBITAL] &f{player} &7fired &r{cannon} &7at &f{x}, {y}, {z}&7!"
+  # Sound played to everyone who sees the announcement. Leave empty for none.
+  sound: "entity.wither.spawn"
+
+# ----------------------------------------------------------------------------
+logging:
+  # Write a line to the console every time a cannon is fired.
+  log-fires: true
+
+# ----------------------------------------------------------------------------
+messages:
+  prefix: "&8[&cOrbital&8] "
+  fire: "&c&lORBITAL INBOUND &8» &r{cannon}"
+  no-target: "&cNo block in sight to target."
+  cooldown: "&cRecharging... wait &f{seconds}s&c."
+  disabled-world: "&cOrbital cannons are disabled in this world."
+  disabled-cannon: "&cThat cannon is disabled."
+  no-permission: "&cYou don't have permission to use that cannon."
+  spawn-protected: "&cYou can't fire orbitals this close to spawn."
+  rate-limited: "&cThe orbital network is overloaded. Try again in a moment."
+  sneak-required: "&7Sneak and right-click to fire."
+  unknown-cannon: "&cUnknown cannon: &f{cannon} &7(/orbital list)"
+  reloaded: "&aReloaded &f{count} &acannons."
+  given: "&aGave &f{player} {amount}x &r{cannon}"

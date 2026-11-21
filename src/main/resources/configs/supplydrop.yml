@@ -1,0 +1,35 @@
+# supplydrop.yml - MegaOrbitals cannon: Supply Drop
+#   Support: a supply crate parachutes down
+#   from orbit, packed with loot.
+# Fire with /orbital supplydrop   Give with /orbitalgive supplydrop
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lSupply Drop'
+# Description lines on the item.
+lore:
+- 'Support: a supply crate parachutes down'
+- from orbit, packed with loot.
+# Item type of the cannon item.
+item: CHEST
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#E0A040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Items in the crate, MATERIAL:amount.
+  loot:
+  - GOLDEN_APPLE:4
+  - DIAMOND:6
+  - IRON_INGOT:16
+  - ENDER_PEARL:4
+  - ARROW:32
+  - COOKED_BEEF:16
+  - EXPERIENCE_BOTTLE:8
+  - TOTEM_OF_UNDYING:1
+  # How long the crate takes to float down.
+  fall-seconds: 6

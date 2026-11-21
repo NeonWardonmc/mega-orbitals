@@ -1,0 +1,27 @@
+# shuffle.yml - MegaOrbitals cannon: Inventory Shuffle
+#   Scrambles every nearby player's inventory.
+#   Good luck finding your sword.
+# Fire with /orbital shuffle   Give with /orbitalgive shuffle
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lInventory Shuffle'
+# Description lines on the item.
+lore:
+- Scrambles every nearby player's inventory.
+- Good luck finding your sword.
+# Item type of the cannon item.
+item: BUNDLE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF80FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # Also mix items between different players.
+  swap-between-players: false

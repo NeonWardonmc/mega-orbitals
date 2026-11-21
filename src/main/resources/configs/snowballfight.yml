@@ -1,0 +1,29 @@
+# snowballfight.yml - MegaOrbitals cannon: Snowball Fight
+#   Drops a snow golem army plus a freezing
+#   snowball barrage that knocks everyone around.
+# Fire with /orbital snowballfight   Give with /orbitalgive snowballfight
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lSnowball Fight'
+# Description lines on the item.
+lore:
+- Drops a snow golem army plus a freezing
+- snowball barrage that knocks everyone around.
+# Item type of the cannon item.
+item: SNOWBALL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FFFFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Snow golems (they attack mobs).
+  golems: 8
+  # Range of the barrage.
+  radius: 25
+  # Length of the barrage.
+  seconds: 10

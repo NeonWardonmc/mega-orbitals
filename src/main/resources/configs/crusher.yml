@@ -1,0 +1,29 @@
+# crusher.yml - MegaOrbitals cannon: Hydraulic Crusher
+#   Two colossal walls slide in from both sides
+#   and slam together, crushing anything between.
+# Fire with /orbital crusher   Give with /orbitalgive crusher
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lHydraulic Crusher'
+# Description lines on the item.
+lore:
+- Two colossal walls slide in from both sides
+- and slam together, crushing anything between.
+# Item type of the cannon item.
+item: PISTON
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#606060'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Starting gap between the walls.
+  width: 24.0
+  # Crush damage.
+  damage: 30.0
+  # How long the walls take to close.
+  close-ticks: 40

@@ -1,0 +1,33 @@
+# wreckingball.yml - MegaOrbitals cannon: Wrecking Ball
+#   A colossal wrecking ball on a chain
+#   from orbit swings round, smashing everything.
+# Fire with /orbital wreckingball   Give with /orbitalgive wreckingball
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lWrecking Ball'
+# Description lines on the item.
+lore:
+- A colossal wrecking ball on a chain
+- from orbit swings round, smashing everything.
+# Item type of the cannon item.
+item: IRON_CHAIN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#606060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Swing radius.
+  radius: 14.0
+  # How long it swings.
+  seconds: 12
+  # Full circles in that time.
+  swings: 4
+  # Damage on hit.
+  damage: 16.0
+  # Size of the ball.
+  ball-size: 4.0

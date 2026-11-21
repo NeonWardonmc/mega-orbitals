@@ -1,0 +1,29 @@
+# tnttrain.yml - MegaOrbitals cannon: Runaway TNT Train
+#   A runaway train of TNT minecarts barrels
+#   through the target, carriage by carriage.
+# Fire with /orbital tnttrain   Give with /orbitalgive tnttrain
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lRunaway TNT Train'
+# Description lines on the item.
+lore:
+- A runaway train of TNT minecarts barrels
+- through the target, carriage by carriage.
+# Item type of the cannon item.
+item: TNT_MINECART
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#FF3030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of TNT carts.
+  carriages: 10
+  # Train speed.
+  speed: 1.2
+  # How far back the train starts.
+  start-distance: 30

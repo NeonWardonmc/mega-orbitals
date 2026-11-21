@@ -1,0 +1,33 @@
+# zombieapocalypse.yml - MegaOrbitals cannon: Zombie Apocalypse
+#   Waves of armoured zombies rise from the
+#   ground. Nearby villagers turn too.
+# Fire with /orbital zombieapocalypse   Give with /orbitalgive zombieapocalypse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lZombie Apocalypse'
+# Description lines on the item.
+lore:
+- Waves of armoured zombies rise from the
+- ground. Nearby villagers turn too.
+# Item type of the cannon item.
+item: ZOMBIE_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#308020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Where zombies rise.
+  radius: 20
+  # Number of waves.
+  waves: 3
+  # Zombies per wave.
+  per-wave: 12
+  # Time between waves.
+  seconds-between-waves: 10
+  # Turn nearby villagers into zombie villagers.
+  infect-villagers: true

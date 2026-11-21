@@ -1,0 +1,29 @@
+# heavyweight.yml - MegaOrbitals cannon: Heavyweight
+#   Triple gravity: everyone nearby can barely
+#   jump, and every fall hurts a lot more.
+# Fire with /orbital heavyweight   Give with /orbitalgive heavyweight
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lHeavyweight'
+# Description lines on the item.
+lore:
+- 'Triple gravity: everyone nearby can barely'
+- jump, and every fall hurts a lot more.
+# Item type of the cannon item.
+item: HEAVY_CORE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#404040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long it lasts.
+  seconds: 60
+  # Gravity multiplier.
+  gravity: 3.0

@@ -1,0 +1,31 @@
+# boulders.yml - MegaOrbitals cannon: Rolling Boulders
+#   Giant boulders crash down and roll outward,
+#   flattening everything in their path.
+# Fire with /orbital boulders   Give with /orbitalgive boulders
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lRolling Boulders'
+# Description lines on the item.
+lore:
+- Giant boulders crash down and roll outward,
+- flattening everything in their path.
+# Item type of the cannon item.
+item: COBBLESTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#909090'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of boulders.
+  boulders: 6
+  # How far they roll.
+  distance: 40
+  # Damage when run over.
+  damage: 14.0
+  # Boulder size.
+  size: 4.0

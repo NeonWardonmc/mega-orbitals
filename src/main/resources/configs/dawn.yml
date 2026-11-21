@@ -1,0 +1,29 @@
+# dawn.yml - MegaOrbitals cannon: Forced Dawn
+#   Forces the sun to rise: it becomes morning and
+#   every undead mob nearby bursts into flames.
+# Fire with /orbital dawn   Give with /orbitalgive dawn
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lForced Dawn'
+# Description lines on the item.
+lore:
+- 'Forces the sun to rise: it becomes morning and'
+- every undead mob nearby bursts into flames.
+# Item type of the cannon item.
+item: SUNFLOWER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFE080'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Set the world time to morning.
+  change-time: true
+  # Range for burning undead.
+  radius: 60
+  # Holy damage to undead.
+  damage: 10.0

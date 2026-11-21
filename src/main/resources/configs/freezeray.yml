@@ -1,0 +1,29 @@
+# freezeray.yml - MegaOrbitals cannon: Freeze Ray
+#   A freezing beam from you to the target. Water
+#   becomes ice, lava obsidian, and people freeze.
+# Fire with /orbital freezeray   Give with /orbitalgive freezeray
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lFreeze Ray'
+# Description lines on the item.
+lore:
+- A freezing beam from you to the target. Water
+- becomes ice, lava obsidian, and people freeze.
+# Item type of the cannon item.
+item: ICE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#A0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Beam width.
+  width: 2.5
+  # How long targets stay frozen.
+  freeze-seconds: 5
+  # Frost damage.
+  damage: 6.0

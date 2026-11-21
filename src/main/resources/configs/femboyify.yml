@@ -1,0 +1,33 @@
+# femboyify.yml - MegaOrbitals cannon: Femboyify
+#   Everyone nearby gets the same cute skin.
+#   Mobs get the matching head too.
+# Fire with /orbital femboyify   Give with /orbitalgive femboyify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lFemboyify'
+# Description lines on the item.
+lore:
+- Everyone nearby gets the same cute skin.
+- Mobs get the matching head too.
+# Item type of the cannon item.
+item: PINK_TULIP
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF80D0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long the skin lasts (0 = until they rejoin).
+  seconds: 300
+  # Put the skin's head on nearby mobs too.
+  include-mobs: true
+  # Signed skin texture value (from Mojang / mineskin.org). Change to use another skin.
+  texture-value: ewogICJ0aW1lc3RhbXAiIDogMTc5NTI0NDI1MzAyMiwKICAicHJvZmlsZUlkIiA6ICI4NTQyNjc1ZjExNDk0OTYzYWM4MWE3OGRmNjNkZTdlNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJpaWlWb2RvbyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9jMjc2NTEyNmYzZmVmZDhhODQ3NmU3MGE4NWJmYWI1NjI3MzI0YjA0MmVlOGJjMzgxNDMzNThhNjA3Njc2ZDk5IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=
+  # Signature for the texture value above.
+  texture-signature: TxOzTHtKpKWKiLrda8eQSeFF3VDeVqy0CfuQom5z2AqM0QlODm0Cb3g6X0Un2GTn7JTtvn0TSgFExetKx05KDl2SvzEld86nU32Dgwq77zueiODsXRmmuv2RTYHXz+4Zdnx0siKeJS1N2gDAbwJZGEW0RvG3YzQcu3uXAKtdGMMbmivtP+2tdxKfdebvOKYcqLR0WEm4D/F5e1LHUBzWq4aU7ok7j4loIwWsjrHDYiZLKO1ik2km+z7JRRWyV0apGqiJw1fFr50Klc7TEvCiM67b9uS1qG10Z7PytUudUJLFOd0CR5nhvWxXwfoYNXqeFM+O7Z01wUuK1944DjUovr9r9eGGODbni/Q214Ee34B6gK9TfpfO1uuQyA4vvdmb7zrNBSQF7GFHJNId7rzQfIdlrbIcuR003wyumb/8q0f20F4IHGcWnL64IgKI07beZ/7GCkDYcamiRYDxtlQWBkuol/XFuc55O+zdW9in0rig0+iNGUR/zG1RRKDlgPJHZR9cpSDj4TazwsJQ0/XkhaV9d851Jr+S9p7bEbTcssT0uBYWehc3W2DibjrXix5xEaIfkTWQtPBf1kec7+JKjeLHcAJAFRzCHMN+S6ANK+a9hhBzB5wKcrLIsjWlwwyw+PdJsZcWTregnBE7w+ofMMbgr/wmMG0Ft4xCMTyKUWk=

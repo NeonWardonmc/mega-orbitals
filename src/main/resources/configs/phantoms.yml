@@ -1,0 +1,29 @@
+# phantoms.yml - MegaOrbitals cannon: Phantom Squadron
+#   A squadron of giant phantoms
+#   dive-bombs everyone below.
+# Fire with /orbital phantoms   Give with /orbitalgive phantoms
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lPhantom Squadron'
+# Description lines on the item.
+lore:
+- A squadron of giant phantoms
+- dive-bombs everyone below.
+# Item type of the cannon item.
+item: PHANTOM_MEMBRANE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#3040A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of phantoms.
+  phantoms: 10
+  # Phantom size (vanilla max natural is 0-2).
+  size: 4
+  # Let them burn in the sun.
+  burn-in-daylight: false

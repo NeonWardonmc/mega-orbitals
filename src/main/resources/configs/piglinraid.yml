@@ -1,0 +1,29 @@
+# piglinraid.yml - MegaOrbitals cannon: Piglin War Band
+#   A war band of crossbow piglins and brutes
+#   storms in. They won't turn into zombies.
+# Fire with /orbital piglinraid   Give with /orbitalgive piglinraid
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lPiglin War Band'
+# Description lines on the item.
+lore:
+- A war band of crossbow piglins and brutes
+- storms in. They won't turn into zombies.
+# Item type of the cannon item.
+item: GOLD_INGOT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#E0A020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Crossbow piglins.
+  piglins: 10
+  # Piglin brutes.
+  brutes: 3
+  # Spread.
+  radius: 10.0

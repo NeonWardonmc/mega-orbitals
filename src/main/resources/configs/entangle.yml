@@ -1,0 +1,29 @@
+# entangle.yml - MegaOrbitals cannon: Entangle
+#   Roots burst from the ground and lock
+#   everyone in place, squeezing them.
+# Fire with /orbital entangle   Give with /orbitalgive entangle
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lEntangle'
+# Description lines on the item.
+lore:
+- Roots burst from the ground and lock
+- everyone in place, squeezing them.
+# Item type of the cannon item.
+item: MANGROVE_ROOTS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#507030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # How long they are held.
+  seconds: 8
+  # Squeeze damage every second.
+  damage: 1.5

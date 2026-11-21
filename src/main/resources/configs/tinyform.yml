@@ -1,0 +1,29 @@
+# tinyform.yml - MegaOrbitals cannon: Mouse Form
+#   YOU shrink to the size of a mouse:
+#   tiny, fast and very hard to hit.
+# Fire with /orbital tinyform   Give with /orbitalgive tinyform
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lMouse Form'
+# Description lines on the item.
+lore:
+- 'YOU shrink to the size of a mouse:'
+- tiny, fast and very hard to hit.
+# Item type of the cannon item.
+item: RABBIT_FOOT
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#80FF80'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long you stay tiny.
+  seconds: 60
+  # Your size (1.0 = normal).
+  size: 0.25
+  # Extra speed (0.6 = +60%).
+  speed-bonus: 0.6

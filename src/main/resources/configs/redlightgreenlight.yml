@@ -1,0 +1,29 @@
+# redlightgreenlight.yml - MegaOrbitals cannon: Red Light, Green Light
+#   Minigame: GREEN LIGHT you can move. RED LIGHT,
+#   anyone who moves gets struck by lightning.
+# Fire with /orbital redlightgreenlight   Give with /orbitalgive redlightgreenlight
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lRed Light, &a&lGreen Light'
+# Description lines on the item.
+lore:
+- 'Minigame: GREEN LIGHT you can move. RED LIGHT,'
+- anyone who moves gets struck by lightning.
+# Item type of the cannon item.
+item: REDSTONE_LAMP
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FF4040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 40
+  # Length of the game.
+  seconds: 45
+  # Damage for moving on red.
+  damage: 8.0

@@ -1,0 +1,27 @@
+# ruinify.yml - MegaOrbitals cannon: Thousand Years
+#   Ages everything by a thousand years: bricks crack,
+#   stone gets mossy, windows break, cobwebs appear.
+# Fire with /orbital ruinify   Give with /orbitalgive ruinify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lThousand Years'
+# Description lines on the item.
+lore:
+- 'Ages everything by a thousand years: bricks crack,'
+- stone gets mossy, windows break, cobwebs appear.
+# Item type of the cannon item.
+item: MOSSY_COBBLESTONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#708060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Chance each block crumbles away entirely.
+  decay: 0.08

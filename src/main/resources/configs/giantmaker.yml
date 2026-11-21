@@ -1,0 +1,31 @@
+# giantmaker.yml - MegaOrbitals cannon: Gigantify
+#   Every mob nearby grows to three times
+#   its size, with triple health to match.
+# Fire with /orbital giantmaker   Give with /orbitalgive giantmaker
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lGigantify'
+# Description lines on the item.
+lore:
+- Every mob nearby grows to three times
+- its size, with triple health to match.
+# Item type of the cannon item.
+item: BONE_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40A040'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # New size multiplier.
+  size: 3.0
+  # Health multiplier.
+  health: 3.0
+  # How long they stay giant.
+  minutes: 10

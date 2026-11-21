@@ -1,0 +1,29 @@
+# moongravity.yml - MegaOrbitals cannon: Moon Gravity
+#   Moon gravity: everyone nearby floats
+#   around in huge, slow, bouncy jumps.
+# Fire with /orbital moongravity   Give with /orbitalgive moongravity
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lMoon Gravity'
+# Description lines on the item.
+lore:
+- 'Moon gravity: everyone nearby floats'
+- around in huge, slow, bouncy jumps.
+# Item type of the cannon item.
+item: END_STONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C0C0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long it lasts.
+  seconds: 60
+  # Gravity multiplier (1.0 = normal).
+  gravity: 0.17

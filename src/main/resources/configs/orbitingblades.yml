@@ -1,0 +1,33 @@
+# orbitingblades.yml - MegaOrbitals cannon: Blade Orbit
+#   Giant swords orbit the target in a widening
+#   ring, slicing anything that comes near.
+# Fire with /orbital orbitingblades   Give with /orbitalgive orbitingblades
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lBlade Orbit'
+# Description lines on the item.
+lore:
+- Giant swords orbit the target in a widening
+- ring, slicing anything that comes near.
+# Item type of the cannon item.
+item: NETHERITE_SWORD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#60A0C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of swords.
+  blades: 6
+  # Starting orbit size.
+  start-radius: 4.0
+  # Final orbit size.
+  end-radius: 14.0
+  # How long they orbit.
+  seconds: 20
+  # Damage per hit.
+  damage: 10.0

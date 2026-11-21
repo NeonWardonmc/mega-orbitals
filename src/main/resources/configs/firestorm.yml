@@ -1,0 +1,29 @@
+# firestorm.yml - MegaOrbitals cannon: Firestorm
+#   Fire rains from the sky and
+#   sets the whole area ablaze.
+# Fire with /orbital firestorm   Give with /orbitalgive firestorm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lFirestorm'
+# Description lines on the item.
+lore:
+- Fire rains from the sky and
+- sets the whole area ablaze.
+# Item type of the cannon item.
+item: BLAZE_POWDER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF6010'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Area set on fire.
+  radius: 30
+  # Chance each spot catches fire (0-1).
+  fire-chance: 0.5
+  # How long creatures burn.
+  burn-seconds: 15

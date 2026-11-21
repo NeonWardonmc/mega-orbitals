@@ -1,0 +1,29 @@
+# drill.yml - MegaOrbitals cannon: Orbital Drill
+#   A beam that blasts a shaft
+#   straight down to bedrock.
+# Fire with /orbital drill   Give with /orbitalgive drill
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lOrbital Drill'
+# Description lines on the item.
+lore:
+- A beam that blasts a shaft
+- straight down to bedrock.
+# Item type of the cannon item.
+item: NETHERITE_PICKAXE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FFFFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How many blocks down it drills.
+  depth: 200
+  # Power of each blast.
+  power: 5.0
+  # Blocks between each blast.
+  blocks-per-blast: 3

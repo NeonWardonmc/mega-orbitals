@@ -1,0 +1,27 @@
+# lavalake.yml - MegaOrbitals cannon: Lava Lake
+#   The ground beneath the target melts into
+#   a bubbling lake of lava.
+# Fire with /orbital lavalake   Give with /orbitalgive lavalake
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lLava Lake'
+# Description lines on the item.
+lore:
+- The ground beneath the target melts into
+- a bubbling lake of lava.
+# Item type of the cannon item.
+item: MAGMA_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF6010'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Lake radius.
+  radius: 9
+  # Lake depth.
+  depth: 4

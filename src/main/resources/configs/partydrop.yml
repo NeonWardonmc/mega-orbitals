@@ -1,0 +1,27 @@
+# partydrop.yml - MegaOrbitals cannon: Party Drop
+#   A party crashes in: cakes and candles appear,
+#   confetti flies and music plays.
+# Fire with /orbital partydrop   Give with /orbitalgive partydrop
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lParty Drop'
+# Description lines on the item.
+lore:
+- 'A party crashes in: cakes and candles appear,'
+- confetti flies and music plays.
+# Item type of the cannon item.
+item: CAKE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FF80C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of cakes.
+  cakes: 8
+  # Spread.
+  radius: 6.0

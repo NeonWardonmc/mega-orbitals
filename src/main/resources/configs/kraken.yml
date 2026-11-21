@@ -1,0 +1,31 @@
+# kraken.yml - MegaOrbitals cannon: Release the Kraken
+#   Floods the area into a sea and releases
+#   elder guardians with a guardian army.
+# Fire with /orbital kraken   Give with /orbitalgive kraken
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lRelease the Kraken'
+# Description lines on the item.
+lore:
+- Floods the area into a sea and releases
+- elder guardians with a guardian army.
+# Item type of the cannon item.
+item: PRISMARINE_SHARD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#208080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the sea.
+  radius: 14
+  # Depth of the sea.
+  depth: 8
+  # Elder guardians.
+  elders: 2
+  # Guardians.
+  guardians: 8

@@ -1,0 +1,31 @@
+# llamabarrage.yml - MegaOrbitals cannon: Llama Barrage
+#   A sky full of llama spit. Disgusting,
+#   humiliating, and it really adds up.
+# Fire with /orbital llamabarrage   Give with /orbitalgive llamabarrage
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lLlama Barrage'
+# Description lines on the item.
+lore:
+- A sky full of llama spit. Disgusting,
+- humiliating, and it really adds up.
+# Item type of the cannon item.
+item: WHITE_CARPET
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#F0E0B0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long the spitting lasts.
+  seconds: 8
+  # Spit per target per volley.
+  spit-per-target: 2
+  # Extra damage per spit that lands near you.
+  damage: 1.0

@@ -1,0 +1,35 @@
+# omega.yml - MegaOrbitals cannon: || Ω OMEGA Ω ||
+#   Fires every other cannon at once.
+#   All of them. At the same spot.
+#   The server may not survive.
+# Fire with /orbital omega   Give with /orbitalgive omega
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&l&k||&r &4&lΩ OMEGA Ω &4&l&k||'
+# Description lines on the item.
+lore:
+- Fires every other cannon at once.
+- All of them. At the same spot.
+- '&cThe server may not survive.'
+# Item type of the cannon item.
+item: COMMAND_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 300
+# Colour of the targeting ring.
+warning-color: '#FF0000'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Cannon ids Omega should skip, e.g. [meganuke, exile].
+  exclude: []
+  # Fire at most this many cannons, picked at random (0 = every cannon).
+  max-cannons: 0
+  # Ticks between each cannon launch (0 = truly all at once).
+  stagger-ticks: 1
+  # Skip cannons disabled in config.yml.
+  skip-disabled: true
+  # Also play every cannon's own warning (very noisy).
+  include-warnings: false

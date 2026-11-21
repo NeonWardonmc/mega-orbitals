@@ -1,0 +1,27 @@
+# illusionercoven.yml - MegaOrbitals cannon: Illusioner Coven
+#   A coven of illusioners: they blind you,
+#   split into clones and rain arrows.
+# Fire with /orbital illusionercoven   Give with /orbitalgive illusionercoven
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&9&lIllusioner Coven'
+# Description lines on the item.
+lore:
+- 'A coven of illusioners: they blind you,'
+- split into clones and rain arrows.
+# Item type of the cannon item.
+item: BOW
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#4060C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of illusioners.
+  illusioners: 5
+  # Spread.
+  radius: 8.0

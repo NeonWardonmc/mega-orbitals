@@ -1,0 +1,31 @@
+# domino.yml - MegaOrbitals cannon: Domino Blast
+#   Explosions topple forward like dominoes the way
+#   you face, each one bigger than the last.
+# Fire with /orbital domino   Give with /orbitalgive domino
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lDomino Blast'
+# Description lines on the item.
+lore:
+- Explosions topple forward like dominoes the way
+- you face, each one bigger than the last.
+# Item type of the cannon item.
+item: SMOOTH_QUARTZ
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFE060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far the dominoes run.
+  length: 60
+  # Blocks between blasts.
+  spacing: 4.0
+  # Power of the first blast.
+  start-power: 2.0
+  # Power of the last blast.
+  end-power: 7.0

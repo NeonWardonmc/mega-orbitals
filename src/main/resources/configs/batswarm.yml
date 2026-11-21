@@ -1,0 +1,31 @@
+# batswarm.yml - MegaOrbitals cannon: Bat Swarm
+#   A screeching cloud of bats engulfs everyone,
+#   blocking their view and nipping at them.
+# Fire with /orbital batswarm   Give with /orbitalgive batswarm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lBat Swarm'
+# Description lines on the item.
+lore:
+- A screeching cloud of bats engulfs everyone,
+- blocking their view and nipping at them.
+# Item type of the cannon item.
+item: BAT_SPAWN_EGG
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#303030'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of bats.
+  bats: 50
+  # Range.
+  radius: 20
+  # How long the swarm lasts.
+  seconds: 30
+  # Nip damage every second.
+  damage: 0.5

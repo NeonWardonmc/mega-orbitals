@@ -1,0 +1,31 @@
+# endrift.yml - MegaOrbitals cannon: End Rift
+#   Tears open a rift to the End: end stone,
+#   obsidian pillars, shulkers and endermen.
+# Fire with /orbital endrift   Give with /orbitalgive endrift
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lEnd Rift'
+# Description lines on the item.
+lore:
+- 'Tears open a rift to the End: end stone,'
+- obsidian pillars, shulkers and endermen.
+# Item type of the cannon item.
+item: END_STONE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#E0E0A0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the rift.
+  radius: 22
+  # Obsidian pillars.
+  pillars: 4
+  # Shulkers (on top of the pillars).
+  shulkers: 4
+  # Endermen.
+  endermen: 8

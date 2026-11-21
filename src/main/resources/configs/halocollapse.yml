@@ -1,0 +1,33 @@
+# halocollapse.yml - MegaOrbitals cannon: Halo Collapse
+#   A ring of bombs orbits above the target,
+#   spirals inward and collapses into one blast.
+# Fire with /orbital halocollapse   Give with /orbitalgive halocollapse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lHalo Collapse'
+# Description lines on the item.
+lore:
+- A ring of bombs orbits above the target,
+- spirals inward and collapses into one blast.
+# Item type of the cannon item.
+item: GOLD_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFB020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Bombs in the ring.
+  bombs: 24
+  # Starting ring size.
+  radius: 22.0
+  # Time to collapse.
+  seconds: 6
+  # Power of each bomb as it lands.
+  ring-power: 3.0
+  # Power of the final blast.
+  final-power: 10.0

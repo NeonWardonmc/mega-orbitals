@@ -1,0 +1,33 @@
+# sweeper.yml - MegaOrbitals cannon: Sweeper
+#   A laser sweeps a circle around the target,
+#   carving a burning trench.
+# Fire with /orbital sweeper   Give with /orbitalgive sweeper
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lSweeper'
+# Description lines on the item.
+lore:
+- A laser sweeps a circle around the target,
+- carving a burning trench.
+# Item type of the cannon item.
+item: BLAZE_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#FF3030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the sweep circle.
+  radius: 20
+  # How long the sweep takes.
+  seconds: 8
+  # Full circles during that time.
+  rotations: 2
+  # Damage to anything the beam touches.
+  damage: 10.0
+  # Half-width of the trench.
+  trench-width: 2

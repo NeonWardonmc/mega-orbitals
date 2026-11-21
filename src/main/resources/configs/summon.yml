@@ -1,0 +1,27 @@
+# summon.yml - MegaOrbitals cannon: Summoning Circle
+#   Teleports every player near the target
+#   to stand right in front of you.
+# Fire with /orbital summon   Give with /orbitalgive summon
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lSummoning Circle'
+# Description lines on the item.
+lore:
+- Teleports every player near the target
+- to stand right in front of you.
+# Item type of the cannon item.
+item: RESPAWN_ANCHOR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#8020C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range around the target.
+  radius: 20
+  # Also summon mobs.
+  include-mobs: false

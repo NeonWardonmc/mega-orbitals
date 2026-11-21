@@ -1,0 +1,29 @@
+# beeswarm.yml - MegaOrbitals cannon: Killer Bees
+#   A furious swarm of bees descends
+#   on everyone nearby.
+# Fire with /orbital beeswarm   Give with /orbitalgive beeswarm
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lKiller Bees'
+# Description lines on the item.
+lore:
+- A furious swarm of bees descends
+- on everyone nearby.
+# Item type of the cannon item.
+item: BEEHIVE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFD020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of bees.
+  bees: 30
+  # How far the bees hunt.
+  radius: 25
+  # Bees vanish after this long.
+  remove-after-seconds: 60

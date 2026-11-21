@@ -1,0 +1,29 @@
+# giant.yml - MegaOrbitals cannon: The Giant
+#   Drops one of Minecraft's forgotten Giants
+#   from orbit. The landing alone is devastating.
+# Fire with /orbital giant   Give with /orbitalgive giant
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&2&lThe Giant'
+# Description lines on the item.
+lore:
+- Drops one of Minecraft's forgotten Giants
+- from orbit. The landing alone is devastating.
+# Item type of the cannon item.
+item: ZOMBIE_HEAD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#30A030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Damage to everything it lands near.
+  landing-damage: 25.0
+  # Size of the landing impact.
+  landing-radius: 7.0
+  # Giant vanishes after this long (0 = stays).
+  remove-after-seconds: 120

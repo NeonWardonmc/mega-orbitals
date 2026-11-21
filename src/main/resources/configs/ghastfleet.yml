@@ -1,0 +1,29 @@
+# ghastfleet.yml - MegaOrbitals cannon: Ghast Fleet
+#   A fleet of ghasts drifts in overhead
+#   and opens fire on everyone below.
+# Fire with /orbital ghastfleet   Give with /orbitalgive ghastfleet
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lGhast Fleet'
+# Description lines on the item.
+lore:
+- A fleet of ghasts drifts in overhead
+- and opens fire on everyone below.
+# Item type of the cannon item.
+item: GHAST_TEAR
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#F0F0F0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of ghasts.
+  ghasts: 5
+  # Height above the target.
+  height: 22
+  # Spread of the fleet.
+  radius: 14.0

@@ -1,0 +1,29 @@
+# comet.yml - MegaOrbitals cannon: Comet
+#   A comet skims low across the ground
+#   through the target, gouging a burning trench.
+# Fire with /orbital comet   Give with /orbitalgive comet
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lComet'
+# Description lines on the item.
+lore:
+- A comet skims low across the ground
+- through the target, gouging a burning trench.
+# Item type of the cannon item.
+item: LIGHT_BLUE_GLAZED_TERRACOTTA
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#60C0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Length of its path.
+  length: 100
+  # Size of the trench.
+  trench-radius: 3
+  # Damage to anything it hits.
+  damage: 25.0

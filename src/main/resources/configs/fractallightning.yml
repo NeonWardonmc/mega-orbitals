@@ -1,0 +1,31 @@
+# fractallightning.yml - MegaOrbitals cannon: Fractal Lightning
+#   Lightning hits the ground and splits into a
+#   branching tree of electricity racing outward.
+# Fire with /orbital fractallightning   Give with /orbitalgive fractallightning
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lFractal Lightning'
+# Description lines on the item.
+lore:
+- Lightning hits the ground and splits into a
+- branching tree of electricity racing outward.
+# Item type of the cannon item.
+item: LIGHTNING_ROD
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Starting branches.
+  branches: 5
+  # How many times branches split.
+  depth: 4
+  # Length of each branch segment.
+  segment-length: 6.0
+  # Damage near each branch.
+  damage: 8.0

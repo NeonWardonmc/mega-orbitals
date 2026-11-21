@@ -1,0 +1,27 @@
+# glassify.yml - MegaOrbitals cannon: X-Ray Strike
+#   Turns every solid block in a sphere into glass.
+#   Hidden bases and stashes, revealed.
+# Fire with /orbital glassify   Give with /orbitalgive glassify
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lX-Ray Strike'
+# Description lines on the item.
+lore:
+- Turns every solid block in a sphere into glass.
+- Hidden bases and stashes, revealed.
+# Item type of the cannon item.
+item: GLASS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Sphere radius.
+  radius: 14
+  # Leave ores and storage blocks visible as they are.
+  keep-ores-and-containers: true

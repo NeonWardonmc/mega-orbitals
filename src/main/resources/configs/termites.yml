@@ -1,0 +1,29 @@
+# termites.yml - MegaOrbitals cannon: Termites
+#   A termite infestation eats every wooden block:
+#   houses, floors, doors, fences, chests' tables.
+# Fire with /orbital termites   Give with /orbitalgive termites
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lTermites'
+# Description lines on the item.
+lore:
+- 'A termite infestation eats every wooden block:'
+- houses, floors, doors, fences, chests' tables.
+# Item type of the cannon item.
+item: OAK_PLANKS
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#A07040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Vertical range.
+  height: 30
+  # Blocks checked per tick (lower = slower munching).
+  eat-speed: 150

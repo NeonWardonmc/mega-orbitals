@@ -1,0 +1,29 @@
+# collapse.yml - MegaOrbitals cannon: Structural Collapse
+#   Switches on gravity for every block in range.
+#   Houses, towers and trees crumble to the ground.
+# Fire with /orbital collapse   Give with /orbitalgive collapse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lStructural Collapse'
+# Description lines on the item.
+lore:
+- Switches on gravity for every block in range.
+- Houses, towers and trees crumble to the ground.
+# Item type of the cannon item.
+item: GRAVEL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#808080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 10
+  # How high above the target it affects.
+  height: 40
+  # Safety cap on how many blocks can fall.
+  max-blocks: 2500

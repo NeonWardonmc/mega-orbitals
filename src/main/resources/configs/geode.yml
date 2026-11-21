@@ -1,0 +1,25 @@
+# geode.yml - MegaOrbitals cannon: Geode Prison
+#   Seals the area inside a giant amethyst
+#   geode, glittering with crystals inside.
+# Fire with /orbital geode   Give with /orbitalgive geode
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lGeode Prison'
+# Description lines on the item.
+lore:
+- Seals the area inside a giant amethyst
+- geode, glittering with crystals inside.
+# Item type of the cannon item.
+item: AMETHYST_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 25
+# Colour of the targeting ring.
+warning-color: '#C080FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Geode radius.
+  radius: 11

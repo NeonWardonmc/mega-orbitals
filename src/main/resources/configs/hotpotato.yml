@@ -1,0 +1,31 @@
+# hotpotato.yml - MegaOrbitals cannon: Hot Potato
+#   Sticks a ticking bomb on the nearest player.
+#   Touch someone to pass it on before it blows!
+# Fire with /orbital hotpotato   Give with /orbitalgive hotpotato
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lHot Potato'
+# Description lines on the item.
+lore:
+- Sticks a ticking bomb on the nearest player.
+- Touch someone to pass it on before it blows!
+# Item type of the cannon item.
+item: BAKED_POTATO
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFA040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far to look for the first holder.
+  range: 40
+  # Fuse length.
+  seconds: 20
+  # How close you must get to pass it on.
+  pass-distance: 2.5
+  # Explosion power.
+  power: 5.0

@@ -1,0 +1,29 @@
+# gravitybomb.yml - MegaOrbitals cannon: Gravity Bomb
+#   Pulls everything into the centre, then
+#   flips gravity and hurls it all skyward.
+# Fire with /orbital gravitybomb   Give with /orbitalgive gravitybomb
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lGravity Bomb'
+# Description lines on the item.
+lore:
+- Pulls everything into the centre, then
+- flips gravity and hurls it all skyward.
+# Item type of the cannon item.
+item: CRYING_OBSIDIAN
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#6020A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long it pulls.
+  pull-seconds: 3
+  # Launch strength.
+  launch: 3.5

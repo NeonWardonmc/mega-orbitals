@@ -1,0 +1,27 @@
+# flashbang.yml - MegaOrbitals cannon: Flashbang
+#   A blinding flash and a deafening ring.
+#   No damage. Total disorientation.
+# Fire with /orbital flashbang   Give with /orbitalgive flashbang
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lFlashbang'
+# Description lines on the item.
+lore:
+- A blinding flash and a deafening ring.
+- No damage. Total disorientation.
+# Item type of the cannon item.
+item: WHITE_CONCRETE_POWDER
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 5
+# Colour of the targeting ring.
+warning-color: '#FFFFFF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 25
+  # How long they're blinded.
+  seconds: 6

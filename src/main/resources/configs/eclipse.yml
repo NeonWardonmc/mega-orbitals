@@ -1,0 +1,35 @@
+# eclipse.yml - MegaOrbitals cannon: Eclipse
+#   A black sun blots out the sky. It becomes
+#   midnight and creatures of the night pour in.
+# Fire with /orbital eclipse   Give with /orbitalgive eclipse
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&8&lEclipse'
+# Description lines on the item.
+lore:
+- A black sun blots out the sky. It becomes
+- midnight and creatures of the night pour in.
+# Item type of the cannon item.
+item: BLACK_CONCRETE
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#101010'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Set the world to midnight.
+  change-time: true
+  # Range.
+  radius: 25
+  # Zombies.
+  zombies: 8
+  # Skeletons.
+  skeletons: 6
+  # Phantoms.
+  phantoms: 4
+  # Darkness for everyone in range.
+  darkness-seconds: 30

@@ -1,0 +1,29 @@
+# bloodpact.yml - MegaOrbitals cannon: Blood Pact
+#   You sacrifice half your health. Everyone near
+#   the target takes three times what you gave up.
+# Fire with /orbital bloodpact   Give with /orbitalgive bloodpact
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lBlood Pact'
+# Description lines on the item.
+lore:
+- You sacrifice half your health. Everyone near
+- the target takes three times what you gave up.
+# Item type of the cannon item.
+item: REDSTONE_BLOCK
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#A00000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Range.
+  radius: 20
+  # Fraction of your current health you give up.
+  sacrifice: 0.5
+  # Damage to each target = health you gave up x this.
+  multiplier: 3.0

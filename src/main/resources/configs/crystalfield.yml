@@ -1,0 +1,33 @@
+# crystalfield.yml - MegaOrbitals cannon: Crystal Minefield
+#   A field of hovering end crystals.
+#   Get close and they chain-detonate.
+# Fire with /orbital crystalfield   Give with /orbitalgive crystalfield
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lCrystal Minefield'
+# Description lines on the item.
+lore:
+- A field of hovering end crystals.
+- Get close and they chain-detonate.
+# Item type of the cannon item.
+item: END_CRYSTAL
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FF80FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the field.
+  radius: 16
+  # Distance between crystals.
+  spacing: 5
+  # How close sets one off.
+  trigger-distance: 3.0
+  # Explosion power of each crystal.
+  power: 6.0
+  # Crystals vanish after this long.
+  armed-seconds: 120
