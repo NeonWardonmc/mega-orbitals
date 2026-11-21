@@ -2,6 +2,9 @@
 
 A Paper plugin for Minecraft **26.1.2** with **1322 overpowered orbital strike cannons**, each one a completely different weapon: nukes, black holes, tornadoes, mob armies, terrain tools, minigames, curses, buffs and more. Cannon #201, **Omega**, fires every other cannon at once.
 
+See **[CANNONS.md](CANNONS.md)** for every cannon, and **[CHANGELOG.md](CHANGELOG.md)** for what changed in each version.
+Want to add a cannon or report a bug? Read **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+
 ## Install
 
 1. Build the jar (see below) or grab it from Releases.
@@ -45,7 +48,7 @@ More commands:
 
 ## Releases
 
-Pushing to `main` builds the jar with GitHub Actions. Pushing a tag such as `v1.3.0` (matching the `pom.xml` version) also publishes a GitHub Release with the jar attached.
+Pushing to `main` builds the jar with GitHub Actions. Pushing a tag such as `v1.5.0` (matching the `pom.xml` version) also publishes a GitHub Release with the jar attached, using that version's section of `CHANGELOG.md` as the release notes.
 
 ## Permissions
 

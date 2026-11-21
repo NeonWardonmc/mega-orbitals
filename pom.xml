@@ -44,7 +44,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.0</version>
             </plugin>
-            <!-- After compiling, write configs/<cannon>.yml for every cannon into the jar and into src/main/resources/configs -->
+            <!-- After compiling, write configs/<cannon>.yml for every cannon into the jar and into src/main/resources/configs, plus CANNONS.md -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -73,6 +73,7 @@
                             <arguments>
                                 <argument>${project.build.outputDirectory}</argument>
                                 <argument>${project.basedir}/src/main/resources/configs</argument>
+                                <argument>${project.basedir}/CANNONS.md</argument>
                             </arguments>
                         </configuration>
                     </execution>

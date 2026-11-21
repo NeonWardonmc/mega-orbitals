@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Full cannon list
+    url: https://github.com/NeonWardonmc/mega-orbitals/blob/main/CANNONS.md
+    about: Check whether a cannon already exists before suggesting it.
