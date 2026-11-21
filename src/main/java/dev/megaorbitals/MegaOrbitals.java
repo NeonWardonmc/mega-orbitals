@@ -41,6 +41,13 @@ public final class MegaOrbitals extends JavaPlugin {
     public NamespacedKey itemKey;
 
     private final Map<String, Cannon> cannons = new TreeMap<>();
+    /** Which plugin registered each cannon id (this plugin for built-in cannons). */
+    private final Map<String, org.bukkit.plugin.Plugin> owners = new java.util.HashMap<>();
+
+    private static MegaOrbitals instance;
+
+    /** The running plugin, or null while it is not enabled. Addons should use MegaOrbitalsAPI instead. */
+    public static MegaOrbitals instance() { return instance; }
     private BlockQueue blockQueue;
     private Settings settings;
     private Rollback rollback;
@@ -90,6 +97,7 @@ public final class MegaOrbitals extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new OrbitalListener(this), this);
         menu = new OrbitalMenu(this);
         getServer().getPluginManager().registerEvents(menu, this);
+        instance = this;
     }
 
     private OrbitalMenu menu;
@@ -102,6 +110,7 @@ public final class MegaOrbitals extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        instance = null;
         if (satellites != null) satellites.save();
     }
 
@@ -151,6 +160,7 @@ public final class MegaOrbitals extends JavaPlugin {
                     if (!Cannon.class.isAssignableFrom(c) || Modifier.isAbstract(c.getModifiers())) continue;
                     Cannon cannon = (Cannon) c.getDeclaredConstructor().newInstance();
                     cannons.put(cannon.id(), cannon);
+                    owners.put(cannon.id(), this);
                     getServer().getPluginManager().registerEvents(cannon, this);
                 } catch (Throwable t) {
                     getLogger().warning("Could not load cannon class " + cls + ": " + t);
@@ -175,10 +185,80 @@ public final class MegaOrbitals extends JavaPlugin {
                 getLogger().warning("Could not load config for " + c.id() + ": " + e);
             }
         }
+        for (Cannon c : cannons.values()) Catalog.addCategory(c.category());
         getLogger().info("Loaded " + cannons.size() + " orbital cannons.");
     }
 
-    public Map<String, Cannon> cannons() { return cannons; }
+    /** Every loaded cannon by id (read-only). */
+    public Map<String, Cannon> cannons() { return java.util.Collections.unmodifiableMap(cannons); }
+
+    // ------------------------------------------------------------ addons
+
+    /**
+     * Adds a cannon from another plugin (see MegaOrbitalsAPI.register). Its config is created in configs/<id>.yml,
+     * it is registered as a listener owned by that plugin, and it is removed when that plugin is disabled.
+     */
+    public boolean registerCannon(org.bukkit.plugin.Plugin owner, Cannon c) {
+        if (owner == null || c == null) throw new IllegalArgumentException("owner and cannon must not be null");
+        String id = c.id();
+        if (id == null || !id.matches("[a-z0-9_-]+")) {
+            getLogger().warning(owner.getName() + " tried to register a cannon with an invalid id '" + id + "' (use a-z, 0-9, _ and -).");
+            return false;
+        }
+        if (cannons.containsKey(id)) {
+            org.bukkit.plugin.Plugin taken = owners.get(id);
+            getLogger().warning(owner.getName() + " tried to register cannon '" + id + "', but " + (taken == null ? "another plugin" : taken.getName())
+                    + " already uses that id. Override id() to pick another one.");
+            return false;
+        }
+        File dir = new File(getDataFolder(), "configs");
+        dir.mkdirs();
+        try {
+            c.load(this, dir);
+        } catch (Exception e) {
+            getLogger().warning("Could not load config for addon cannon " + id + " from " + owner.getName() + ": " + e);
+        }
+        cannons.put(id, c);
+        owners.put(id, owner);
+        getServer().getPluginManager().registerEvents(c, owner);
+        Catalog.addCategory(c.category());
+        if (settings.debug()) getLogger().info(owner.getName() + " registered cannon " + id + ".");
+        return true;
+    }
+
+    /** Removes every cannon the given plugin registered. Returns how many were removed. */
+    public int unregisterCannons(org.bukkit.plugin.Plugin owner) {
+        if (owner == this) return 0;
+        int n = 0;
+        for (var it = owners.entrySet().iterator(); it.hasNext(); ) {
+            var e = it.next();
+            if (e.getValue() != owner) continue;
+            Cannon c = cannons.remove(e.getKey());
+            if (c != null) org.bukkit.event.HandlerList.unregisterAll(c);
+            it.remove();
+            n++;
+        }
+        if (n > 0) getLogger().info("Removed " + n + " cannon(s) added by " + owner.getName() + ".");
+        return n;
+    }
+
+    /** Cannons registered by the given plugin. */
+    public List<Cannon> cannonsOf(org.bukkit.plugin.Plugin owner) {
+        List<Cannon> out = new ArrayList<>();
+        for (var e : owners.entrySet()) if (e.getValue() == owner && cannons.containsKey(e.getKey())) out.add(cannons.get(e.getKey()));
+        return out;
+    }
+
+    /** The plugin that registered a cannon, or null. */
+    public org.bukkit.plugin.Plugin ownerOf(Cannon c) {
+        return c == null || cannons.get(c.id()) != c ? null : owners.get(c.id());
+    }
+
+    /** The cannon id stored on a cannon item, or null. */
+    public String cannonIdOf(ItemStack item) {
+        if (item == null || !item.hasItemMeta()) return null;
+        return item.getItemMeta().getPersistentDataContainer().get(cannonKey, PersistentDataType.STRING);
+    }
     public Cannon cannon(String id) { return id == null ? null : cannons.get(id.toLowerCase()); }
     public BlockQueue blockQueue() { return blockQueue; }
     public Settings settings() { return settings; }
@@ -222,6 +302,7 @@ public final class MegaOrbitals extends JavaPlugin {
                 return false;
             }
         }
+        if (!new dev.megaorbitals.api.OrbitalFireEvent(shooter, c, t, fromItem).callEvent()) return false;
         if (!settings.tryRateLimit()) return deny(shooter, "rate-limited");
 
         if (sat != null) satellites.spend(sat, progression.cost(c));
@@ -252,6 +333,7 @@ public final class MegaOrbitals extends JavaPlugin {
             getLogger().warning("Warning effect of " + c.id() + " failed: " + e);
         }
         s.later(c.warningTicks(), () -> {
+            if (!new dev.megaorbitals.api.OrbitalStrikeEvent(s).callEvent()) return;
             if (!intercepted(s)) c.strike(s);
         });
         return s;

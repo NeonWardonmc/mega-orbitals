@@ -27,6 +27,12 @@ public final class OrbitalListener implements Listener {
         this.plugin = plugin;
     }
 
+    // Addon cannons go away with the plugin that added them.
+    @EventHandler
+    public void onPluginDisable(org.bukkit.event.server.PluginDisableEvent e) {
+        if (e.getPlugin() != plugin) plugin.unregisterCannons(e.getPlugin());
+    }
+
     // Right-clicking a cannon item fires it (anyone with megaorbitals.use, default everyone).
     @EventHandler(priority = EventPriority.HIGH)
     public void onUse(PlayerInteractEvent e) {

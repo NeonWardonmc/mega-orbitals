@@ -26,7 +26,13 @@ jobs:
           cache: maven
 
       - name: Build
-        run: mvn -B clean package
+        run: mvn -B clean install
+
+      - name: Build the example addon against this version (checks the addon API still works)
+        run: |
+          VERSION=$(sed -n 's:.*<version>\(.*\)</version>.*:\1:p' pom.xml | head -1)
+          echo "Building the example addon against MegaOrbitals $VERSION"
+          mvn -B -f examples/example-addon/pom.xml clean package -Dmegaorbitals.version="$VERSION"
 
       - name: Upload jar
         uses: actions/upload-artifact@v4

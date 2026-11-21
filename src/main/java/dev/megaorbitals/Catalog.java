@@ -7,14 +7,17 @@ import java.util.Map;
 /**
  * Default tier and menu category for every built-in cannon. Each cannon's yml can override both
  * ("tier:" and "category:"). Cannons not listed here default to rare / other.
+ * Generated and addon cannons set their own defaults with {@link #define} (see Cannon#catalog).
  */
 public final class Catalog {
 
     private Catalog() {}
 
     public static final List<String> TIERS = List.of("common", "rare", "epic", "legendary");
-    public static final List<String> CATEGORIES = List.of("explosives", "beams", "weapons", "space", "weather", "terrain",
-            "mobs", "control", "curses", "buffs", "utility", "minigames", "fun", "other");
+    private static final List<String> CATEGORY_LIST = new java.util.concurrent.CopyOnWriteArrayList<>(List.of("explosives", "beams",
+            "weapons", "space", "weather", "terrain", "mobs", "control", "curses", "buffs", "utility", "minigames", "fun", "other"));
+    /** Menu categories in tab order (read-only view; addons add theirs with {@link #addCategory}). */
+    public static final List<String> CATEGORIES = java.util.Collections.unmodifiableList(CATEGORY_LIST);
 
     private static final Map<String, String> TIER = new HashMap<>();
     private static final Map<String, String> CATEGORY = new HashMap<>();
@@ -94,6 +97,17 @@ public final class Catalog {
     public static void define(String id, String tier, String category) {
         TIER.putIfAbsent(id, tier);
         CATEGORY.putIfAbsent(id, category);
+    }
+
+    /** Adds a menu category (tab) if it doesn't exist yet. New ones go just before "other". */
+    public static void addCategory(String category) {
+        if (category == null || category.isBlank()) return;
+        String c = category.toLowerCase(java.util.Locale.ROOT).trim();
+        synchronized (CATEGORY_LIST) {
+            if (CATEGORY_LIST.contains(c)) return;
+            int other = CATEGORY_LIST.indexOf("other");
+            CATEGORY_LIST.add(other < 0 ? CATEGORY_LIST.size() : other, c);
+        }
     }
 
     public static String tier(String id) { return TIER.getOrDefault(id, "rare"); }

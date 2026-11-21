@@ -46,10 +46,21 @@ The owner is not a programmer, so explain results in plain language.
 - Arsenal tiers and categories are set through `Catalog.define`, not the lists in `Catalog.java`.
 - Omega skips arsenal cannons unless `include-arsenal` is true.
 
+## Addon API (1.6.0+)
+
+- `dev.megaorbitals.api`: `MegaOrbitalsAPI` (register/unregister/look up/fire/give), `OrbitalFireEvent`, `OrbitalStrikeEvent`.
+  `MegaOrbitals.registerCannon` / `unregisterCannons` do the work. `OrbitalListener.onPluginDisable` removes an addon's cannons.
+- Treat the public methods of `Cannon`, `Strike`, `Fx`, `Blocks`, `Catalog` and the `api` package as a public API.
+  Don't rename or remove them. If you must change them, bump `MegaOrbitalsAPI.API_VERSION` and note it in the changelog.
+- `examples/example-addon` must keep compiling. CI builds it against the current version (`mvn install` first, then
+  `mvn -f examples/example-addon/pom.xml package -Dmegaorbitals.version=<version>`).
+- Docs for owners and addon developers are in `docs/`. Update them when commands, config keys or the API change.
+
 ## Releasing
 
-- Bump the version in `pom.xml`, `src/main/resources/plugin.yml` (`version:` and the cannon count in `description:`)
-  and the `config.yml` header. Update the count in `README.md`, and add a section to `CHANGELOG.md`.
+- Bump the version in `pom.xml`, `src/main/resources/plugin.yml` (`version:` and the cannon count in `description:`),
+  the `config.yml` header and `megaorbitals.version` in `examples/example-addon/pom.xml`.
+  Update the count in `README.md` and `docs/`, and give the version's `CHANGELOG.md` section its date.
 - Only commit or push when the owner asks. Then push `main`, and after that push the tag `vX.Y.Z`.
   The tag must match the `pom.xml` version.
 - GitHub Actions (`.github/workflows/build.yml`) builds the tag and publishes the release.

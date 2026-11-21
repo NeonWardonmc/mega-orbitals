@@ -5,6 +5,27 @@ When a version tag is pushed, GitHub Actions copies that version's section below
 
 ## [Unreleased]
 
+## [1.6.0] - 2026-11-21
+
+**Addon support and full documentation.**
+
+- **Addons:** other plugins can now add their own cannons with `MegaOrbitalsAPI.register(...)`.
+  Addon cannons get their own config file, menu entry, `/orbital` id and undo support,
+  and they are removed when the addon is disabled.
+- New events for other plugins:
+  - `OrbitalFireEvent`: cancel a player's shot before anything is used up.
+  - `OrbitalStrikeEvent`: cancel a strike just before it lands.
+- `MegaOrbitalsAPI` also lets any plugin look up, give and fire cannons.
+- Cannons can set their own tier and menu tab with `catalog(tier, category)`. New categories become new menu tabs,
+  including categories set in a cannon's yml.
+- New `docs/` folder:
+  - getting started
+  - commands and permissions
+  - configuration
+  - features
+  - FAQ
+  - an addon guide and API reference
+- New example addon in `examples/example-addon`, built by GitHub Actions on every push so the API can't break unnoticed.
 - Added `CANNONS.md`, the full list of cannons. It is rewritten on every build.
 - Added this changelog, a contributing guide, `CLAUDE.md` project notes and GitHub issue templates.
 
@@ -56,7 +77,8 @@ When a version tag is pushed, GitHub Actions copies that version's section below
 - `/orbital menu`, `list`, `search`, `info` and `reload`.
 - Omega, the cannon that fires every other cannon.
 
-[Unreleased]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.4.0...v1.5.0
 [1.4.0]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/NeonWardonmc/mega-orbitals/compare/v1.2.0...v1.3.0

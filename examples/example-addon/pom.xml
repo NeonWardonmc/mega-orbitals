@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example MegaOrbitals addon. Copy this folder to start your own addon.
+
+  It needs the MegaOrbitals jar in your local Maven repository first. Either:
+    - build MegaOrbitals itself with:  mvn install
+    - or install a downloaded release jar with:
+        mvn install:install-file -Dfile=MegaOrbitals-1.6.0.jar -DgroupId=dev.megaorbitals -DartifactId=MegaOrbitals -Dversion=1.6.0 -Dpackaging=jar
+  Then build this addon with:  mvn package
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>ExampleOrbitalAddon</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <maven.compiler.release>25</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- The MegaOrbitals version you build against. -->
+        <megaorbitals.version>1.6.0</megaorbitals.version>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>26.1.2.build.74-stable</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- provided: the server already has MegaOrbitals installed, so it is not bundled into your jar. -->
+        <dependency>
+            <groupId>dev.megaorbitals</groupId>
+            <artifactId>MegaOrbitals</artifactId>
+            <version>${megaorbitals.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+</project>

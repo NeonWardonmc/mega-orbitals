@@ -5,6 +5,8 @@ Thanks for helping. New cannons, bug fixes and ideas are all welcome.
 - **Found a bug or have a cannon idea?** [Open an issue](https://github.com/NeonWardonmc/mega-orbitals/issues/new/choose) and pick a template.
 - **Want to write code?** Fork the repo, make your change on a branch and open a pull request.
 
+Want your own cannons without changing MegaOrbitals? Write an addon plugin instead: see [docs/addons.md](docs/addons.md).
+
 ## Building
 
 You need **JDK 25** and **Maven**.

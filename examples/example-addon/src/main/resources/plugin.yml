@@ -1,0 +1,7 @@
+name: ExampleOrbitalAddon
+version: ${project.version}
+main: com.example.orbitaladdon.ExampleAddon
+api-version: '26.1'
+description: An example addon that adds two cannons to MegaOrbitals.
+# MegaOrbitals must load first so its API is ready in onEnable.
+depend: [MegaOrbitals]

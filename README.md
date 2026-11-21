@@ -2,8 +2,10 @@
 
 A Paper plugin for Minecraft **26.1.2** with **1322 overpowered orbital strike cannons**, each one a completely different weapon: nukes, black holes, tornadoes, mob armies, terrain tools, minigames, curses, buffs and more. Cannon #201, **Omega**, fires every other cannon at once.
 
-See **[CANNONS.md](CANNONS.md)** for every cannon, and **[CHANGELOG.md](CHANGELOG.md)** for what changed in each version.
-Want to add a cannon or report a bug? Read **[CONTRIBUTING.md](CONTRIBUTING.md)**.
+- **[Documentation](docs/README.md)**: getting started, commands, configuration, features and FAQ.
+- **[CANNONS.md](CANNONS.md)**: every cannon. **[CHANGELOG.md](CHANGELOG.md)**: what changed in each version.
+- **[Making an addon](docs/addons.md)**: add your own cannons from a separate plugin ([example addon](examples/example-addon)).
+- Want to add a cannon to MegaOrbitals itself or report a bug? Read **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
 ## Install
 
@@ -93,6 +95,9 @@ They are defined in `Arsenal.java`; the small classes in `cannons/` are generate
 Omega skips them unless its `include-arsenal` setting is true.
 
 ## Adding a cannon
+
+To add cannons without changing MegaOrbitals, write an addon instead: see [docs/addons.md](docs/addons.md).
+To add one to MegaOrbitals itself:
 
 Create a class in `src/main/java/dev/megaorbitals/cannons/` that extends `Cannon`:
 

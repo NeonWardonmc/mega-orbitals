@@ -20,6 +20,9 @@ import java.util.Map;
  * Settings declared with {@link #option} appear under "settings:" in that file.
  *
  * Cannons are also registered as event listeners, so a cannon can use @EventHandler methods.
+ *
+ * Other plugins can add their own cannons: extend this class and register an instance with
+ * {@link dev.megaorbitals.api.MegaOrbitalsAPI#register}. See docs/addons.md.
  */
 public abstract class Cannon implements Listener {
 
@@ -52,6 +55,15 @@ public abstract class Cannon implements Listener {
     /** This cannon does not break blocks by default. */
     protected final void noBlockDamage() {
         this.defBreak = false;
+    }
+
+    /**
+     * Default tier (common, rare, epic, legendary) and menu category for this cannon. Built-in cannons are listed in
+     * {@link Catalog}; addon cannons call this in their constructor. A new category becomes a new menu tab.
+     * Server owners can still override both in the cannon's yml.
+     */
+    protected final void catalog(String tier, String category) {
+        Catalog.define(id(), tier.toLowerCase(Locale.ROOT), category.toLowerCase(Locale.ROOT));
     }
 
     /** Declares a setting shown under settings: in the cannon's yml. */
