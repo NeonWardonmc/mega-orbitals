@@ -1,0 +1,37 @@
+# deflector.yml - MegaOrbitals cannon: Projectile Deflector
+#   A dome that sends every arrow, trident and
+#   fireball straight back at whoever shot it.
+# Fire with /orbital deflector   Give with /orbitalgive deflector
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lProjectile Deflector'
+# Description lines on the item.
+lore:
+- A dome that sends every arrow, trident and
+- fireball straight back at whoever shot it.
+# Item type of the cannon item.
+item: SHIELD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: buffs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#80E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the dome.
+  radius: 10.0
+  # How long the dome lasts.
+  seconds: 45
+  # Returned projectiles fly this much faster.
+  speed-boost: 1.2
+  # Also deflect projectiles fired by the shooter.
+  deflect-own: false

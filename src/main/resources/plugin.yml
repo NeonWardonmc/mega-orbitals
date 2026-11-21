@@ -1,8 +1,8 @@
 name: MegaOrbitals
-version: 1.3.0
+version: 1.4.0
 main: dev.megaorbitals.MegaOrbitals
 api-version: '26.1'
-description: 302 overpowered orbital strike cannons.
+description: 322 overpowered orbital strike cannons.
 commands:
   orbital:
     description: Fire, browse, undo and manage orbital cannons.

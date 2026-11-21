@@ -1,0 +1,39 @@
+# parkourtower.yml - MegaOrbitals cannon: Parkour Tower
+#   Builds a random climbing course into the sky
+#   with a prize chest at the top.
+# Fire with /orbital parkourtower   Give with /orbitalgive parkourtower
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&e&lParkour Tower'
+# Description lines on the item.
+lore:
+- Builds a random climbing course into the sky
+- with a prize chest at the top.
+# Item type of the cannon item.
+item: LADDER
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: common
+# Menu tab this cannon is listed under.
+category: minigames
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#FFE040'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of jumps in the course.
+  jumps: 24
+  # Radius of the spiral.
+  radius: 4.5
+  # What is in the chest at the top, MATERIAL:amount.
+  prize:
+  - DIAMOND:5
+  - GOLDEN_APPLE:3
+  - EMERALD:8
+  - EXPERIENCE_BOTTLE:16

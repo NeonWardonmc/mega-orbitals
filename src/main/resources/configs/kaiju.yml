@@ -1,0 +1,45 @@
+# kaiju.yml - MegaOrbitals cannon: Kaiju
+#   A colossal warden or ravager stomps
+#   through the area for a minute.
+# Fire with /orbital kaiju   Give with /orbitalgive kaiju
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lKaiju'
+# Description lines on the item.
+lore:
+- A colossal warden or ravager stomps
+- through the area for a minute.
+# Item type of the cannon item.
+item: SCULK_SHRIEKER
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: legendary
+# Menu tab this cannon is listed under.
+category: mobs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 60
+# Colour of the targeting ring.
+warning-color: '#600020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # WARDEN, RAVAGER or RANDOM.
+  monster: RANDOM
+  # How big it is (1 = normal size, max 16).
+  scale: 6.0
+  # How long it rampages before vanishing.
+  seconds: 60
+  # Its health.
+  health: 600.0
+  # Damage of each footstep shockwave.
+  stomp-damage: 10.0
+  # Size of each footstep shockwave.
+  stomp-radius: 7.0
+  # Explosion power of each footstep (0 = no block damage from steps).
+  stomp-power: 2.0
+  # It hunts players this close; otherwise it wanders around the target.
+  roam-radius: 40.0

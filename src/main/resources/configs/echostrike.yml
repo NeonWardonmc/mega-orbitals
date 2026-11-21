@@ -1,0 +1,39 @@
+# echostrike.yml - MegaOrbitals cannon: Echo Strike
+#   Records a player's movement, then a damaging
+#   echo retraces their exact path.
+# Fire with /orbital echostrike   Give with /orbitalgive echostrike
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&3&lEcho Strike'
+# Description lines on the item.
+lore:
+- Records a player's movement, then a damaging
+- echo retraces their exact path.
+# Item type of the cannon item.
+item: ECHO_SHARD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: weapons
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#2080A0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to find the player.
+  range: 30.0
+  # How long their movement is recorded.
+  record-seconds: 10
+  # How many recorded steps the echo moves each tick (1 = same speed, 2 = double...).
+  echo-speed: 1
+  # How close the echo must pass to hurt.
+  hit-radius: 2.0
+  # Damage of each echo hit.
+  damage: 6.0

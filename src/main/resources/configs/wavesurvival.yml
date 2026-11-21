@@ -1,0 +1,50 @@
+# wavesurvival.yml - MegaOrbitals cannon: Wave Survival
+#   Minigame: rounds of harder and harder mobs.
+#   Survivors get rewards after each wave.
+# Fire with /orbital wavesurvival   Give with /orbitalgive wavesurvival
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&c&lWave Survival'
+# Description lines on the item.
+lore:
+- 'Minigame: rounds of harder and harder mobs.'
+- Survivors get rewards after each wave.
+# Item type of the cannon item.
+item: ZOMBIE_HEAD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: minigames
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#C03030'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Number of waves.
+  waves: 5
+  # Players this close to the target are in the game.
+  arena-radius: 20.0
+  # Mobs in the first wave.
+  base-mobs: 4
+  # Extra mobs added each wave.
+  extra-mobs-per-wave: 2
+  # Seconds before a wave ends even if mobs are left (they despawn).
+  wave-time-limit: 120
+  # Rest time between waves.
+  break-seconds: 8
+  # Given to each player after every wave, MATERIAL:amount.
+  reward:
+  - BREAD:4
+  - IRON_INGOT:3
+  - ARROW:16
+  # Extra prize for surviving the last wave.
+  final-reward:
+  - DIAMOND:5
+  - GOLDEN_APPLE:2

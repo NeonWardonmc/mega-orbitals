@@ -1,0 +1,37 @@
+# orbitalelevator.yml - MegaOrbitals cannon: Orbital Elevator
+#   A beam lifts players up to a floating sky
+#   platform. Drop through the hole to float down.
+# Fire with /orbital orbitalelevator   Give with /orbitalgive orbitalelevator
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lOrbital Elevator'
+# Description lines on the item.
+lore:
+- A beam lifts players up to a floating sky
+- platform. Drop through the hole to float down.
+# Item type of the cannon item.
+item: END_ROD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: utility
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E0F0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How high above the ground the platform floats.
+  height: 60
+  # Size of the sky platform.
+  platform-radius: 6
+  # How long the elevator runs before the platform disappears.
+  seconds: 180
+  # How fast players rise.
+  lift-speed: 0.7
