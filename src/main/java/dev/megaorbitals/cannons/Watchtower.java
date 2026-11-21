@@ -32,8 +32,8 @@ public final class Watchtower extends Cannon {
             }
             if (y < h) {
                 var ladder = base.clone().add(0, y, 1).getBlock();
-                ladder.setType(Material.LADDER, false);
-                if (ladder.getBlockData() instanceof Ladder l) { l.setFacing(BlockFace.NORTH); ladder.setBlockData(l, false); }
+                Blocks.put(ladder, Material.LADDER, false);
+                if (ladder.getBlockData() instanceof Ladder l) { l.setFacing(BlockFace.NORTH); Blocks.put(ladder, l, false); }
             }
             if (y == h) Blocks.set(base.clone().add(0, h, 1).getBlock(), Material.AIR);
         });

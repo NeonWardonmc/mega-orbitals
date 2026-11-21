@@ -26,7 +26,7 @@ public final class Napalm extends Cannon {
                 Fx.p(s.world, Particle.FLAME, g, 2, 0.3, 0.02);
                 Fx.p(s.world, Particle.LAVA, g, 1, 0.3, 0);
                 Block b = g.getBlock();
-                if (s.breaks() && b.getType().isAir()) b.setType(Material.FIRE, true);
+                if (s.breaks() && b.getType().isAir()) Blocks.put(b, Material.FIRE, true);
             }
             for (LivingEntity le : s.victims(c, r + 1.5)) {
                 if (le.getLocation().distance(c) < r - 1.5) continue;

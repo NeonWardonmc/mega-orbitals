@@ -24,12 +24,39 @@ public final class Blocks {
                 && t != Material.END_GATEWAY && t != Material.REINFORCED_DEEPSLATE;
     }
 
+    /** Set by the plugin on enable; every change below is recorded for /orbital undo. */
+    static Rollback rollback;
+
+    private static void remember(Block b) {
+        if (rollback != null) rollback.record(b);
+    }
+
+    /** Changes a block (skipping unbreakable ones), recording it for undo. */
     public static void set(Block b, Material m) {
-        if (b.getType() != m && breakable(b)) b.setType(m, false);
+        if (b.getType() == m || !breakable(b)) return;
+        remember(b);
+        b.setType(m, false);
     }
 
     public static void set(Block b, BlockData d) {
-        if (breakable(b)) b.setBlockData(d, false);
+        if (!breakable(b)) return;
+        remember(b);
+        b.setBlockData(d, false);
+    }
+
+    /** Changes a block with no breakable check (like Block.setType), recording it for undo. */
+    public static void put(Block b, Material m) { put(b, m, true); }
+
+    public static void put(Block b, Material m, boolean physics) {
+        remember(b);
+        b.setType(m, physics);
+    }
+
+    public static void put(Block b, BlockData d) { put(b, d, true); }
+
+    public static void put(Block b, BlockData d, boolean physics) {
+        remember(b);
+        b.setBlockData(d, physics);
     }
 
     public static boolean loaded(World w, int x, int z) {

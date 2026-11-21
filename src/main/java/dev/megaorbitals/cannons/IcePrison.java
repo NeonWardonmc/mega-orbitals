@@ -37,7 +37,7 @@ public final class IcePrison extends Cannon {
         s.sound(s.at(), "block.glass.place", 8f, 0.5f);
         if (i("melt-seconds") > 0) {
             s.later(i("melt-seconds") * 20L, () -> {
-                for (Block b : ice) if (b.getType() == Material.PACKED_ICE) b.setType(Material.AIR, false);
+                for (Block b : ice) if (b.getType() == Material.PACKED_ICE) Blocks.put(b, Material.AIR, false);
                 s.sound(s.at(), "block.glass.break", 6f, 1f);
             });
         }

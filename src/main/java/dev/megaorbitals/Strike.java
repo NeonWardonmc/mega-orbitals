@@ -28,13 +28,34 @@ public final class Strike {
     public final World world;
     public final Player shooter;
     private final Location target;
+    /** Undo record shared by this strike and any cannons it fires (Omega, Roulette). Null when undo is off. */
+    private final Rollback.Record record;
+
+    /** The strike whose code is running right now (so block changes can be recorded for undo). */
+    private static Strike current;
 
     public Strike(MegaOrbitals plugin, Cannon cannon, Location targetBlock, Player shooter) {
+        this(plugin, cannon, targetBlock, shooter, null);
+    }
+
+    /** A strike fired by another strike; it shares the parent's undo record. */
+    public Strike(MegaOrbitals plugin, Cannon cannon, Location targetBlock, Player shooter, Strike parent) {
         this.plugin = plugin;
         this.cannon = cannon;
         this.world = targetBlock.getWorld();
         this.shooter = shooter;
         this.target = targetBlock.clone().add(0.5, 1.0, 0.5);
+        this.record = parent != null ? parent.record : plugin.rollback().begin(cannon, world, shooter);
+    }
+
+    public static Strike current() { return current; }
+    public Rollback.Record record() { return record; }
+
+    /** Runs r with this strike marked as the one currently changing blocks. */
+    public void run(Runnable r) {
+        Strike prev = current;
+        current = this;
+        try { r.run(); } finally { current = prev; }
     }
 
     /** The impact point: top centre of the targeted block. Always a fresh copy. */
@@ -73,19 +94,19 @@ public final class Strike {
         return new BukkitRunnable() {
             int t = 0;
             @Override public void run() {
-                boolean go;
-                try { go = fn.test(t++); } catch (Exception e) {
+                boolean[] go = {false};
+                try { Strike.this.run(() -> go[0] = fn.test(t++)); } catch (Exception e) {
                     plugin.getLogger().warning("Cannon " + cannon.id() + " error: " + e);
-                    go = false;
+                    go[0] = false;
                 }
-                if (!go) cancel();
+                if (!go[0]) cancel();
             }
         }.runTaskTimer(plugin, 0L, Math.max(1, period));
     }
 
     private Runnable guard(Runnable r) {
         return () -> {
-            try { r.run(); } catch (Exception e) { plugin.getLogger().warning("Cannon " + cannon.id() + " error: " + e); }
+            try { run(r); } catch (Exception e) { plugin.getLogger().warning("Cannon " + cannon.id() + " error: " + e); }
         };
     }
 
@@ -127,7 +148,11 @@ public final class Strike {
 
     /** Queue a block edit job (skipped when break-blocks is false). */
     public void blocks(BlockJob job) {
-        if (breaks()) plugin.blockQueue().submit(job);
+        if (!breaks()) return;
+        plugin.blockQueue().submit(new BlockJob() {
+            @Override public int step(int budget) { int[] used = {0}; run(() -> used[0] = job.step(budget)); return used[0]; }
+            @Override public boolean done() { return job.done(); }
+        });
     }
 
     /** Ground level at the x/z of l (searching 60 blocks up/down from l). */
@@ -145,6 +170,7 @@ public final class Strike {
     /** Marks an entity as belonging to this cannon (used for block-damage rules). */
     public <T extends Entity> T tag(T e) {
         e.getPersistentDataContainer().set(plugin.cannonKey, PersistentDataType.STRING, cannon.id());
+        if (record != null) e.getPersistentDataContainer().set(plugin.strikeKey, PersistentDataType.INTEGER, record.id);
         return e;
     }
 

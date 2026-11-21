@@ -12,6 +12,12 @@ lore:
 - a bubbling lake of lava.
 # Item type of the cannon item.
 item: MAGMA_BLOCK
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: terrain
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
 # Warning time before the strike hits (20 ticks = 1 second).
 warning-ticks: 30
 # Colour of the targeting ring.

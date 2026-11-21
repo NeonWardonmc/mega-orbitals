@@ -1,5 +1,5 @@
 # ============================================================================
-#  MegaOrbitals 1.2.0 - main configuration
+#  MegaOrbitals 1.3.0 - main configuration
 #  Every cannon has its own file in: plugins/MegaOrbitals/configs/<cannon>.yml
 #  Run /orbital reload after editing anything.
 # ============================================================================
@@ -96,17 +96,104 @@ logging:
   log-fires: true
 
 # ----------------------------------------------------------------------------
-messages:
-  prefix: "&8[&cOrbital&8] "
-  fire: "&c&lORBITAL INBOUND &8» &r{cannon}"
-  no-target: "&cNo block in sight to target."
-  cooldown: "&cRecharging... wait &f{seconds}s&c."
-  disabled-world: "&cOrbital cannons are disabled in this world."
-  disabled-cannon: "&cThat cannon is disabled."
-  no-permission: "&cYou don't have permission to use that cannon."
-  spawn-protected: "&cYou can't fire orbitals this close to spawn."
-  rate-limited: "&cThe orbital network is overloaded. Try again in a moment."
-  sneak-required: "&7Sneak and right-click to fire."
-  unknown-cannon: "&cUnknown cannon: &f{cannon} &7(/orbital list)"
-  reloaded: "&aReloaded &f{count} &acannons."
-  given: "&aGave &f{player} {amount}x &r{cannon}"
+# Messages now live in lang/<language>.yml. Copy lang/en.yml to translate.
+language: en
+
+# ----------------------------------------------------------------------------
+# UNDO / ROLLBACK - every block a strike changes is remembered so it can be put back.
+#   /orbital undo            undo your last strike (ops with megaorbitals.undo.others: the last strike by anyone)
+#   /orbital undo <player>   undo that player's last strike
+#   /orbital undo all        undo every remembered strike
+#   /orbital history         list strikes that can still be undone
+# Not covered: fire spreading or liquids flowing on their own, and the contents of chests that get destroyed.
+rollback:
+  enabled: true
+  # Put terrain back automatically this many seconds after a strike. 0 = never.
+  # Each cannon can override this with auto-restore-seconds in its own yml.
+  auto-restore-seconds: 0
+  # Forget strikes older than this (they can no longer be undone).
+  keep-minutes: 60
+  # Safety cap on remembered blocks per strike (about 12 bytes each). The mega nuke can change far more;
+  # anything past the cap simply can't be undone.
+  max-blocks-per-strike: 5000000
+
+# ----------------------------------------------------------------------------
+# CRAFTING - Orbital Cores come in four tiers. Each tier is crafted from the tier below it,
+# and right-clicking a core turns it into a random cannon of that tier.
+# Ingredients are a MATERIAL name or core:<tier>.
+crafting:
+  enabled: true
+  recipes:
+    common:
+      shape: [" I ", "IRI", " I "]
+      ingredients: {I: IRON_INGOT, R: REDSTONE_BLOCK}
+    rare:
+      shape: ["DTD", "TCT", "DTD"]
+      ingredients: {D: DIAMOND, T: TNT, C: "core:common"}
+    epic:
+      shape: ["NEN", "ECE", "NEN"]
+      ingredients: {N: NETHERITE_SCRAP, E: ENDER_EYE, C: "core:rare"}
+    legendary:
+      shape: ["IBI", "BCB", "IBI"]
+      ingredients: {I: NETHERITE_INGOT, B: DRAGON_BREATH, C: "core:epic"}
+    binoculars:
+      shape: ["SRS", " C "]
+      ingredients: {S: SPYGLASS, R: REDSTONE, C: COMPASS}
+    satellite:
+      shape: ["GDG", "IBI", "GDG"]
+      ingredients: {G: GLASS, D: DAYLIGHT_DETECTOR, I: IRON_BLOCK, B: BEACON}
+
+# Cores dropped by mobs killed by players: ENTITY_TYPE: "tier:chance" (1.0 = always).
+# ANY_MONSTER applies to every other hostile mob. Mobs spawned by cannons never drop cores.
+drops-enabled: true
+drops:
+  ENDER_DRAGON: "legendary:1.0"
+  WITHER: "legendary:0.35"
+  WARDEN: "epic:0.5"
+  ELDER_GUARDIAN: "epic:0.5"
+  EVOKER: "rare:0.25"
+  RAVAGER: "rare:0.2"
+  PIGLIN_BRUTE: "rare:0.1"
+  ANY_MONSTER: "common:0.005"
+
+# ----------------------------------------------------------------------------
+# SPOTTER BINOCULARS - left-click to mark a target; your cannons then hit the mark.
+spotter:
+  range: 512
+  mark-seconds: 180
+  # Clear the mark after one cannon is fired at it.
+  clear-after-fire: false
+
+# ----------------------------------------------------------------------------
+# SATELLITES - when enabled, firing a cannon ITEM needs one of your satellites over the target with
+# enough charge. Admin /orbital commands and megaorbitals.bypass.satellite skip this.
+satellites:
+  enabled: false
+  radius: 400
+  max-charge: 100
+  start-charge: 50
+  recharge-per-minute: 5
+  max-per-player: 3
+  # true = anyone may use anyone's satellites.
+  shared: false
+  # Charge each tier costs to fire.
+  cost: {common: 10, rare: 25, epic: 50, legendary: 100}
+
+# ----------------------------------------------------------------------------
+# DISCORD - post to a webhook when big cannons are fired.
+discord:
+  enabled: false
+  webhook-url: ""
+  username: "MegaOrbitals"
+  # Alert for every cannon of these tiers...
+  tiers: [legendary]
+  # ...and for these cannons too.
+  cannons: [omega, meganuke]
+  message: ":rotating_light: **{player}** fired **{cannon}** ({tier}) at `{world} {x} {y} {z}`"
+
+# ----------------------------------------------------------------------------
+# UPDATE CHECKER - tells ops (megaorbitals.update) when a newer release is on GitHub.
+update-checker:
+  enabled: true
+  repo: "NeonWardonmc/mega-orbitals"
+  every-hours: 6

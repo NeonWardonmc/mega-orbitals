@@ -23,7 +23,7 @@ public final class FloorIsLava extends Cannon {
                 Block b = s.randomPoint(d("radius")).add(0, -1, 0).getBlock();
                 if (!b.getType().isSolid() || !Blocks.breakable(b)) continue;
                 Blocks.set(b, Material.MAGMA_BLOCK);
-                s.later(40, () -> { if (b.getType() == Material.MAGMA_BLOCK) b.setType(Material.LAVA); });
+                s.later(40, () -> { if (b.getType() == Material.MAGMA_BLOCK) Blocks.put(b, Material.LAVA); });
             }
             Fx.p(s.world, Particle.LAVA, s.at(), 10, d("radius") / 2, 0);
             if (t % 4 == 0) s.sound(s.at(), "block.lava.pop", 6f, 0.6f);

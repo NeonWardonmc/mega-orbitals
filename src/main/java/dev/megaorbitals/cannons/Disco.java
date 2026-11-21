@@ -39,7 +39,7 @@ public final class Disco extends Cannon {
         s.sound(s.at(), str("music"), 4f, 1f);
         int ticks = i("seconds") * 20;
         s.every(5, ticks / 5, t -> {
-            for (Block b : floor.keySet()) if (rnd.nextInt(3) == 0) b.setType(FLOOR[rnd.nextInt(FLOOR.length)], false);
+            for (Block b : floor.keySet()) if (rnd.nextInt(3) == 0) Blocks.put(b, FLOOR[rnd.nextInt(FLOOR.length)], false);
             Location top = s.at(0, 12, 0);
             for (int k = 0; k < 6; k++) {
                 Location to = s.at(rnd.nextGaussian() * r, 0, rnd.nextGaussian() * r);
@@ -52,6 +52,6 @@ public final class Disco extends Cannon {
                 le.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 20, 0, false, false));
             }
         });
-        s.later(ticks, () -> floor.forEach((b, data) -> b.setBlockData(data, false)));
+        s.later(ticks, () -> floor.forEach((b, data) -> Blocks.put(b, data, false)));
     }
 }

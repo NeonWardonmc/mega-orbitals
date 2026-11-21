@@ -31,7 +31,7 @@ public final class OilSlick extends Cannon {
             World w = s.world;
             s.blocks(Blocks.columns(s.at(), r, (x, z, dist) -> {
                 Block top = s.surface(new Location(w, x + 0.5, s.at().getY(), z + 0.5)).getBlock();
-                if (top.getType().isAir() && Math.random() < 0.6) top.setType(Material.FIRE, true);
+                if (top.getType().isAir() && Math.random() < 0.6) Blocks.put(top, Material.FIRE, true);
                 return 3;
             }));
             for (LivingEntity le : s.victims(s.at(), r)) le.setFireTicks(200);

@@ -12,6 +12,12 @@ lore:
 - and luck for everyone in range.
 # Item type of the cannon item.
 item: GOLDEN_PICKAXE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: common
+# Menu tab this cannon is listed under.
+category: buffs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
 # Warning time before the strike hits (20 ticks = 1 second).
 warning-ticks: 5
 # Colour of the targeting ring.

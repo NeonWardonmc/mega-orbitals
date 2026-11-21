@@ -25,7 +25,7 @@ public final class Drain extends Cannon {
                 Blocks.set(b, Material.AIR);
             } else if (b.getBlockData() instanceof Waterlogged w && w.isWaterlogged()) {
                 w.setWaterlogged(false);
-                b.setBlockData(w, false);
+                Blocks.put(b, w, false);
             }
         }));
         s.sound(s.at(), "block.sponge.absorb", 10f, 0.6f);

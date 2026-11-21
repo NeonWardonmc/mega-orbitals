@@ -12,6 +12,12 @@ lore:
 - then detonates in three expanding waves.
 # Item type of the cannon item.
 item: BEACON
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: legendary
+# Menu tab this cannon is listed under.
+category: explosives
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
 # Warning time before the strike hits (20 ticks = 1 second).
 warning-ticks: 100
 # Colour of the targeting ring.

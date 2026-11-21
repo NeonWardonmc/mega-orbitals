@@ -34,7 +34,7 @@ public final class Collapse extends Cannon {
                 f.setMaxDamage(20);
             });
             s.tag(fb);
-            b.setType(Material.AIR, false);
+            Blocks.put(b, Material.AIR, false);
             count[0]++;
         }));
         s.sound(s.at(), "block.stone.break", 10f, 0.4f);

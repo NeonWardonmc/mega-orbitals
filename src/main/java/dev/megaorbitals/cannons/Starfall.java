@@ -31,7 +31,7 @@ public final class Starfall extends Cannon {
                 if (k != 7) return;
                 s.explode(hit, (float) d("power"), false);
                 Block b = hit.getBlock();
-                if (s.breaks() && rnd.nextInt(3) == 0 && b.getType().isAir()) b.setType(Material.GLOWSTONE, false);
+                if (s.breaks() && rnd.nextInt(3) == 0 && b.getType().isAir()) Blocks.put(b, Material.GLOWSTONE, false);
             });
         });
     }

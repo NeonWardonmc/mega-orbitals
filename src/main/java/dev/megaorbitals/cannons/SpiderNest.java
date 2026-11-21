@@ -25,7 +25,7 @@ public final class SpiderNest extends Cannon {
         if (s.breaks()) {
             for (int k = 0; k < i("webs"); k++) {
                 Block b = s.randomPoint(r).add(0, rnd.nextInt(3), 0).getBlock();
-                if (b.getType().isAir()) b.setType(Material.COBWEB, false);
+                if (b.getType().isAir()) Blocks.put(b, Material.COBWEB, false);
             }
         }
         for (int k = 0; k < i("spiders"); k++) s.hunt(s.mob(s.randomPoint(r), Spider.class, null), 40);

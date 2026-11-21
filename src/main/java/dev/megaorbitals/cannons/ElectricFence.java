@@ -21,7 +21,7 @@ public final class ElectricFence extends Cannon {
         if (b("place-rods") && s.breaks()) {
             for (Location l : Fx.circle(s.at(), r, (int) (r * 2 * Math.PI / 4))) {
                 var b = s.surface(l).getBlock();
-                if (b.getType().isAir()) b.setType(Material.LIGHTNING_ROD, false);
+                if (b.getType().isAir()) Blocks.put(b, Material.LIGHTNING_ROD, false);
             }
         }
         s.every(2, i("seconds") * 10, t -> {

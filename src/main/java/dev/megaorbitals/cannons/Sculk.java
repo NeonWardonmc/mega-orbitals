@@ -28,12 +28,12 @@ public final class Sculk extends Cannon {
             Location top = s.surface(new Location(w, x + 0.5, s.at().getY(), z + 0.5));
             Block g = top.getBlock().getRelative(0, -1, 0);
             Blocks.set(g, Material.SCULK);
-            if (rnd.nextInt(30) == 0 && top.getBlock().getType().isAir()) top.getBlock().setType(Material.SCULK_SENSOR, false);
+            if (rnd.nextInt(30) == 0 && top.getBlock().getType().isAir()) Blocks.put(top.getBlock(), Material.SCULK_SENSOR, false);
             return 4;
         }), i("spread-speed")));
         for (int k = 0; k < i("shriekers"); k++) {
             Block b = s.randomPoint(d("radius") * 0.7).getBlock();
-            if (s.breaks() && b.getType().isAir()) b.setType(Material.SCULK_SHRIEKER, false);
+            if (s.breaks() && b.getType().isAir()) Blocks.put(b, Material.SCULK_SHRIEKER, false);
         }
         s.every(40, i("darkness-seconds") / 2, t -> {
             for (LivingEntity le : s.victims(s.at(), d("radius"))) le.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 60, 0));

@@ -22,13 +22,13 @@ public final class LavaPour extends Cannon {
         List<Block> sources = new ArrayList<>();
         sources.add(s.at(0, i("height"), 0).getBlock());
         for (Location l : Fx.circle(s.at(0, i("height"), 0), d("radius"), i("streams"))) sources.add(l.getBlock());
-        for (Block b : sources) if (b.getType().isAir()) b.setType(Material.LAVA);
+        for (Block b : sources) if (b.getType().isAir()) Blocks.put(b, Material.LAVA);
         s.every(10, i("seconds") * 2, t -> {
             for (Block b : sources) Fx.p(s.world, Particle.DRIPPING_LAVA, b.getLocation().add(0.5, 0, 0.5), 3, 0.3, 0);
             if (t % 4 == 0) s.sound(s.at(), "block.lava.ambient", 8f, 0.5f);
         });
         s.later(i("seconds") * 20L, () -> {
-            for (Block b : sources) if (b.getType() == Material.LAVA) b.setType(Material.AIR);
+            for (Block b : sources) if (b.getType() == Material.LAVA) Blocks.put(b, Material.AIR);
         });
     }
 }

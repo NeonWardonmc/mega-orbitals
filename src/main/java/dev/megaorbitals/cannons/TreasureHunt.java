@@ -23,7 +23,7 @@ public final class TreasureHunt extends Cannon {
     public void strike(Strike s) {
         Location spot = s.randomPoint(d("radius")).subtract(0, 3 + new Random().nextInt(3), 0);
         Block b = spot.getBlock();
-        b.setType(Material.CHEST);
+        Blocks.put(b, Material.CHEST);
         if (b.getState() instanceof Chest chest) {
             for (String e : list("loot")) {
                 String[] p = e.split(":");

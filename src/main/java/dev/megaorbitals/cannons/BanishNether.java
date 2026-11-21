@@ -33,8 +33,8 @@ public final class BanishNether extends Cannon {
                     if (b.getType().isSolid() && n.getBlockAt(x, yy + 1, z).getType().isAir() && n.getBlockAt(x, yy + 2, z).getType().isAir()) { y = yy + 1; break; }
                 }
                 if (y == 64) {
-                    for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) n.getBlockAt(x + dx, 63, z + dz).setType(Material.NETHERRACK);
-                    for (int dy = 64; dy <= 65; dy++) n.getBlockAt(x, dy, z).setType(Material.AIR);
+                    for (int dx = -1; dx <= 1; dx++) for (int dz = -1; dz <= 1; dz++) Blocks.put(n.getBlockAt(x + dx, 63, z + dz), Material.NETHERRACK);
+                    for (int dy = 64; dy <= 65; dy++) Blocks.put(n.getBlockAt(x, dy, z), Material.AIR);
                 }
                 p.teleportAsync(new Location(n, x + 0.5, y, z + 0.5));
                 Fx.title(p, "&4&lBANISHED", "&7Welcome to the Nether.", 50);

@@ -1,0 +1,59 @@
+# MegaOrbitals messages - English.
+# To translate: copy this file to lang/<code>.yml (for example lang/es.yml), translate the text,
+# then set "language: <code>" in config.yml and run /orbital reload.
+# Any message missing from your file falls back to this English one.
+# Colour codes use &. Words in {braces} are filled in by the plugin.
+
+prefix: "&8[&cOrbital&8] "
+
+# Firing
+fire: "&c&lORBITAL INBOUND &8» &r{cannon}"
+no-target: "&cNo block in sight to target."
+cooldown: "&cRecharging... wait &f{seconds}s&c."
+disabled-world: "&cOrbital cannons are disabled in this world."
+disabled-cannon: "&cThat cannon is disabled."
+no-permission: "&cYou don't have permission to do that."
+spawn-protected: "&cYou can't fire orbitals this close to spawn."
+rate-limited: "&cThe orbital network is overloaded. Try again in a moment."
+sneak-required: "&7Sneak and right-click to fire."
+cannon-missing: "&cThis cannon no longer exists."
+
+# Commands
+unknown-cannon: "&cUnknown cannon: &f{cannon} &7(/orbital list)"
+reloaded: "&aReloaded &f{count} &acannons."
+given: "&aGave &f{player} {amount}x &r{cannon}"
+player-not-found: "&cPlayer not found: &f{player}"
+players-only: "&cOnly players can do that."
+
+# Undo
+undo-done: "&aUndoing &f{cannon} &aby &f{player} &8({blocks} blocks)"
+undo-none: "&7Nothing to undo."
+undo-all: "&aUndoing &f{count} &astrikes."
+undo-truncated: "&eThat strike changed more blocks than the undo limit, so it can only be partly undone."
+history-header: "&6Recent strikes you can undo:"
+history-line: "&8#{id} &f{cannon} &7by &f{player} &8- &7{blocks} blocks, {minutes}m ago"
+
+# Spotter binoculars
+mark-set: "&e⌖ Target marked &8» &f{x}, {y}, {z} &7({distance}m)"
+mark-cleared: "&7Target mark cleared. Cannons aim at your crosshair again."
+mark-expired: "&7Your target mark expired."
+
+# Satellites
+no-satellite: "&cNo charged satellite covers that spot. &7(needs {cost} charge - launch one or wait)"
+satellite-launched: "&bSatellite launched! &7It covers {radius} blocks around here and recharges over time."
+satellite-limit: "&cYou already have the maximum of {max} satellites."
+satellite-header: "&bYour satellites:"
+satellite-line: "&8#{index} &f{world} {x}, {z} &8- &b{charge}/{max} charge &7({distance}m away)"
+satellite-none: "&7You have no satellites. Craft one and right-click to launch it."
+
+# Cores and crafting
+core-opened: "&6Decoded: &r{cannon}"
+core-empty: "&cNo cannons of that tier are enabled."
+
+# Menu
+menu-title: "&4&lOrbital Cannons &8({page}/{pages})"
+menu-search-prompt: "&eType a word in chat to search cannons, or &ccancel&e."
+menu-search-cancelled: "&7Search cancelled."
+
+# Updates
+update-available: "&6A new MegaOrbitals version is out: &f{latest} &7(you have {current}). &e{url}"

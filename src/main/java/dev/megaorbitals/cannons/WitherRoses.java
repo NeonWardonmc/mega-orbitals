@@ -24,7 +24,7 @@ public final class WitherRoses extends Cannon {
             Block above = ground.getRelative(0, 1, 0);
             if (!above.getType().isAir() || !ground.getType().isSolid()) return 1;
             Blocks.set(ground, Material.SOUL_SOIL);
-            above.setType(Material.WITHER_ROSE, false);
+            Blocks.put(above, Material.WITHER_ROSE, false);
             return 3;
         }));
         Fx.p(w, Particle.SOUL, s.at(0, 1, 0), 100, d("radius") / 2, 0.02);

@@ -37,7 +37,7 @@ public final class Desertify extends Cannon {
             }
             Block surf = w.getBlockAt(x, w.getHighestBlockYAt(x, z) + 1, z);
             if (surf.getType().isAir() && w.getBlockAt(x, surf.getY() - 1, z).getType() == Material.SAND && rnd.nextInt(30) == 0) {
-                surf.setType(rnd.nextInt(3) == 0 ? Material.CACTUS : Material.DEAD_BUSH, false);
+                Blocks.put(surf, rnd.nextInt(3) == 0 ? Material.CACTUS : Material.DEAD_BUSH, false);
             }
             return work;
         }), 2000));

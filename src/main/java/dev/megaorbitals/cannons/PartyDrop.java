@@ -22,9 +22,9 @@ public final class PartyDrop extends Cannon {
         if (s.breaks()) {
             for (Location l : Fx.circle(s.at(), d("radius"), i("cakes"))) {
                 Block b = s.surface(l).getBlock();
-                if (b.getType().isAir()) b.setType(Material.CAKE, false);
+                if (b.getType().isAir()) Blocks.put(b, Material.CAKE, false);
                 Block c = s.surface(l.clone().add(rnd.nextGaussian(), 0, rnd.nextGaussian())).getBlock();
-                if (c.getType().isAir()) c.setType(candles[rnd.nextInt(candles.length)], false);
+                if (c.getType().isAir()) Blocks.put(c, candles[rnd.nextInt(candles.length)], false);
             }
         }
         s.every(4, 40, t -> {

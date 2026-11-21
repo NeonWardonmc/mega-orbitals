@@ -50,7 +50,7 @@ public final class DuelArena extends Cannon {
         Fx.title(b, "&c&lDUEL!", "&7vs " + a.getName(), 50);
         s.sound(c, "event.raid.horn", 6f, 1.5f);
         s.later(i("seconds") * 20L, () -> {
-            for (Block bl : placed) if (bl.getType() == Material.RED_STAINED_GLASS || bl.getType() == Material.BARRIER) bl.setType(Material.AIR, false);
+            for (Block bl : placed) if (bl.getType() == Material.RED_STAINED_GLASS || bl.getType() == Material.BARRIER) Blocks.put(bl, Material.AIR, false);
         });
     }
 }

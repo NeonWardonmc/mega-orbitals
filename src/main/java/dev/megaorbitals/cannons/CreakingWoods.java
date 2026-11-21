@@ -26,7 +26,7 @@ public final class CreakingWoods extends Cannon {
                 for (int x = -2; x <= 2; x++) for (int z = -2; z <= 2; z++) for (int y = h - 1; y <= h; y++) {
                     if (Math.abs(x) + Math.abs(z) > 3) continue;
                     var b = g.clone().add(x, y, z).getBlock();
-                    if (b.getType().isAir()) b.setType(Material.PALE_OAK_LEAVES, false);
+                    if (b.getType().isAir()) Blocks.put(b, Material.PALE_OAK_LEAVES, false);
                 }
             }
         }

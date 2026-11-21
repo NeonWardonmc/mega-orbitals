@@ -37,7 +37,7 @@ public final class Roulette extends Cannon {
         for (int k = 0; k < Math.max(1, i("spins")); k++) {
             Cannon pick = pool.get(rnd.nextInt(pool.size()));
             names.add(pick.name());
-            s.plugin.fireAt(pick, s.block(), s.shooter);
+            s.plugin.fireAt(pick, s.block(), s.shooter, s);
         }
         if (s.shooter != null) s.actionBar(s.shooter, "&6🎲 The wheel landed on: &r" + String.join("&7, &r", names));
         s.sound(s.at(), "entity.player.levelup", 6f, 1f);

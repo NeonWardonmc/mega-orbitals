@@ -59,10 +59,10 @@ public final class Omega extends Cannon {
             Cannon c = all.get(k);
             s.later((long) k * stagger, () -> {
                 if (warnings) {
-                    s.plugin.fireAt(c, s.block(), s.shooter);
+                    s.plugin.fireAt(c, s.block(), s.shooter, s);
                 } else {
-                    Strike sub = new Strike(s.plugin, c, s.block(), s.shooter);
-                    try { c.strike(sub); } catch (Exception e) { s.plugin.getLogger().warning("Omega: " + c.id() + " failed: " + e); }
+                    Strike sub = new Strike(s.plugin, c, s.block(), s.shooter, s);
+                    try { sub.run(() -> c.strike(sub)); } catch (Exception e) { s.plugin.getLogger().warning("Omega: " + c.id() + " failed: " + e); }
                 }
             });
         }

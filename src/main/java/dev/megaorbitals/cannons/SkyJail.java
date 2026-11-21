@@ -27,17 +27,17 @@ public final class SkyJail extends Cannon {
             for (int x = -2; x <= 2; x++) for (int y = -1; y <= 3; y++) for (int z = -2; z <= 2; z++) {
                 Block b = base.clone().add(x, y, z).getBlock();
                 boolean wall = Math.abs(x) == 2 || Math.abs(z) == 2;
-                if (y == -1) { b.setType(Material.GLASS, false); floors.add(b); }
-                else if (y == 3) b.setType(Material.IRON_BLOCK, false);
-                else if (wall) b.setType(Material.IRON_BARS, true);
-                else b.setType(Material.AIR, false);
+                if (y == -1) { Blocks.put(b, Material.GLASS, false); floors.add(b); }
+                else if (y == 3) Blocks.put(b, Material.IRON_BLOCK, false);
+                else if (wall) Blocks.put(b, Material.IRON_BARS, true);
+                else Blocks.put(b, Material.AIR, false);
             }
             p.teleport(base.clone().add(0.5, 0, 0.5).setDirection(p.getLocation().getDirection()));
             Fx.title(p, "&7&lSKY JAIL", "&8Sentence: " + i("jail-seconds") + " seconds.", 40);
         }
         if (b("open-floor")) {
             s.later(i("jail-seconds") * 20L, () -> {
-                for (Block b : floors) if (b.getType() == Material.GLASS) b.setType(Material.AIR, false);
+                for (Block b : floors) if (b.getType() == Material.GLASS) Blocks.put(b, Material.AIR, false);
                 s.sound(s.at(), "block.glass.break", 4f, 0.6f);
             });
         }

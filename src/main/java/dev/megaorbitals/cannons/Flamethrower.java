@@ -40,7 +40,7 @@ public final class Flamethrower extends Cannon {
             }
             if (s.breaks() && t % 8 == 0) {
                 Block b = eye.clone().add(look.clone().multiply(range * Math.random())).getBlock();
-                if (b.getType().isAir() && b.getRelative(0, -1, 0).getType().isSolid()) b.setType(Material.FIRE);
+                if (b.getType().isAir() && b.getRelative(0, -1, 0).getType().isSolid()) Blocks.put(b, Material.FIRE);
             }
             if (t % 6 == 0) me.getWorld().playSound(eye, "entity.blaze.shoot", 1f, 0.6f);
         });

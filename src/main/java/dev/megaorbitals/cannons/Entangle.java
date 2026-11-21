@@ -27,7 +27,7 @@ public final class Entangle extends Cannon {
             for (int x = -1; x <= 1; x++) for (int z = -1; z <= 1; z++) {
                 if (x == 0 && z == 0) continue;
                 Block b = f.clone().add(x, 0, z).getBlock();
-                if (b.getType().isAir()) { b.setType(Material.MANGROVE_ROOTS, false); roots.add(b); }
+                if (b.getType().isAir()) { Blocks.put(b, Material.MANGROVE_ROOTS, false); roots.add(b); }
             }
         }
         int ticks = i("seconds") * 20;
@@ -44,7 +44,7 @@ public final class Entangle extends Cannon {
                 Fx.block(s.world, Particle.BLOCK, le.getLocation(), Material.MANGROVE_ROOTS, 10, 0.4);
             }
         }));
-        s.later(ticks, () -> roots.forEach(b -> { if (b.getType() == Material.MANGROVE_ROOTS) b.setType(Material.AIR, false); }));
+        s.later(ticks, () -> roots.forEach(b -> { if (b.getType() == Material.MANGROVE_ROOTS) Blocks.put(b, Material.AIR, false); }));
         s.sound(s.at(), "block.roots.place", 8f, 0.5f);
     }
 }

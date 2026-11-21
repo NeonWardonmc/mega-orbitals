@@ -31,7 +31,7 @@ public final class SpikeLine extends Cannon {
                 for (int y = 0; y < h; y++) {
                     Block b = g.clone().add(0, y, 0).getBlock();
                     if (!b.getType().isAir()) break;
-                    b.setType(y == h - 1 ? Material.POINTED_DRIPSTONE : Material.DRIPSTONE_BLOCK, false);
+                    Blocks.put(b, y == h - 1 ? Material.POINTED_DRIPSTONE : Material.DRIPSTONE_BLOCK, false);
                     placed.add(b);
                 }
             }
@@ -44,7 +44,7 @@ public final class SpikeLine extends Cannon {
             if (t % 2 == 0) s.sound(g, "block.pointed_dripstone.land", 2f, 0.6f);
         });
         if (i("vanish-seconds") > 0) s.later(i("length") + i("vanish-seconds") * 20L, () -> {
-            for (Block b : placed) if (b.getType() == Material.POINTED_DRIPSTONE || b.getType() == Material.DRIPSTONE_BLOCK) b.setType(Material.AIR, false);
+            for (Block b : placed) if (b.getType() == Material.POINTED_DRIPSTONE || b.getType() == Material.DRIPSTONE_BLOCK) Blocks.put(b, Material.AIR, false);
         });
     }
 }

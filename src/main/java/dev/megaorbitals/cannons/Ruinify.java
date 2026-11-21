@@ -23,7 +23,7 @@ public final class Ruinify extends Cannon {
             Material m = b.getType();
             String n = m.name();
             if (m.isAir()) {
-                if (rnd.nextInt(300) == 0 && b.getRelative(0, 1, 0).getType().isSolid()) b.setType(Material.COBWEB, false);
+                if (rnd.nextInt(300) == 0 && b.getRelative(0, 1, 0).getType().isSolid()) Blocks.put(b, Material.COBWEB, false);
                 return;
             }
             if (n.contains("GLASS")) { Blocks.set(b, Material.AIR); return; }

@@ -33,7 +33,7 @@ public final class SupplyDrop extends Cannon {
             crate.remove();
             chute.remove();
             Block b = s.at().getBlock();
-            b.setType(Material.CHEST);
+            Blocks.put(b, Material.CHEST);
             if (b.getState() instanceof Chest chest) {
                 for (String entry : list("loot")) {
                     String[] parts = entry.split(":");

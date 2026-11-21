@@ -30,7 +30,7 @@ public final class NetherRift extends Cannon {
             Block g = top.getBlock().getRelative(0, -1, 0);
             if (rnd.nextInt(40) == 0) Blocks.set(g, Material.LAVA);
             else Blocks.set(g, nether[rnd.nextInt(nether.length)]);
-            if (rnd.nextInt(15) == 0 && top.getBlock().getType().isAir()) top.getBlock().setType(Material.FIRE);
+            if (rnd.nextInt(15) == 0 && top.getBlock().getType().isAir()) Blocks.put(top.getBlock(), Material.FIRE);
             return 4;
         }), 400));
         s.later(20, () -> {

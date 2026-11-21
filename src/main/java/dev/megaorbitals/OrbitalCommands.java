@@ -12,7 +12,8 @@ import java.util.List;
 
 public final class OrbitalCommands implements TabExecutor {
 
-    private static final List<String> SUBS = List.of("list", "reload", "info", "search", "menu");
+    private static final List<String> SUBS = List.of("list", "reload", "info", "search", "menu", "undo", "history", "satellites");
+    private static final List<String> SPECIAL_ITEMS = List.of("binoculars", "satellite-item", "core:common", "core:rare", "core:epic", "core:legendary");
     private final MegaOrbitals plugin;
 
     public OrbitalCommands(MegaOrbitals plugin) {
@@ -56,13 +57,63 @@ public final class OrbitalCommands implements TabExecutor {
             send(sender, "&6" + hits.size() + " match \"" + q + "\": &f" + String.join("&7, &f", hits));
             return true;
         }
+        if (c == null && a.equals("undo")) {
+            if (!sender.hasPermission("megaorbitals.undo")) { send(sender, st.msg("no-permission")); return true; }
+            Rollback rb = plugin.rollback();
+            if (args.length > 1 && args[1].equalsIgnoreCase("all")) {
+                int n = 0;
+                for (Rollback.Record r : new ArrayList<>(rb.records())) if (!r.restored() && r.size() > 0) { rb.restore(r); n++; }
+                send(sender, n == 0 ? st.msg("undo-none") : st.msg("undo-all").replace("{count}", String.valueOf(n)));
+                return true;
+            }
+            java.util.UUID who = null;
+            if (args.length > 1) {
+                var op = Bukkit.getOfflinePlayerIfCached(args[1]);
+                if (op == null) { send(sender, st.msg("player-not-found").replace("{player}", args[1])); return true; }
+                who = op.getUniqueId();
+            } else if (sender instanceof Player p && !p.hasPermission("megaorbitals.undo.others")) {
+                who = p.getUniqueId();
+            }
+            Rollback.Record r = rb.latest(who);
+            if (r == null) { send(sender, st.msg("undo-none")); return true; }
+            Cannon rc = plugin.cannon(r.cannon);
+            send(sender, st.msg("undo-done").replace("{cannon}", rc == null ? r.cannon : rc.name())
+                    .replace("{player}", r.shooterName).replace("{blocks}", String.valueOf(r.size())));
+            if (r.truncated()) send(sender, st.msg("undo-truncated"));
+            rb.restore(r);
+            return true;
+        }
+        if (c == null && a.equals("history")) {
+            if (!sender.hasPermission("megaorbitals.undo")) { send(sender, st.msg("no-permission")); return true; }
+            send(sender, st.msg("history-header"));
+            long now = System.currentTimeMillis();
+            List<Rollback.Record> recs = plugin.rollback().records();
+            int shown = 0;
+            for (int k = recs.size() - 1; k >= 0 && shown < 10; k--) {
+                Rollback.Record r = recs.get(k);
+                if (r.restored() || r.size() == 0) continue;
+                sender.sendMessage(MegaOrbitals.color(st.msg("history-line").replace("{id}", String.valueOf(r.id)).replace("{cannon}", r.cannon)
+                        .replace("{player}", r.shooterName).replace("{blocks}", String.valueOf(r.size()))
+                        .replace("{minutes}", String.valueOf((now - r.time) / 60000))));
+                shown++;
+            }
+            if (shown == 0) sender.sendMessage(MegaOrbitals.color(st.msg("undo-none")));
+            return true;
+        }
+        if (c == null && a.equals("satellites")) {
+            if (sender instanceof Player p) plugin.satellites().list(p);
+            else send(sender, st.msg("players-only"));
+            return true;
+        }
         if (c == null && a.equals("menu")) {
             if (sender instanceof Player p) plugin.menu().open(p, 0);
-            else send(sender, "&cOnly players can open the menu.");
+            else send(sender, st.msg("players-only"));
             return true;
         }
         if (c == null && a.equals("reload")) {
             plugin.loadCannons();
+            plugin.lang().reload();
+            plugin.progression().registerRecipes();
             send(sender, st.msg("reloaded").replace("{count}", String.valueOf(plugin.cannons().size())));
             return true;
         }
@@ -101,7 +152,7 @@ public final class OrbitalCommands implements TabExecutor {
         if (args.length >= 2) {
             target = Bukkit.getPlayerExact(args[1]);
             if (target == null) {
-                send(sender, "&cPlayer not found: " + args[1]);
+                send(sender, st.msg("player-not-found").replace("{player}", args[1]));
                 return true;
             }
         } else if (sender instanceof Player p) {
@@ -113,6 +164,18 @@ public final class OrbitalCommands implements TabExecutor {
         int amount = 1;
         if (args.length >= 3) {
             try { amount = Math.max(1, Math.min(64, Integer.parseInt(args[2]))); } catch (NumberFormatException ignored) {}
+        }
+
+        String special = args[0].toLowerCase();
+        ItemStack extra = special.equals("binoculars") ? plugin.spotter().binoculars()
+                : special.equals("satellite-item") ? plugin.satellites().satelliteItem()
+                : special.startsWith("core:") && Catalog.TIERS.contains(special.substring(5)) ? plugin.progression().core(special.substring(5), 1)
+                : null;
+        if (extra != null) {
+            extra.setAmount(amount);
+            target.getInventory().addItem(extra).values().forEach(left -> target.getWorld().dropItem(target.getLocation(), left));
+            send(sender, st.msg("given").replace("{player}", target.getName()).replace("{amount}", String.valueOf(amount)).replace("{cannon}", special));
+            return true;
         }
 
         List<Cannon> list = new ArrayList<>();
@@ -146,7 +209,7 @@ public final class OrbitalCommands implements TabExecutor {
         boolean orbital = cmd.getName().equalsIgnoreCase("orbital");
         if (args.length == 1) {
             List<String> opts = new ArrayList<>(plugin.cannons().keySet());
-            if (orbital) opts.addAll(SUBS); else opts.add("all");
+            if (orbital) opts.addAll(SUBS); else { opts.add("all"); opts.addAll(SPECIAL_ITEMS); }
             String pre = args[0].toLowerCase();
             for (String s : opts) if (s.startsWith(pre)) out.add(s);
         } else if (args.length == 2 && orbital && args[0].equalsIgnoreCase("info")) {

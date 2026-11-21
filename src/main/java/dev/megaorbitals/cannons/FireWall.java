@@ -26,7 +26,7 @@ public final class FireWall extends Cannon {
                     Location g = s.surface(l);
                     Block ground = g.getBlock().getRelative(0, -1, 0);
                     Blocks.set(ground, Material.NETHERRACK);
-                    if (g.getBlock().getType().isAir()) g.getBlock().setType(Material.FIRE, false);
+                    if (g.getBlock().getType().isAir()) Blocks.put(g.getBlock(), Material.FIRE, false);
                 }
             }
         }

@@ -12,6 +12,12 @@ lore:
 - Harmless. Extremely visible from the sky.
 # Item type of the cannon item.
 item: RED_WOOL
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: common
+# Menu tab this cannon is listed under.
+category: terrain
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
 # Warning time before the strike hits (20 ticks = 1 second).
 warning-ticks: 10
 # Colour of the targeting ring.

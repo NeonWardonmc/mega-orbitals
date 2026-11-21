@@ -22,6 +22,31 @@ A Paper plugin for Minecraft **26.1.2** with **302 overpowered orbital strike ca
 
 Anyone holding a cannon item can **right-click** to fire it at the block they're looking at.
 
+More commands:
+
+| Command | What it does |
+|---|---|
+| `/orbital undo [all\|player]` | Puts back every block your last strike changed (or a player's, or all) |
+| `/orbital history` | Lists strikes that can still be undone |
+| `/orbital satellites` | Lists your satellites and their charge |
+| `/orbitalgive binoculars\|satellite-item\|core:<tier>` | Gives the special items |
+
+## Features
+
+- **Undo / rollback.** Every block a strike changes is remembered. Use `/orbital undo`, or set `rollback.auto-restore-seconds` (or a cannon's own `auto-restore-seconds`) to put terrain back automatically.
+- **Tiers and categories.** Each cannon is common, rare, epic or legendary, and sits in a category (explosives, mobs, terrain...). Both can be changed in its yml.
+- **Crafting and drops.** Orbital Cores are crafted, each tier from the one below, or dropped by bosses (`drops:` in config.yml). Right-click a core to get a random cannon of that tier.
+- **Spotter binoculars.** Left-click to mark a target. Your cannons then hit the mark wherever you fire them from.
+- **Satellites** (off by default). Launch satellites that recharge over time. Firing a cannon item then needs a charged satellite over the target.
+- **Menu tabs.** `/orbital menu` has category tabs, a tier filter and a chat search box.
+- **Discord alerts** for big cannons, via a webhook.
+- **Language files.** Every message is in `lang/en.yml`. Copy it to translate.
+- **Update checker.** Ops are told in-game when a newer GitHub release is out.
+
+## Releases
+
+Pushing to `main` builds the jar with GitHub Actions. Pushing a tag such as `v1.3.0` (matching the `pom.xml` version) also publishes a GitHub Release with the jar attached.
+
 ## Permissions
 
 | Permission | Default | Meaning |
@@ -32,6 +57,10 @@ Anyone holding a cannon item can **right-click** to fire it at the block they're
 | `megaorbitals.immune` | nobody | Never targeted by cannons |
 | `megaorbitals.bypass.cooldown` | op | Ignore cooldowns |
 | `megaorbitals.cannon.<id>` | — | Needed per cannon when `cannons.per-cannon-permission` is on |
+| `megaorbitals.undo` | op | Use `/orbital undo` and `/orbital history` |
+| `megaorbitals.undo.others` | op | `/orbital undo` undoes anyone's last strike, not just your own |
+| `megaorbitals.bypass.satellite` | op | Fire cannon items without a satellite |
+| `megaorbitals.update` | op | Get update notifications |
 
 ## Configuration
 

@@ -85,6 +85,12 @@ public abstract class Cannon implements Listener {
         return m == null || !m.isItem() ? defItem : m;
     }
     public int warningTicks() { return cfg.getInt("warning-ticks", defWarning); }
+    /** common, rare, epic or legendary. */
+    public String tier() { return cfg.getString("tier", Catalog.tier(id())).toLowerCase(Locale.ROOT); }
+    /** Menu category, e.g. explosives, mobs, terrain. */
+    public String category() { return cfg.getString("category", Catalog.category(id())).toLowerCase(Locale.ROOT); }
+    /** Seconds before the terrain is put back automatically (-1 = use config.yml, 0 = never). */
+    public int autoRestoreSeconds() { return cfg.getInt("auto-restore-seconds", -1); }
     public Color warningColor() { return Fx.hex(cfg.getString("warning-color", defColor)); }
     public boolean breaksBlocks() {
         if (plugin != null && !plugin.settings().allowBlockDamage()) return false;
@@ -136,6 +142,9 @@ public abstract class Cannon implements Listener {
         changed |= def(c, "name", defName, "Display name of the cannon item (& colour codes).");
         changed |= def(c, "lore", new ArrayList<>(defLore), "Description lines on the item.");
         changed |= def(c, "item", defItem.name(), "Item type of the cannon item.");
+        changed |= def(c, "tier", Catalog.tier(id()), "common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).");
+        changed |= def(c, "category", Catalog.category(id()), "Menu tab this cannon is listed under.");
+        changed |= def(c, "auto-restore-seconds", -1, "Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).");
         changed |= def(c, "warning-ticks", defWarning, "Warning time before the strike hits (20 ticks = 1 second).");
         changed |= def(c, "warning-color", defColor, "Colour of the targeting ring.");
         changed |= def(c, "break-blocks", defBreak, "Whether this cannon may break / change blocks.");

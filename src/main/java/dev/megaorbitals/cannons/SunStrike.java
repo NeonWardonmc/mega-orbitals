@@ -37,7 +37,7 @@ public final class SunStrike extends Cannon {
                     if (m == Material.SAND || m == Material.RED_SAND) Blocks.set(b, Material.GLASS);
                     else if (m.isSolid() && Math.random() < 0.3) Blocks.set(b, Material.MAGMA_BLOCK);
                     Block up = b.getRelative(0, 1, 0);
-                    if (up.getType().isAir() && Math.random() < 0.2) up.setType(Material.FIRE);
+                    if (up.getType().isAir() && Math.random() < 0.2) Blocks.put(up, Material.FIRE);
                 }
             }
             s.sound(s.at(), "block.fire.ambient", 4f, 0.6f);

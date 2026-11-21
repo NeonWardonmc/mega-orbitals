@@ -28,7 +28,7 @@ public final class Firestorm extends Cannon {
         s.blocks(Blocks.columns(s.at(), (int) r, (x, z, dist) -> {
             if (!Blocks.loaded(w, x, z) || rnd.nextDouble() > d("fire-chance")) return 1;
             Block top = s.surface(new Location(w, x + 0.5, s.at().getY(), z + 0.5)).getBlock();
-            if (top.getType().isAir() && top.getRelative(0, -1, 0).getType().isSolid()) top.setType(Material.FIRE, true);
+            if (top.getType().isAir() && top.getRelative(0, -1, 0).getType().isSolid()) Blocks.put(top, Material.FIRE, true);
             return 4;
         }));
         s.sound(s.at(), "entity.blaze.shoot", 10f, 0.4f);

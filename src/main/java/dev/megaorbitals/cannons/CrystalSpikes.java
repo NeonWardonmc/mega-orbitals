@@ -25,7 +25,7 @@ public final class CrystalSpikes extends Cannon {
             for (Location l : Fx.circle(s.at(), r, (int) (r * 3))) {
                 Block b = s.surface(l).getBlock();
                 Fx.p(s.world, Particle.END_ROD, b.getLocation().add(0.5, 0.5, 0.5), 1, 0.1, 0.02);
-                if (s.breaks() && b.getType().isAir()) { b.setType(Material.AMETHYST_CLUSTER, false); placed.add(b); }
+                if (s.breaks() && b.getType().isAir()) { Blocks.put(b, Material.AMETHYST_CLUSTER, false); placed.add(b); }
             }
             for (LivingEntity le : s.victims(s.at(), r + 1)) {
                 if (le.getLocation().distance(s.at()) < r - 1.5 || !hit.add(le.getUniqueId())) continue;
@@ -35,7 +35,7 @@ public final class CrystalSpikes extends Cannon {
         });
         if (i("vanish-seconds") > 0) {
             s.later(i("vanish-seconds") * 20L, () -> {
-                for (Block b : placed) if (b.getType() == Material.AMETHYST_CLUSTER) b.setType(Material.AIR, false);
+                for (Block b : placed) if (b.getType() == Material.AMETHYST_CLUSTER) Blocks.put(b, Material.AIR, false);
                 s.sound(s.at(), "block.amethyst_block.break", 6f, 1f);
             });
         }

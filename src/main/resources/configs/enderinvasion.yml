@@ -12,6 +12,12 @@ lore:
 - nearby keeps randomly teleporting.
 # Item type of the cannon item.
 item: ENDER_PEARL
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: mobs
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
 # Warning time before the strike hits (20 ticks = 1 second).
 warning-ticks: 30
 # Colour of the targeting ring.

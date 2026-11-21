@@ -34,7 +34,7 @@ public final class Tsunami extends Cannon {
                 if (!s.breaks()) continue;
                 for (int y = 0; y < h; y++) {
                     Block b = g.clone().add(0, y, 0).getBlock();
-                    if (b.getType().isAir()) { b.setType(Material.WATER, false); ring.add(b); }
+                    if (b.getType().isAir()) { Blocks.put(b, Material.WATER, false); ring.add(b); }
                 }
             }
             placed.addAll(ring);
@@ -43,7 +43,7 @@ public final class Tsunami extends Cannon {
                 Vector out = Fx.dir(c, le.getLocation()).setY(0);
                 le.setVelocity(out.multiply(d("push")).setY(0.4));
             }
-            if (!b("leave-water")) s.later(10, () -> ring.forEach(b -> { if (b.getType() == Material.WATER) b.setType(Material.AIR, false); }));
+            if (!b("leave-water")) s.later(10, () -> ring.forEach(b -> { if (b.getType() == Material.WATER) Blocks.put(b, Material.AIR, false); }));
             if (t % 5 == 0) s.sound(c.clone().add(r, 0, 0), "ambient.underwater.enter", 6f, 0.5f);
         });
     }

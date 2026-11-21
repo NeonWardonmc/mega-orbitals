@@ -38,7 +38,7 @@ public final class SpikeTrap extends Cannon {
         for (int y = 0; y < h; y++) {
             Block b = g.clone().add(0, y, 0).getBlock();
             if (!b.getType().isAir()) break;
-            b.setType(y == h - 1 ? Material.POINTED_DRIPSTONE : Material.DRIPSTONE_BLOCK, false);
+            Blocks.put(b, y == h - 1 ? Material.POINTED_DRIPSTONE : Material.DRIPSTONE_BLOCK, false);
         }
     }
 }

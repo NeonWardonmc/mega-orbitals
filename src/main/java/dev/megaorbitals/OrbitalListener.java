@@ -54,7 +54,7 @@ public final class OrbitalListener implements Listener {
         }
         Cannon c = plugin.cannon(id);
         if (c == null) {
-            p.sendActionBar(MegaOrbitals.color("&cThis cannon no longer exists."));
+            p.sendActionBar(MegaOrbitals.color(st.msg("cannon-missing")));
             return;
         }
         if (!plugin.fire(c, p, true)) return;
@@ -75,12 +75,35 @@ public final class OrbitalListener implements Listener {
         if (c != null && !c.breaksBlocks()) e.blockList().clear();
     }
 
+    /** Undo record of the strike behind this entity (or the strike running right now). */
+    private Rollback.Record recordOf(Entity e) {
+        Strike cur = Strike.current();
+        if (cur != null) return cur.record();
+        if (e == null) return null;
+        Integer id = e.getPersistentDataContainer().get(plugin.strikeKey, PersistentDataType.INTEGER);
+        return id == null ? null : plugin.rollback().byId(id);
+    }
+
+    // Undo: remember every block a cannon explosion is about to destroy.
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onExplodeRecord(EntityExplodeEvent e) {
+        Rollback.Record r = recordOf(e.getEntity());
+        if (r != null) for (Block b : e.blockList()) plugin.rollback().record(r, b);
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onBlockExplodeRecord(org.bukkit.event.block.BlockExplodeEvent e) {
+        Rollback.Record r = recordOf(null);
+        if (r != null) for (Block b : e.blockList()) plugin.rollback().record(r, b);
+    }
+
     // Falling blocks: obey break-blocks, and turn into "land-as" block when they land.
     @EventHandler(ignoreCancelled = true)
     public void onLand(EntityChangeBlockEvent e) {
         if (!(e.getEntity() instanceof FallingBlock fb)) return;
         Cannon c = cannonOf(fb);
         if (c == null) return;
+        plugin.rollback().record(recordOf(fb), e.getBlock());
         if (!c.breaksBlocks() || fb.getPersistentDataContainer().has(plugin.vanishKey, PersistentDataType.BYTE)) {
             e.setCancelled(true);
             fb.remove();

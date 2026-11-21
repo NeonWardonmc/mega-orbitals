@@ -24,7 +24,7 @@ public final class WitchCoven extends Cannon {
         for (int k = 0; k < i("cats"); k++) {
             s.mob(s.randomPoint(d("radius")), Cat.class, c -> c.setCatType(Cat.Type.ALL_BLACK));
         }
-        if (s.breaks()) s.at().getBlock().setType(Material.CAULDRON);
+        if (s.breaks()) Blocks.put(s.at().getBlock(), Material.CAULDRON);
         s.every(10, 20, t -> Fx.p(s.world, Particle.WITCH, s.at(0, 1, 0), 10, 0.3, 0.1));
         s.sound(s.at(), "entity.witch.celebrate", 10f, 0.8f);
     }

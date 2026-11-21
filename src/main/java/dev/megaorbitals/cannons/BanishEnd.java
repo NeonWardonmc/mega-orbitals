@@ -23,8 +23,8 @@ public final class BanishEnd extends Cannon {
         }
         Location plat = new Location(end, 100.5, 49, 0.5);
         for (int x = -2; x <= 2; x++) for (int z = -2; z <= 2; z++) {
-            end.getBlockAt(100 + x, 48, z).setType(Material.OBSIDIAN);
-            for (int y = 49; y <= 51; y++) end.getBlockAt(100 + x, y, z).setType(Material.AIR);
+            Blocks.put(end.getBlockAt(100 + x, 48, z), Material.OBSIDIAN);
+            for (int y = 49; y <= 51; y++) Blocks.put(end.getBlockAt(100 + x, y, z), Material.AIR);
         }
         for (Player p : s.players(s.at(), d("radius"))) {
             Fx.p(s.world, Particle.PORTAL, p.getLocation(), 80, 0.5, 1);

@@ -35,10 +35,21 @@ public final class MegaOrbitals extends JavaPlugin {
     public NamespacedKey vanishKey;
     /** Entities with this key ignore their next fall damage. */
     public NamespacedKey noFallKey;
+    /** Undo-record id of the strike that spawned an entity. */
+    public NamespacedKey strikeKey;
+    /** Marks special items (binoculars, cores, satellites); value = item kind. */
+    public NamespacedKey itemKey;
 
     private final Map<String, Cannon> cannons = new TreeMap<>();
     private BlockQueue blockQueue;
     private Settings settings;
+    private Rollback rollback;
+    private Lang lang;
+    private Progression progression;
+    private Spotter spotter;
+    private Satellites satellites;
+    private DiscordAlerts discord;
+    private UpdateChecker updates;
 
     @Override
     public void onEnable() {
@@ -46,14 +57,30 @@ public final class MegaOrbitals extends JavaPlugin {
         landKey = new NamespacedKey(this, "land_as");
         vanishKey = new NamespacedKey(this, "vanish");
         noFallKey = new NamespacedKey(this, "no_fall");
+        strikeKey = new NamespacedKey(this, "strike");
+        itemKey = new NamespacedKey(this, "item");
         settings = new Settings(this);
         upgradeConfig();
+        lang = new Lang(this);
 
         blockQueue = new BlockQueue(this);
         blockQueue.runTaskTimer(this, 1L, 1L);
+        rollback = new Rollback(this);
+        Blocks.rollback = rollback;
 
         discoverCannons();
         loadCannons();
+
+        progression = new Progression(this);
+        spotter = new Spotter(this);
+        satellites = new Satellites(this);
+        discord = new DiscordAlerts(this);
+        updates = new UpdateChecker(this);
+        for (org.bukkit.event.Listener l : new org.bukkit.event.Listener[]{progression, spotter, satellites, updates}) {
+            getServer().getPluginManager().registerEvents(l, this);
+        }
+        progression.registerRecipes();
+        updates.start();
 
         OrbitalCommands cmds = new OrbitalCommands(this);
         getCommand("orbital").setExecutor(cmds);
@@ -67,6 +94,16 @@ public final class MegaOrbitals extends JavaPlugin {
 
     private OrbitalMenu menu;
     public OrbitalMenu menu() { return menu; }
+    public Rollback rollback() { return rollback; }
+    public Lang lang() { return lang; }
+    public Progression progression() { return progression; }
+    public Spotter spotter() { return spotter; }
+    public Satellites satellites() { return satellites; }
+
+    @Override
+    public void onDisable() {
+        if (satellites != null) satellites.save();
+    }
 
     /** Old (1.0.x) config.yml files are moved to config-old.yml and replaced with the new layout. */
     private void upgradeConfig() {
@@ -81,6 +118,24 @@ public final class MegaOrbitals extends JavaPlugin {
         }
         saveDefaultConfig();
         reloadConfig();
+        appendNewSections(f);
+    }
+
+    /** 1.3.0 added rollback, crafting, spotter, satellites, discord and updates; append them (with comments) to older files. */
+    private void appendNewSections(File f) {
+        if (getConfig().isSet("rollback") || !f.exists()) return;
+        try (var in = getResource("config.yml")) {
+            if (in == null) return;
+            String bundled = new String(in.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8);
+            int from = bundled.indexOf("# Messages now live");
+            if (from < 0) return;
+            String block = "\n# ----------------------------------------------------------------------------\n" + bundled.substring(from);
+            java.nio.file.Files.writeString(f.toPath(), block, java.nio.file.StandardOpenOption.APPEND);
+            reloadConfig();
+            getLogger().info("Added the new 1.3.0 settings (undo, crafting, satellites, discord...) to config.yml.");
+        } catch (Exception e) {
+            getLogger().warning("Could not add new settings to config.yml: " + e.getMessage());
+        }
     }
 
     /** Finds every cannon class in dev.megaorbitals.cannons inside this jar. */
@@ -128,8 +183,14 @@ public final class MegaOrbitals extends JavaPlugin {
     public BlockQueue blockQueue() { return blockQueue; }
     public Settings settings() { return settings; }
 
-    /** Block the player is looking at, or null. */
+    /** Where a player's cannon will land: their spotter mark if they have one, otherwise the block they look at. */
     public Location target(Player p) {
+        Location mark = spotter == null ? null : spotter.mark(p);
+        return mark != null ? mark : crosshair(p);
+    }
+
+    /** Block the player is looking at, or null. */
+    public Location crosshair(Player p) {
         double range = settings.maxRange();
         if (range <= 0) range = 2048;
         RayTraceResult r = p.getWorld().rayTraceBlocks(p.getEyeLocation(), p.getEyeLocation().getDirection(), range, FluidCollisionMode.ALWAYS, true);
@@ -153,28 +214,53 @@ public final class MegaOrbitals extends JavaPlugin {
         Location t = target(shooter);
         if (t == null) return deny(shooter, "no-target");
         if (settings.spawnProtected(t)) return deny(shooter, "spawn-protected");
+        Satellites.Sat sat = null;
+        if (fromItem && satellites.required(shooter)) {
+            sat = satellites.find(shooter, t, progression.cost(c));
+            if (sat == null) {
+                shooter.sendActionBar(color(settings.msg("no-satellite").replace("{cost}", String.valueOf(progression.cost(c)))));
+                return false;
+            }
+        }
         if (!settings.tryRateLimit()) return deny(shooter, "rate-limited");
 
+        if (sat != null) satellites.spend(sat, progression.cost(c));
         settings.startCooldown(shooter, c, fromItem);
-        fireAt(c, t, shooter);
+        Strike s = fireAt(c, t, shooter);
+        spotter.fired(shooter);
         shooter.sendActionBar(color(settings.msg("fire").replace("{cannon}", c.name())));
         if (settings.logFires()) {
             getLogger().info(shooter.getName() + " fired " + c.id() + " at " + t.getWorld().getName() + " " + t.getBlockX() + " " + t.getBlockY() + " " + t.getBlockZ());
         }
         if (settings.announce()) announce(c, t, shooter);
+        discord.alert(c, t, shooter);
+        scheduleAutoRestore(c, s);
         return true;
     }
 
     /** Fires a cannon at a block with no checks at all (used by cannons that fire other cannons). */
     public Strike fireAt(Cannon c, Location targetBlock, Player shooter) {
-        Strike s = new Strike(this, c, targetBlock, shooter);
+        return fireAt(c, targetBlock, shooter, null);
+    }
+
+    /** Same, but the new strike shares parent's undo record (so one /orbital undo reverts them all). */
+    public Strike fireAt(Cannon c, Location targetBlock, Player shooter, Strike parent) {
+        Strike s = new Strike(this, c, targetBlock, shooter, parent);
         try {
-            c.warn(s);
+            s.run(() -> c.warn(s));
         } catch (Exception e) {
             getLogger().warning("Warning effect of " + c.id() + " failed: " + e);
         }
         s.later(c.warningTicks(), () -> c.strike(s));
         return s;
+    }
+
+    /** rollback.auto-restore-seconds (or the cannon's own auto-restore-seconds) puts the terrain back automatically. */
+    private void scheduleAutoRestore(Cannon c, Strike s) {
+        int secs = c.autoRestoreSeconds();
+        if (secs < 0) secs = getConfig().getInt("rollback.auto-restore-seconds", 0);
+        if (secs <= 0 || s.record() == null) return;
+        getServer().getScheduler().runTaskLater(this, () -> rollback.restore(s.record()), c.warningTicks() + secs * 20L);
     }
 
     private boolean deny(Player p, String msgKey) {
@@ -199,6 +285,7 @@ public final class MegaOrbitals extends JavaPlugin {
         ItemMeta meta = stack.getItemMeta();
         meta.displayName(color(c.name()).decoration(TextDecoration.ITALIC, false));
         List<Component> lore = new ArrayList<>();
+        lore.add(color(Catalog.tierColor(c.tier()) + Catalog.pretty(c.tier()) + " &8· &7" + Catalog.pretty(c.category())).decoration(TextDecoration.ITALIC, false));
         for (String l : c.lore()) lore.add(color("&7" + l).decoration(TextDecoration.ITALIC, false));
         String uses = settings.consumeOnUse() ? "One-time use" : "Reusable";
         for (String l : settings.usageLore()) lore.add(color(l.replace("{uses}", uses)).decoration(TextDecoration.ITALIC, false));

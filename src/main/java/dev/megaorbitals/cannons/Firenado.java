@@ -38,7 +38,7 @@ public final class Firenado extends Cannon {
             }
             if (s.breaks() && t % 5 == 0) {
                 Block b = s.randomPoint(6).getBlock();
-                if (b.getType().isAir()) b.setType(Material.FIRE);
+                if (b.getType().isAir()) Blocks.put(b, Material.FIRE);
             }
             if (t % 15 == 0) s.sound(c, "entity.blaze.burn", 6f, 0.5f);
         });

@@ -26,11 +26,11 @@ public final class Thornfield extends Cannon {
             if (!b.getType().isAir()) return 1;
             if (rnd.nextInt(5) == 0) {
                 Blocks.set(ground, Material.SAND);
-                b.setType(Material.CACTUS, false);
+                Blocks.put(b, Material.CACTUS, false);
             } else {
                 Blocks.set(ground, Material.GRASS_BLOCK);
-                b.setType(Material.SWEET_BERRY_BUSH, false);
-                if (b.getBlockData() instanceof Ageable a) { a.setAge(a.getMaximumAge()); b.setBlockData(a, false); }
+                Blocks.put(b, Material.SWEET_BERRY_BUSH, false);
+                if (b.getBlockData() instanceof Ageable a) { a.setAge(a.getMaximumAge()); Blocks.put(b, a, false); }
             }
             return 4;
         }));

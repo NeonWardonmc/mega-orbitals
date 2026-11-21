@@ -31,7 +31,7 @@ public final class TunnelBore extends Cannon {
             if (te > 0 && t % te == 0) {
                 var floor = c.clone().add(0, -r - 1, 0).getBlock();
                 var torch = c.clone().add(0, -r, 0).getBlock();
-                if (floor.getType().isSolid() && torch.getType().isAir()) torch.setType(Material.TORCH);
+                if (floor.getType().isSolid() && torch.getType().isAir()) Blocks.put(torch, Material.TORCH);
             }
             Fx.block(s.world, Particle.BLOCK, c, Material.STONE, 8, 0.8);
             if (t % 5 == 0) s.sound(c, "block.stone.break", 3f, 0.7f);

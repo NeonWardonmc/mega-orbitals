@@ -28,15 +28,15 @@ public final class Flare extends Cannon {
             for (int y = 1; y <= 2; y++) {
                 Block b = s.surface(s.at(x, 0, z)).add(0, y, 0).getBlock();
                 if (!b.getType().isAir()) continue;
-                b.setType(Material.LIGHT, false);
-                if (b.getBlockData() instanceof Levelled lv) { lv.setLevel(15); b.setBlockData(lv, false); }
+                Blocks.put(b, Material.LIGHT, false);
+                if (b.getBlockData() instanceof Levelled lv) { lv.setLevel(15); Blocks.put(b, lv, false); }
                 lights.add(b);
                 break;
             }
         }
         for (LivingEntity le : s.victims(s.at(), r)) le.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, i("seconds") * 20, 0));
         s.every(10, i("seconds") * 2, t -> Fx.p(s.world, Particle.FLAME, s.at(0, 12, 0), 6, 0.3, 0.02));
-        s.later(i("seconds") * 20L, () -> lights.forEach(b -> { if (b.getType() == Material.LIGHT) b.setType(Material.AIR, false); }));
+        s.later(i("seconds") * 20L, () -> lights.forEach(b -> { if (b.getType() == Material.LIGHT) Blocks.put(b, Material.AIR, false); }));
         s.sound(s.at(), "entity.firework_rocket.launch", 6f, 0.6f);
     }
 }

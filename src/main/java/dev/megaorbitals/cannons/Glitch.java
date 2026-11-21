@@ -32,8 +32,8 @@ public final class Glitch extends Cannon {
                     Block b = s.at(rnd.nextInt(2 * r + 1) - r, rnd.nextInt(r) - r / 2, rnd.nextInt(2 * r + 1) - r).getBlock();
                     if (!Blocks.breakable(a) || !Blocks.breakable(b)) continue;
                     BlockData da = a.getBlockData(), db = b.getBlockData();
-                    a.setBlockData(db, false);
-                    b.setBlockData(da, false);
+                    Blocks.put(a, db, false);
+                    Blocks.put(b, da, false);
                 }
             }
             if (t % 4 == 0) {

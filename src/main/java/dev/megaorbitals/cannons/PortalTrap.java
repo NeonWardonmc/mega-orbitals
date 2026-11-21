@@ -27,8 +27,8 @@ public final class PortalTrap extends Cannon {
                 if (frame) Blocks.set(b, Material.OBSIDIAN);
                 else {
                     Blocks.set(b, Material.AIR);
-                    b.setType(Material.NETHER_PORTAL, false);
-                    if (b.getBlockData() instanceof Orientable o) { o.setAxis(Axis.X); b.setBlockData(o, false); }
+                    Blocks.put(b, Material.NETHER_PORTAL, false);
+                    if (b.getBlockData() instanceof Orientable o) { o.setAxis(Axis.X); Blocks.put(b, o, false); }
                 }
             }
             Location hold = base.clone().add(0.5, 0, 0.5);

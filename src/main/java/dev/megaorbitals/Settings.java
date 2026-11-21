@@ -110,11 +110,11 @@ public final class Settings {
     public String announceSound() { return c().getString("announce.sound", ""); }
     public boolean logFires() { return c().getBoolean("logging.log-fires", true); }
 
-    // messages
+    // messages (from lang/<language>.yml)
     public String msg(String key) {
-        return c().getString("messages." + key, "");
+        return plugin.lang().get(key);
     }
     public String prefixed(String key) {
-        return c().getString("messages.prefix", "") + msg(key);
+        return plugin.lang().prefixed(key);
     }
 }

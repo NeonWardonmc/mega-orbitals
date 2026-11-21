@@ -24,7 +24,7 @@ public final class Hellfloor extends Cannon {
             if (rnd.nextDouble() < d("soul-fire-chance")) {
                 Blocks.set(ground, Material.SOUL_SOIL);
                 Block up = ground.getRelative(0, 1, 0);
-                if (up.getType().isAir()) up.setType(Material.SOUL_FIRE, false);
+                if (up.getType().isAir()) Blocks.put(up, Material.SOUL_FIRE, false);
             } else Blocks.set(ground, Material.MAGMA_BLOCK);
             return 4;
         }));
