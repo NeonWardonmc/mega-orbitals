@@ -1,0 +1,39 @@
+# structurecopier.yml - MegaOrbitals cannon: Structure Copier
+#   Scans the area around you and beams an exact
+#   copy of it down onto the target.
+# Fire with /orbital structurecopier   Give with /orbitalgive structurecopier
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lStructure Copier'
+# Description lines on the item.
+lore:
+- Scans the area around you and beams an exact
+- copy of it down onto the target.
+# Item type of the cannon item.
+item: STRUCTURE_BLOCK
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: utility
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#40E080'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Half-width of the copied area (a square around the shooter).
+  radius: 8
+  # How many blocks above the shooter's feet are copied.
+  height: 14
+  # How many blocks below the shooter's feet are copied.
+  depth: 2
+  # Also copy empty space (clears whatever is at the target so the copy is exact).
+  copy-air: true
+  # Blocks pasted per tick.
+  speed: 800

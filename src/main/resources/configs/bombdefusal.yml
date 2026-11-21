@@ -1,0 +1,43 @@
+# bombdefusal.yml - MegaOrbitals cannon: Bomb Defusal
+#   Drops a ticking bomb with a wire panel.
+#   Right-click it and cut the right wire in time!
+# Fire with /orbital bombdefusal   Give with /orbitalgive bombdefusal
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&4&lBomb Defusal'
+# Description lines on the item.
+lore:
+- Drops a ticking bomb with a wire panel.
+- Right-click it and cut the right wire in time!
+# Item type of the cannon item.
+item: TNT
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: minigames
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#E02020'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Time on the clock.
+  seconds: 45
+  # Number of wires (2 to 7).
+  wires: 5
+  # Every this many seconds one wrong wire sparks (a hint). 0 = no hints.
+  hint-seconds: 10
+  # Cutting a wrong wire sets it off at once (otherwise it halves the time left).
+  wrong-wire-explodes: false
+  # Explosion power.
+  power: 8.0
+  # Given to whoever defuses it, MATERIAL:amount.
+  reward:
+  - DIAMOND:3
+  - EMERALD:6

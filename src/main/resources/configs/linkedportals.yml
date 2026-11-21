@@ -1,0 +1,35 @@
+# linkedportals.yml - MegaOrbitals cannon: Linked Portals
+#   Opens two linked portals: one next to you
+#   and one at the target. Walk through either!
+# Fire with /orbital linkedportals   Give with /orbitalgive linkedportals
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lLinked Portals'
+# Description lines on the item.
+lore:
+- 'Opens two linked portals: one next to you'
+- and one at the target. Walk through either!
+# Item type of the cannon item.
+item: ENDER_EYE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: utility
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#C040FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How long the portals stay open.
+  seconds: 60
+  # How close you must get to a portal to go through.
+  portal-size: 1.3
+  # How far in front of the shooter their portal opens.
+  distance-from-shooter: 3.0

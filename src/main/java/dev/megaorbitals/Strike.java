@@ -287,4 +287,31 @@ public final class Strike {
     }
 
     public Component text(String legacy) { return MegaOrbitals.color(legacy); }
+
+    // ------------------------------------------------------------ prizes
+    /** Turns "MATERIAL:amount" entries (as used by prize settings) into items. Bad entries are skipped. */
+    public static List<org.bukkit.inventory.ItemStack> items(List<String> entries) {
+        List<org.bukkit.inventory.ItemStack> out = new ArrayList<>();
+        for (String entry : entries) {
+            String[] parts = entry.split(":");
+            Material m = Material.matchMaterial(parts[0].trim());
+            if (m == null || !m.isItem() || m.isAir()) continue;
+            int amt = 1;
+            try { if (parts.length > 1) amt = Math.max(1, Integer.parseInt(parts[1].trim())); } catch (NumberFormatException ignored) {}
+            out.add(new org.bukkit.inventory.ItemStack(m, amt));
+        }
+        return out;
+    }
+
+    /** Gives "MATERIAL:amount" prize items to a player, dropping whatever does not fit. */
+    public void give(Player p, List<String> entries) {
+        for (org.bukkit.inventory.ItemStack it : items(entries)) {
+            p.getInventory().addItem(it).values().forEach(l -> p.getWorld().dropItem(p.getLocation(), l));
+        }
+    }
+
+    /** Tells the shooter (if any) something on their action bar. */
+    public void tell(String legacy) {
+        if (shooter != null && shooter.isOnline()) actionBar(shooter, legacy);
+    }
 }

@@ -1,0 +1,55 @@
+# asteroidmine.yml - MegaOrbitals cannon: Asteroid Mine
+#   Drops an asteroid packed with ores
+#   for players to mine.
+# Fire with /orbital asteroidmine   Give with /orbitalgive asteroidmine
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&7&lAsteroid Mine'
+# Description lines on the item.
+lore:
+- Drops an asteroid packed with ores
+- for players to mine.
+# Item type of the cannon item.
+item: RAW_IRON_BLOCK
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: space
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 50
+# Colour of the targeting ring.
+warning-color: '#A08060'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the asteroid.
+  size: 5.0
+  # Damage to anyone right under it.
+  impact-damage: 12.0
+  # Explosion when it lands (0 = none).
+  impact-power: 3.0
+  # Filler blocks, MATERIAL:weight.
+  rock:
+  - STONE:30
+  - TUFF:15
+  - DEEPSLATE:15
+  - ANDESITE:10
+  - COBBLED_DEEPSLATE:10
+  # Ore blocks, MATERIAL:weight.
+  ores:
+  - COAL_ORE:12
+  - IRON_ORE:12
+  - COPPER_ORE:8
+  - GOLD_ORE:6
+  - REDSTONE_ORE:6
+  - LAPIS_ORE:5
+  - DIAMOND_ORE:4
+  - EMERALD_ORE:2
+  - ANCIENT_DEBRIS:1
+  # Roughly how much of the asteroid is ore.
+  ore-percent: 35

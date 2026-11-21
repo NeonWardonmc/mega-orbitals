@@ -1,0 +1,37 @@
+# defencegrid.yml - MegaOrbitals cannon: Orbital Defence Grid
+#   Protects an area: other players' orbital
+#   strikes there are shot down before they land.
+# Fire with /orbital defencegrid   Give with /orbitalgive defencegrid
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&a&lOrbital Defence Grid'
+# Description lines on the item.
+lore:
+- 'Protects an area: other players'' orbital'
+- strikes there are shot down before they land.
+# Item type of the cannon item.
+item: LIGHTNING_ROD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: legendary
+# Menu tab this cannon is listed under.
+category: utility
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40FF80'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Size of the protected area.
+  radius: 40.0
+  # How long the grid stays up.
+  seconds: 600
+  # How many strikes it can shoot down before it burns out (0 = unlimited).
+  interceptions: 5
+  # Also shoot down strikes fired by whoever set up the grid.
+  block-own-strikes: false

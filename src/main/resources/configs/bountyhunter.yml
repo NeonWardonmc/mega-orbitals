@@ -1,0 +1,43 @@
+# bountyhunter.yml - MegaOrbitals cannon: Bounty Hunter
+#   Puts a glowing bounty on a player.
+#   Whoever kills them collects the reward!
+# Fire with /orbital bountyhunter   Give with /orbitalgive bountyhunter
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lBounty Hunter'
+# Description lines on the item.
+lore:
+- Puts a glowing bounty on a player.
+- Whoever kills them collects the reward!
+# Item type of the cannon item.
+item: GOLDEN_SWORD
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: curses
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 10
+# Colour of the targeting ring.
+warning-color: '#FFB000'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How far from the target to find the wanted player.
+  range: 30.0
+  # How long the bounty lasts.
+  seconds: 300
+  # Reward for the killer, MATERIAL:amount.
+  reward:
+  - DIAMOND:5
+  - EMERALD:10
+  - GOLDEN_APPLE:2
+  # Given to the wanted player if they survive (empty list = nothing).
+  survivor-reward:
+  - DIAMOND:2
+  # Tell everyone online about the bounty.
+  announce-to-server: true

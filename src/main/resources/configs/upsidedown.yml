@@ -1,0 +1,37 @@
+# upsidedown.yml - MegaOrbitals cannon: Upside-Down
+#   Flips the terrain upside down: the ground
+#   becomes a ceiling and buildings hang from the sky.
+# Fire with /orbital upsidedown   Give with /orbitalgive upsidedown
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&5&lUpside-Down'
+# Description lines on the item.
+lore:
+- 'Flips the terrain upside down: the ground'
+- becomes a ceiling and buildings hang from the sky.
+# Item type of the cannon item.
+item: POINTED_DRIPSTONE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: legendary
+# Menu tab this cannon is listed under.
+category: terrain
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 40
+# Colour of the targeting ring.
+warning-color: '#8040C0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Radius of the flipped area.
+  radius: 10
+  # How many blocks below the surface are flipped too (they become the ceiling).
+  depth: 6
+  # How many blocks above the surface are flipped.
+  height: 24
+  # Blocks changed per tick.
+  speed: 1500

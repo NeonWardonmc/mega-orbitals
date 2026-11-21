@@ -39,6 +39,22 @@ public final class Catalog {
                 + "spleefarena duelarena treasurehunt capturenet beastmaster golemguard wolfpack beeswarm shrinkray tinyform moongravity "
                 + "heavyweight femboyify bubble yank catapult centrifuge magnetize repulsor tether");
 
+        // 1.4.0
+        tier("legendary", "kaiju defencegrid spacestation upsidedown");
+        tier("epic", "mechpilot structurecopier mirrormatch wavesurvival echostrike orbitalelevator deflector capturetheflag");
+        tier("rare", "mimicchests boobytrap bombdefusal linkedportals asteroidmine bountyhunter");
+        tier("common", "lootpinata parkourtower");
+        cat("explosives", "boobytrap");
+        cat("weapons", "echostrike mechpilot");
+        cat("space", "spacestation asteroidmine");
+        cat("terrain", "upsidedown");
+        cat("mobs", "kaiju");
+        cat("curses", "bountyhunter");
+        cat("buffs", "deflector");
+        cat("utility", "linkedportals orbitalelevator structurecopier defencegrid");
+        cat("minigames", "bombdefusal parkourtower wavesurvival capturetheflag mirrormatch");
+        cat("fun", "mimicchests lootpinata");
+
         cat("explosives", "classic meganuke drill bombingrun clusterbomb bouncingbetty minefield doomclock railgun bombardment "
                 + "satellite homingmissiles chainreaction domino aftershock fuelair halocollapse mortar shrapnel bunkerbuster tnttrain "
                 + "crystalfield detonatemobs explodingsheep eggbombs ioncannon groundpound orbitalhammer gunship gravitybomb oilslick");

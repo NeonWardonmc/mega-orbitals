@@ -1,0 +1,44 @@
+# mirrormatch.yml - MegaOrbitals cannon: Mirror Match
+#   Every player nearby fights a mirror copy
+#   of themselves that copies their every move.
+# Fire with /orbital mirrormatch   Give with /orbitalgive mirrormatch
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&f&lMirror Match'
+# Description lines on the item.
+lore:
+- Every player nearby fights a mirror copy
+- of themselves that copies their every move.
+# Item type of the cannon item.
+item: GLASS_PANE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: epic
+# Menu tab this cannon is listed under.
+category: minigames
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 30
+# Colour of the targeting ring.
+warning-color: '#D0E0FF'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Players this close to the target get a mirror.
+  radius: 25.0
+  # How long the fight lasts.
+  seconds: 60
+  # Health of each mirror copy.
+  copy-health: 20.0
+  # Damage the copy deals when it swings back and connects.
+  copy-damage: 3.0
+  # How close the copy must be for its swing to hit.
+  reach: 3.2
+  # Starting distance between a player and their mirror.
+  gap: 6.0
+  # Given for shattering your mirror, MATERIAL:amount.
+  reward:
+  - EXPERIENCE_BOTTLE:8

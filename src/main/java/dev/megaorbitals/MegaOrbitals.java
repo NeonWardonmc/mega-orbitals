@@ -251,8 +251,23 @@ public final class MegaOrbitals extends JavaPlugin {
         } catch (Exception e) {
             getLogger().warning("Warning effect of " + c.id() + " failed: " + e);
         }
-        s.later(c.warningTicks(), () -> c.strike(s));
+        s.later(c.warningTicks(), () -> {
+            if (!intercepted(s)) c.strike(s);
+        });
         return s;
+    }
+
+    /** True if a cannon such as the Orbital Defence Grid shoots this strike down before it lands. */
+    private boolean intercepted(Strike s) {
+        for (Cannon other : cannons.values()) {
+            if (other == s.cannon || !(other instanceof StrikeInterceptor si)) continue;
+            try {
+                if (si.intercept(s)) return true;
+            } catch (Exception e) {
+                getLogger().warning("Interceptor " + other.id() + " failed: " + e);
+            }
+        }
+        return false;
     }
 
     /** rollback.auto-restore-seconds (or the cannon's own auto-restore-seconds) puts the terrain back automatically. */

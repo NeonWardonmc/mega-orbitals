@@ -1,0 +1,39 @@
+# boobytrap.yml - MegaOrbitals cannon: Booby-Trapped Ores
+#   Plants fake diamond ore around the target.
+#   Mine it and it explodes in your face!
+# Fire with /orbital boobytrap   Give with /orbitalgive boobytrap
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&b&lBooby-Trapped Ores'
+# Description lines on the item.
+lore:
+- Plants fake diamond ore around the target.
+- Mine it and it explodes in your face!
+# Item type of the cannon item.
+item: DIAMOND_ORE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: explosives
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#40E0E0'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How many fake ores are planted.
+  ores: 12
+  # How far they are spread.
+  radius: 12.0
+  # Ores can be buried up to this many blocks under the surface (0 = all on top).
+  max-depth: 3
+  # Explosion power when one is mined.
+  power: 4.0
+  # Unmined ores turn back into what they were after this long.
+  armed-minutes: 30

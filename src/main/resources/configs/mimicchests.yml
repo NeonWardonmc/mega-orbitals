@@ -1,0 +1,41 @@
+# mimicchests.yml - MegaOrbitals cannon: Mimic Chests
+#   Scatters tempting loot chests around the target.
+#   Open one and it bites, explodes or lets out mobs!
+# Fire with /orbital mimicchests   Give with /orbitalgive mimicchests
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&6&lMimic Chests'
+# Description lines on the item.
+lore:
+- Scatters tempting loot chests around the target.
+- Open one and it bites, explodes or lets out mobs!
+# Item type of the cannon item.
+item: CHEST
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: rare
+# Menu tab this cannon is listed under.
+category: fun
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 20
+# Colour of the targeting ring.
+warning-color: '#C08030'
+# Whether this cannon may break / change blocks.
+break-blocks: true
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # How many mimic chests appear.
+  chests: 8
+  # How far apart they are scattered.
+  radius: 14.0
+  # Damage of a bite.
+  bite-damage: 8.0
+  # Power of an exploding mimic.
+  explode-power: 3.0
+  # Mobs that pour out of a mob mimic.
+  mobs: 4
+  # Unopened mimics vanish after this long.
+  seconds: 300

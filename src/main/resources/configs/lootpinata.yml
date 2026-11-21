@@ -1,0 +1,47 @@
+# lootpinata.yml - MegaOrbitals cannon: Loot Pinata
+#   A floating pinata appears. Hit it enough
+#   times and it bursts into loot!
+# Fire with /orbital lootpinata   Give with /orbitalgive lootpinata
+# Run /orbital reload after editing.
+
+# Display name of the cannon item (& colour codes).
+name: '&d&lLoot Pinata'
+# Description lines on the item.
+lore:
+- A floating pinata appears. Hit it enough
+- times and it bursts into loot!
+# Item type of the cannon item.
+item: CAKE
+# common, rare, epic or legendary (sets crafting core, drop pool and satellite charge cost).
+tier: common
+# Menu tab this cannon is listed under.
+category: fun
+# Put the terrain back after this many seconds (-1 = use config.yml, 0 = never).
+auto-restore-seconds: -1
+# Warning time before the strike hits (20 ticks = 1 second).
+warning-ticks: 15
+# Colour of the targeting ring.
+warning-color: '#FF60C0'
+# Whether this cannon may break / change blocks.
+break-blocks: false
+# Whether the person who fired it can be hurt by it.
+hurt-shooter: false
+settings:
+  # Hits needed to burst it.
+  hits: 25
+  # It floats away if nobody bursts it in time.
+  seconds: 180
+  # Loot that pours out, MATERIAL:amount.
+  loot:
+  - DIAMOND:4
+  - EMERALD:8
+  - GOLD_INGOT:12
+  - COOKIE:32
+  - CAKE:1
+  - GOLDEN_APPLE:2
+  - EXPERIENCE_BOTTLE:12
+  - FIREWORK_ROCKET:16
+  - NAME_TAG:1
+  - ENCHANTED_GOLDEN_APPLE:1
+  # How many entries from the loot list are dropped.
+  loot-rolls: 6
