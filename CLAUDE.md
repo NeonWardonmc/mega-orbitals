@@ -56,6 +56,15 @@ The owner is not a programmer, so explain results in plain language.
   `mvn -f examples/example-addon/pom.xml package -Dmegaorbitals.version=<version>`).
 - Docs for owners and addon developers are in `docs/`. Update them when commands, config keys or the API change.
 
+## Docs website
+
+- https://mega-orbitals.ishowavoid.dev (GitHub Pages, custom domain; DNS is a CNAME at GoDaddy pointing to neonwardonmc.github.io).
+  The owner's personal site is on the apex ishowavoid.dev: never point the apex at GitHub.
+- `.github/workflows/docs.yml` builds it on every push to main: `tools/prepare_site.py` copies `docs/`, `CANNONS.md`,
+  `CHANGELOG.md`, `CONTRIBUTING.md` and `website/` into `.site-src/` with website links, then `mkdocs build --strict`.
+  Pages "Source" must stay "GitHub Actions". MkDocs is pinned in `website/requirements.txt` (MkDocs 2.0 breaks the theme).
+- Write links in docs as normal relative GitHub links (`../CANNONS.md`); the script converts them. New pages go in `mkdocs.yml` `nav:`.
+
 ## Releasing
 
 - Bump the version in `pom.xml`, `src/main/resources/plugin.yml` (`version:` and the cannon count in `description:`),

@@ -1,0 +1,86 @@
+# The MegaOrbitals documentation website (GitHub Pages).
+# The pages live in docs/ (readable on GitHub too). tools/prepare_site.py copies them, plus CANNONS.md,
+# CHANGELOG.md, CONTRIBUTING.md and website/index.md, into .site-src/ with website-friendly links,
+# then `mkdocs build` turns that into the site. See website/README.md.
+site_name: MegaOrbitals
+site_description: 1322 overpowered orbital strike cannons for Paper 26.1.2 Minecraft servers.
+site_url: https://mega-orbitals.ishowavoid.dev/
+repo_url: https://github.com/NeonWardonmc/mega-orbitals
+repo_name: NeonWardonmc/mega-orbitals
+edit_uri: ""
+copyright: MegaOrbitals is released under CC0 1.0. Not affiliated with Mojang or Microsoft.
+
+docs_dir: .site-src
+site_dir: .site-build
+
+theme:
+  name: material
+  icon:
+    logo: material/satellite-variant
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/extra.css
+
+nav:
+  - Home: index.md
+  - Server owners:
+      - Getting started: getting-started.md
+      - Commands and permissions: commands.md
+      - Configuration: configuration.md
+      - Features: features.md
+      - FAQ: faq.md
+  - Cannons: cannons.md
+  - Developers:
+      - Making an addon: addons.md
+      - API reference: api-reference.md
+      - Contributing: contributing.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/NeonWardonmc/mega-orbitals
+      name: MegaOrbitals on GitHub

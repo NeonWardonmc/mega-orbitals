@@ -5,6 +5,8 @@ When a version tag is pushed, GitHub Actions copies that version's section below
 
 ## [Unreleased]
 
+- Documentation website at https://mega-orbitals.ishowavoid.dev, built from `docs/` with MkDocs and published by GitHub Actions.
+
 ## [1.6.0] - 2026-11-21
 
 **Addon support and full documentation.**

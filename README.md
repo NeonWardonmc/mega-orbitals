@@ -2,7 +2,7 @@
 
 A Paper plugin for Minecraft **26.1.2** with **1322 overpowered orbital strike cannons**, each one a completely different weapon: nukes, black holes, tornadoes, mob armies, terrain tools, minigames, curses, buffs and more. Cannon #201, **Omega**, fires every other cannon at once.
 
-- **[Documentation](docs/README.md)**: getting started, commands, configuration, features and FAQ.
+- **[Website: mega-orbitals.ishowavoid.dev](https://mega-orbitals.ishowavoid.dev)**: the full documentation, also readable [here in docs/](docs/README.md).
 - **[CANNONS.md](CANNONS.md)**: every cannon. **[CHANGELOG.md](CHANGELOG.md)**: what changed in each version.
 - **[Making an addon](docs/addons.md)**: add your own cannons from a separate plugin ([example addon](examples/example-addon)).
 - Want to add a cannon to MegaOrbitals itself or report a bug? Read **[CONTRIBUTING.md](CONTRIBUTING.md)**.

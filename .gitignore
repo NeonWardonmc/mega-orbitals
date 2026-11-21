@@ -15,3 +15,7 @@ Thumbs.db
 
 # Local Claude settings
 .claude/settings.local.json
+
+# Documentation website build
+.site-src/
+.site-build/
